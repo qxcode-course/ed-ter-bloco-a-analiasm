@@ -1,0 +1,44 @@
+2026-03-16 18:04:41, MOVE, v:1, k:ed@pintando, mode:DOWN
+2026-03-16 18:04:50, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-16 18:05:12, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-16 18:05:32, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-16 18:05:42, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-16 18:05:49, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-16 18:05:53, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-16 18:06:11, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-16 18:25:58, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:19
+2026-03-16 18:31:47, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:17
+2026-03-16 18:31:48, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-16 18:32:09, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-16 18:33:44, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-16 18:34:10, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:100, size:0
+2026-03-16 18:34:14, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:100
+2026-03-16 18:34:18, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:100
+2026-03-16 18:34:22, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:100
+2026-03-16 18:34:28, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:100
+2026-03-16 18:34:41, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-16 18:36:30, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-16 18:36:35, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-16 18:39:19, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:15
+2026-03-16 18:40:32, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-16 18:41:12, MOVE, v:1, k:ed@pintando, mode:DOWN
+2026-03-16 18:41:17, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-16 18:41:30, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:5
+2026-03-16 18:42:19, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-16 18:46:33, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-16 18:46:35, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:16
+2026-03-16 18:48:27, EXEC, v:1, k:ed@pintando, mode:FULL, size:15, fail:COMP
+2026-03-16 18:51:10, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:14
+2026-03-16 18:51:28, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:14
+2026-03-16 18:51:44, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:14
+2026-03-16 18:53:02, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:14
+2026-03-16 18:53:43, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:14
+2026-03-16 18:54:46, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:14
+2026-03-16 18:55:50, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:14
+2026-03-16 18:58:38, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:15
+2026-03-16 18:58:58, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:15
+2026-03-16 19:01:07, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:15
+2026-03-16 19:01:25, EXEC, v:1, k:ed@pintando, mode:FULL, rate:25, size:15
+2026-03-16 19:08:55, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:16
+2026-03-16 19:10:59, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:17
+2026-03-16 19:11:59, MOVE, v:1, k:ed@pintando, mode:BACK

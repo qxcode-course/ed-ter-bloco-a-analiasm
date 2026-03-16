@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_18-25-58",
+            "content": "@@ -20,16 +20,17 @@\n  %22fmt%22%0A%0A\n+%0A\n func mai\n@@ -34,16 +34,17 @@\n main()%7B%0A\n+%0A\n base := \n@@ -75,16 +75,22 @@\n t.Scanf(\n+%22%25f%22, \n &base)%0Af\n@@ -98,16 +98,22 @@\n t.Sacnf(\n+%22%25f%22, \n &altura)\n@@ -127,16 +127,17 @@\n = (base*\n+ \n altura)/\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-16_18-31-47",
+            "content": "@@ -25,40 +25,48 @@\n %22%0A%0Af\n-loat base, altura;%0A%0Afunc main()%7B\n+unc main()%7B%0Abase := 0.0;%0Aaltura := 0.0;%0A\n %0A%0Afm\n@@ -155,8 +155,10 @@\n area)%0A%0A%7D\n+%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-16_18-39-19",
+            "content": "package main\nimport \"fmt\"\n\nfloat base, altura;\n\nfunc main(){\n\nfmt.Scanf(&base)\nfmt.Sacnf(&altura)\n\narea = (base*altura)/2.0\n\nfmt.Printf(\"%.2f\\n\", area)\n\n}",
+            "lines": "15"
+        }
+    ]
+}

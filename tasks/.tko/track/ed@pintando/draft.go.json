@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_18-41-30",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -34,152 +34,35 @@\n in()\n+ \n %7B%0A\n-base := 0.0;%0Aaltura := 0.0;%0Aarea := 0.0;%0A%0Afmt.Scanf(%22%25f%22, &base)%0Afmt.Scanf(%22%25f%22, &altura)%0A%0Aarea = (base*altura)/2.0%0A%0Afmt.Printf(%22%25.2f%5Cn%22, area)%0A%0A%7D\n+    fmt.Println(%22qxcode%22)%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-16_18-46-35",
+            "content": "@@ -25,48 +25,60 @@\n %22%0A%0Af\n-loat32 base, altura, area;%0Afunc main()%7B%0A\n+unc main()%7B%0Abase := 0.0;%0Aaltura := 0.0;%0Aarea := 0.0;\n %0A%0Afm\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-16_18-48-27",
+            "content": "@@ -25,23 +25,14 @@\n %22%0A%0Af\n-unc main()%7B%0Avar\n+loat32\n  bas\n@@ -50,17 +50,23 @@\n area\n- float32;\n+;%0Afunc main()%7B%0A\n %0A%0Afm\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-16_18-51-10",
+            "content": "@@ -137,16 +137,18 @@\n ltura)/2\n+.0\n %0A%0Afmt.Pr\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_18-51-28",
+            "content": "@@ -65,10 +65,10 @@\n loat\n-64\n+32\n ;%0A%0Af\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_18-51-44",
+            "content": "@@ -65,10 +65,10 @@\n loat\n-32\n+64\n ;%0A%0Af\n@@ -155,16 +155,18 @@\n tf(%22%25.2f\n+%5Cn\n %22, area)\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_18-53-02",
+            "content": "@@ -159,10 +159,8 @@\n %25.2f\n-%5Cn\n %22, a\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_18-53-42",
+            "content": "@@ -75,26 +75,24 @@\n mt.Scanf(%22%25f\n-%5Cn\n %22, &base)%0Afm\n@@ -102,18 +102,16 @@\n canf(%22%25f\n-%5Cn\n %22, &altu\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_18-54-46",
+            "content": "@@ -75,25 +75,26 @@\n mt.Scanf(%22%25f\n- \n+%5Cn\n %22, &base)%0Afm\n@@ -104,17 +104,18 @@\n canf(%22%25f\n- \n+%5Cn\n %22, &altu\n@@ -135,11 +135,9 @@\n base\n- * \n+*\n altu\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_18-55-50",
+            "content": "@@ -41,15 +41,20 @@\n var \n-a, b, c\n+base, altura\n , ar\n@@ -84,17 +84,20 @@\n %22%25f %22, &\n-a\n+base\n )%0Afmt.Sc\n@@ -112,48 +112,38 @@\n %22, &\n-b)%0Afmt.Scanf(%22%25f %22, &c)%0A%0Aarea = ((a*b)*c\n+altura)%0A%0Aarea = (base * altura\n )/2%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_18-58-38",
+            "content": "@@ -136,12 +136,14 @@\n a = \n+(\n (a*b\n+)\n *c)/\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-16_18-58-58",
+            "content": "@@ -136,16 +136,18 @@\n a = (a*b\n+*c\n )/2%0A%0Afmt\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-16_19-01-07",
+            "content": "@@ -60,10 +60,10 @@\n loat\n-64\n+32\n ;%0A%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-16_19-01-25",
+            "content": "@@ -49,11 +49,8 @@\n , c,\n- s,\n  are\n@@ -129,47 +129,19 @@\n c)%0A%0A\n-s = (a+b+c)/2%0Aarea = ((s-a)*(s-b)*(s-c)\n+area = (a*b\n )/2%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-16_19-08-55",
+            "content": "@@ -16,22 +16,14 @@\n port\n-(\n+ \n %22fmt%22\n-%0A%22math%22)\n %0A%0Afu\n@@ -153,50 +153,29 @@\n a = \n-math.Sqrt(s * (s - a) * (s - b) * (s - \n+((s-a)*(s-b)*(s-\n c))\n+/2\n %0A%0Afm\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-16_19-10-59",
+            "content": "package main\nimport(\"fmt\"\n\"math\")\n\nfunc main(){\nvar a, b, c, s, area float64;\n\nfmt.Scanf(\"%f \", &a)\nfmt.Scanf(\"%f \", &b)\nfmt.Scanf(\"%f \", &c)\n\ns = (a+b+c)/2\narea = math.Sqrt(s * (s - a) * (s - b) * (s - c))\n\nfmt.Printf(\"%.2f\\n\", area)\n\n}",
+            "lines": "17"
+        }
+    ]
+}
