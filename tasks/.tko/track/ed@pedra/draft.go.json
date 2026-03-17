@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_23-00-33",
+            "content": "package main\nimport \"fmt\"\n\nfunc main(){\n\nvar competidores int\nvar pedraA, pedraB int\n\ncampeaoid := -1\nmenordiferenca := 0\n\nfmt.Scanf(\"%d\", &competidores)\n\t    \nfor i := 0; i < competidores ; i++{\n    fmt.Scanf(\"%d\", &pedraA)\n    fmt.Scanf(\"%d\", &pedraB)\n\n\tif pedraA >= 10 && pedraB >= 10{\n\t\tdiferenca := pedraA - pedraB\n\n\t\tif diferenca < 0 {\n\t\t\tdiferenca = -diferenca\n\t\t}\n\n\t\tif campeaoid == -1 || diferenca < menordiferenca{\n\t\t\tmenordiferenca = diferenca\n\t\t\tcampeaoid = i\n\t\t}\n\t}\n}\n \n    if campeaoid == -1 {\n\t\tfmt.Printf(\"sem ganhador\\n\")\n\t}else{\n\t\tfmt.Printf(\"%d\\n\", campeaoid)\n\t}\n\n}",
+            "lines": "38"
+        }
+    ]
+}

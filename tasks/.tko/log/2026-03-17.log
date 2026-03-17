@@ -36,3 +36,14 @@
 2026-03-17 17:28:15, MOVE, v:1, k:ed@pedra, mode:DOWN
 2026-03-17 17:28:19, MOVE, v:1, k:ed@pedra, mode:PICK
 2026-03-17 17:29:21, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-17 22:02:59, SELF, v:1, k:ed@mumia, self:1, rate:100, study:92, friend:Nao, concept:1, problem:1, debug:1
+2026-03-17 22:03:10, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-17 22:03:13, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-17 22:04:44, SELF, v:1, k:ed@fuga, self:1, rate:100, study:60, friend:Nao, concept:1, problem:1, debug:1
+2026-03-17 22:04:59, SELF, v:1, k:ed@mumia, self:1, rate:100, study:92, friend:Nao, concept:1, problem:1, debug:1
+2026-03-17 22:06:09, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-17 23:00:33, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:38
+2026-03-17 23:09:33, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-17 23:32:20, SELF, v:1, k:ed@pedra, self:1, rate:100, study:64, friend:Nao, concept:1, problem:1, debug:1
+2026-03-17 23:33:08, SELF, v:1, k:ed@pedra, self:1, rate:100, study:87, friend:Nao, concept:1, problem:1, debug:1
+2026-03-17 23:34:28, SELF, v:1, k:ed@pedra, self:1, rate:100, study:89, friend:Nao, concept:1, problem:1, debug:1
