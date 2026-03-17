@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-50-33",
+            "content": "@@ -267,29 +267,16 @@\n (%22S%5Cn%22)%0A\n-      break;%0A\n     %7Dels\n@@ -318,23 +318,8 @@\n n%22)%0A\n-        break;%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_16-51-48",
+            "content": "@@ -168,11 +168,12 @@\n f F \n-%3C 0\n+%3E 15\n %7B%0A  \n@@ -182,18 +182,17 @@\n     F = \n-15\n+0\n %0A    %7Del\n@@ -195,28 +195,27 @@\n  %7Delse if F \n-%3E 15\n+%3C 0\n %7B%0A        F \n@@ -212,25 +212,26 @@\n         F = \n-0\n+15\n %0A    %7D %0A%0A   \n@@ -269,30 +269,30 @@\n S%5Cn%22)%0A      \n+b\n re\n-turn\n+ak;\n %0A    %7Delse i\n@@ -339,14 +339,14 @@\n     \n+b\n re\n-turn\n+ak;\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_16-54-26",
+            "content": "@@ -262,16 +262,18 @@\n rintf(%22S\n+%5Cn\n %22)%0A     \n@@ -322,16 +322,18 @@\n rintf(%22N\n+%5Cn\n %22)%0A     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_16-55-03",
+            "content": "@@ -57,32 +57,33 @@\n  D int%0A%0Afmt.Scan\n+f\n (%22%25d%22, &H)%0Afmt.S\n@@ -96,32 +96,33 @@\n d%22, &P)%0Afmt.Scan\n+f\n (%22%25d%22, &F)%0Afmt.S\n@@ -116,32 +116,33 @@\n d%22, &F)%0Afmt.Scan\n+f\n (%22%25d%22, &D)%0A%0Afor \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_16-55-46",
+            "content": "@@ -259,18 +259,16 @@\n rintf(%22S\n-%5Cn\n %22)%0A     \n@@ -321,10 +321,8 @@\n f(%22N\n-%5Cn\n %22)%0A \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_16-56-06",
+            "content": "@@ -259,13 +259,14 @@\n rint\n-ln\n+f\n (%22S\n+%5Cn\n %22)%0A \n@@ -319,13 +319,14 @@\n rint\n-ln\n+f\n (%22N\n+%5Cn\n %22)%0A \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_16-56-30",
+            "content": "@@ -165,13 +165,11 @@\n f F \n-== 16\n+%3C 0\n %7B%0A  \n@@ -178,17 +178,18 @@\n     F = \n-0\n+15\n %0A    %7Del\n@@ -200,13 +200,12 @@\n f F \n-== -1\n+%3E 15\n %7B%0A  \n@@ -210,26 +210,25 @@\n         F = \n-15\n+0\n %0A    %7D %0A%0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_16-59-41",
+            "content": "@@ -134,17 +134,16 @@\n %22, &D)%0A%0A\n-%0A\n for %7B%0A  \n@@ -165,12 +165,13 @@\n f F \n-%3E 15\n+== 16\n %7B%0A  \n@@ -201,11 +201,13 @@\n f F \n-%3C 0\n+== -1\n %7B%0A  \n@@ -220,24 +220,25 @@\n F = 15%0A    %7D\n+ \n %0A%0A    if F =\n@@ -240,20 +240,19 @@\n f F == H\n+ \n %7B%0A\n-  \n       fm\n@@ -276,26 +276,24 @@\n     \n-  break\n+return\n %0A    %7D\n-%0A%0A   \n+else\n  if \n@@ -337,22 +337,26 @@\n     \n-b\n re\n-ak\n+turn\n %0A    %7D%0A\n-%7D%0A\n+    \n %0A%7D%0A\n+%7D\n %0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_17-07-26",
+            "content": "@@ -260,14 +260,13 @@\n rint\n-f\n+ln\n (%22S\n-%5Cn\n %22)%0A \n@@ -321,14 +321,13 @@\n rint\n-f\n+ln\n (%22N\n-%5Cn\n %22)%0A \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_17-10-17",
+            "content": "@@ -57,33 +57,32 @@\n  D int%0A%0Afmt.Scan\n-f\n (%22%25d%22, &H)%0Afmt.S\n@@ -76,33 +76,32 @@\n d%22, &H)%0Afmt.Scan\n-f\n (%22%25d%22, &P)%0Afmt.S\n@@ -95,33 +95,32 @@\n d%22, &P)%0Afmt.Scan\n-f\n (%22%25d%22, &F)%0Afmt.S\n@@ -122,17 +122,16 @@\n fmt.Scan\n-f\n (%22%25d%22, &\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_17-10-50",
+            "content": "@@ -57,32 +57,33 @@\n  D int%0A%0Afmt.Scan\n+f\n (%22%25d%22, &H)%0Afmt.S\n@@ -77,32 +77,33 @@\n d%22, &H)%0Afmt.Scan\n+f\n (%22%25d%22, &P)%0Afmt.S\n@@ -97,32 +97,33 @@\n d%22, &P)%0Afmt.Scan\n+f\n (%22%25d%22, &F)%0Afmt.S\n@@ -125,16 +125,17 @@\n fmt.Scan\n+f\n (%22%25d%22, &\n@@ -351,22 +351,14 @@\n k%0A    %7D%0A\n-%0A%0A%0A%0A%0A%0A%0A%0A\n %7D%0A%0A%7D%0A%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_17-13-30",
+            "content": "@@ -57,33 +57,32 @@\n  D int%0A%0Afmt.Scan\n-f\n (%22%25d%22, &H)%0Afmt.S\n@@ -76,33 +76,32 @@\n d%22, &H)%0Afmt.Scan\n-f\n (%22%25d%22, &P)%0Afmt.S\n@@ -95,33 +95,32 @@\n d%22, &P)%0Afmt.Scan\n-f\n (%22%25d%22, &F)%0Afmt.S\n@@ -122,17 +122,16 @@\n fmt.Scan\n-f\n (%22%25d%22, &\n@@ -347,14 +347,22 @@\n k%0A    %7D%0A\n+%0A%0A%0A%0A%0A%0A%0A%0A\n %7D%0A%0A%7D%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_17-22-14",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   \nvar H, P, F, D int\n\nfmt.Scanf(\"%d\", &H)\nfmt.Scanf(\"%d\", &P)\nfmt.Scanf(\"%d\", &F)\nfmt.Scanf(\"%d\", &D)\n\n\nfor {\n    F += D\n\n    if F > 15{\n        F = 0\n    }else if F < 0{\n        F = 15\n    }\n\n    if F == H{\n        fmt.Printf(\"S\\n\")\n        break\n    }\n\n    if F == P{\n        fmt.Printf(\"N\\n\")\n        break\n    }\n}\n\n}\n\n",
+            "lines": "34"
+        }
+    ]
+}
