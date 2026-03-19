@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_17-02-04",
+            "content": "@@ -50,32 +50,33 @@\n ist int%0Afmt.Scan\n+f\n (%22%25d%22, &animaist\n@@ -194,16 +194,17 @@\n fmt.Scan\n+f\n (%22%25d%22, &\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_17-03-12",
+            "content": "@@ -55,24 +55,30 @@\n nt%0Afmt.Scan(\n+%22%25d%22, \n &animaist)%0A%0A\n@@ -194,16 +194,22 @@\n mt.Scan(\n+%22%25d%22, \n &animal)\n@@ -538,11 +538,18 @@\n rint\n-ln(\n+f(%22%25d%5Cn%22, \n &cas\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_17-04-12",
+            "content": "@@ -526,16 +526,11 @@\n rint\n-f(%22%25d%22, \n+ln(\n &cas\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_17-05-20",
+            "content": "@@ -531,10 +531,8 @@\n (%22%25d\n-%5Cn\n %22, &\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_17-05-59",
+            "content": "@@ -532,16 +532,17 @@\n %22%25d%5Cn%22, \n+&\n casais)%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_17-07-35",
+            "content": "@@ -426,13 +426,8 @@\n   %7D%0A\n-    %0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_17-09-54",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\nvar animaist int\nfmt.Scan(&animaist)\n\nnaocasais := [50]int{}\nqtdnaocasais := 0\ncasais := 0\n\nfor i := 0; i < animaist; i++{\n    var animal int\n    fmt.Scan(&animal)\n    achou := false\n\n    for j := 0; j < qtdnaocasais; j++{\n        if naocasais[j] == -animal && naocasais[j] != 0{\n            casais++\n            naocasais[j] = 0\n            achou = true\n            break\n        }\n    }\n    \n    if !achou{\n        naocasais[qtdnaocasais] = animal\n        qtdnaocasais++\n    }\n}\n    fmt.Printf(\"%d\\n\", casais)\n}\n",
+            "lines": "31"
+        }
+    ]
+}

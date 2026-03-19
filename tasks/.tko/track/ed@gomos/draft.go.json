@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_20-19-11",
+            "content": "@@ -618,16 +618,18 @@\n intf(%22%25d\n+%5Cn\n %22, corpi\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-19_20-19-30",
+            "content": "@@ -622,13 +622,8 @@\n (%22%25d\n- %25d%5Cn\n %22, c\n@@ -631,16 +631,39 @@\n rpinho.x\n+)%0A    fmt.Printf(%22%25d%5Cn%22\n , corpin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-19_20-20-11",
+            "content": "@@ -613,16 +613,17 @@\n mt.Print\n+f\n (%22%25d %25d%5C\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-19_20-20-23",
+            "content": "@@ -613,17 +613,16 @@\n mt.Print\n-f\n (%22%25d %25d%5C\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-19_20-21-19",
+            "content": "@@ -116,24 +116,17 @@\n fmt.Scan\n-f(%22%25d%22, \n+(\n &q)%0A    \n@@ -133,24 +133,17 @@\n fmt.Scan\n-f(%22%25d%22, \n+(\n &direcao\n@@ -223,32 +223,25 @@\n     fmt.Scan\n-f(%22%25d%22, \n+(\n &corpinho%5Bi%5D\n@@ -264,16 +264,9 @@\n Scan\n-f(%22%25d%22, \n+(\n &cor\n@@ -283,17 +283,16 @@\n )%0A    %7D%0A\n-%0A\n posicoes\n@@ -322,16 +322,16 @@\n nto, q)%0A\n+\n copy(pos\n@@ -357,17 +357,16 @@\n rpinho)%0A\n-%0A\n switch d\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-19_20-27-15",
+            "content": "@@ -603,16 +603,23 @@\n for _, c\n+orpinho\n  := rang\n@@ -661,13 +661,27 @@\n %22, c\n-.x, c\n+orpinho.x, corpinho\n .y)%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-19_20-29-26",
+            "content": "@@ -595,45 +595,8 @@\n i-1%5D\n-                                     \n %0A%7D%0A%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-19_20-40-12",
+            "content": "@@ -116,17 +116,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &q)%0A    \n@@ -140,17 +140,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &direcao\n@@ -233,33 +233,40 @@\n         fmt.Scan\n-(\n+f(%22%25d%22, \n &corpinho%5Bi%5D.x)%0A\n@@ -281,17 +281,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &corpinh\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-19_20-41-28",
+            "content": "@@ -119,18 +119,31 @@\n .Scan(&q\n-, \n+)%0A    fmt.Scan(\n &direcao\n@@ -242,18 +242,35 @@\n nho%5Bi%5D.x\n-, \n+)%0A        fmt.Scan(\n &corpinh\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-19_20-47-34",
+            "content": "@@ -355,9 +355,9 @@\n se %22\n-U\n+C\n %22:%0A \n@@ -385,9 +385,9 @@\n se %22\n-D\n+B\n %22:%0A \n@@ -415,9 +415,9 @@\n se %22\n-L\n+E\n %22:%0A \n@@ -445,9 +445,9 @@\n se %22\n-R\n+D\n %22:%0A \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-19_20-52-13",
+            "content": "@@ -467,22 +467,16 @@\n %5D.x++%0A%7D%0A\n-      \n %0Afor i :\n@@ -491,24 +491,16 @@\n  q; i++%7B\n-        \n %0A    cor\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-19_21-20-50",
+            "content": "package main\nimport \"fmt\"\ntype Ponto struct{\n    x, y int\n}\nfunc main() {\n    var q int\n    var direcao string\n    fmt.Scan(&q, &direcao)\n\n    corpinho := make([]Ponto, q)\n    \n    for i := 0; i < q; i++{\n        fmt.Scan(&corpinho[i].x, &corpinho[i].y)\n    }\n\nposicoesanteriores := make([]Ponto, q)\ncopy(posicoesanteriores, corpinho)\n\nswitch direcao{\ncase \"U\":\n    corpinho[0].y--\ncase \"D\":\n    corpinho[0].y++\ncase \"L\":\n    corpinho[0].x--\ncase \"R\":\n    corpinho[0].x++\n}\n      \nfor i := 1; i < q; i++{        \n    corpinho[i] = posicoesanteriores[i-1]                                     \n}\n\nfor _, c := range corpinho{\n    fmt.Printf(\"%d %d\\n\", c.x, c.y)\n}\n\n}\n",
+            "lines": "39"
+        }
+    ]
+}

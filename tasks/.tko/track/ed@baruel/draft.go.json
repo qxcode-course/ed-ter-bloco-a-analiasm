@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_17-56-11",
+            "content": "@@ -454,17 +454,16 @@\n Printf(%22\n- \n %22)%0A     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_17-58-15",
+            "content": "@@ -245,33 +245,9 @@\n  %3C= \n-todoalbum && figurinha %3E \n+5\n 0%7B%0A \n@@ -631,18 +631,16 @@\n mt.Print\n-ln\n ()%0A    %0A\n@@ -838,18 +838,16 @@\n mt.Print\n-ln\n (i)%0A    \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_18-03-11",
+            "content": "@@ -815,33 +815,32 @@\n        fmt.Print\n-f\n (%22 %22)%0A          \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_18-03-32",
+            "content": "@@ -467,36 +467,36 @@\n        fmt.Print\n-ln\n+f\n (%22\n+ \n %22)%0A            %7D\n@@ -509,34 +509,32 @@\n        fmt.Print\n-ln\n (i)%0A            \n@@ -622,34 +622,32 @@\n        fmt.Print\n-ln\n (%22N%22)%0A    %7D%0A    \n@@ -823,20 +823,20 @@\n mt.Print\n-ln\n+f\n (%22\n+ \n %22)%0A     \n@@ -949,32 +949,32 @@\n     if !naotem%7B%0A\n+\n         fmt.Prin\n@@ -974,18 +974,16 @@\n mt.Print\n-ln\n (%22N%22)%0A  \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_18-05-01",
+            "content": "@@ -91,24 +91,17 @@\n fmt.Scan\n-f(%22%25d%22, \n+(\n &todoalb\n@@ -114,24 +114,17 @@\n fmt.Scan\n-f(%22%25d%22, \n+(\n &qtdfigu\n@@ -211,16 +211,9 @@\n Scan\n-f(%22%25d%22, \n+(\n &fig\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_18-08-08",
+            "content": "@@ -500,11 +500,12 @@\n rint\n+ln\n (%22\n- \n %22)%0A \n@@ -530,32 +530,34 @@\n        fmt.Print\n+ln\n (i)%0A            \n@@ -645,32 +645,34 @@\n        fmt.Print\n+ln\n (%22N%22)%0A    %7D%0A    \n@@ -680,16 +680,18 @@\n mt.Print\n+ln\n ()%0A    %0A\n@@ -848,16 +848,18 @@\n mt.Print\n+ln\n (%22%22)%0A   \n@@ -890,16 +890,18 @@\n mt.Print\n+ln\n (i)%0A    \n@@ -999,16 +999,18 @@\n mt.Print\n+ln\n (%22N%22)%0A  \n@@ -1026,13 +1026,15 @@\n mt.Print\n+ln\n ()%0A%7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_18-10-04",
+            "content": "@@ -91,17 +91,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &todoalb\n@@ -121,17 +121,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &qtdfigu\n@@ -221,17 +221,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &figurin\n@@ -623,17 +623,16 @@\n %0A    if \n-!\n serepete\n@@ -835,33 +835,32 @@\n      fmt.Print(%22\n- \n %22)%0A            %7D\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_18-17-51",
+            "content": "@@ -469,34 +469,33 @@\n      fmt.Print(%22\n-%5Cn\n+ \n %22)%0A            %7D\n@@ -625,34 +625,32 @@\n     fmt.Print(%22N\n-%5Cn\n %22)%0A    %7D%0A    fmt\n@@ -823,18 +823,17 @@\n .Print(%22\n-%5Cn\n+ \n %22)%0A     \n@@ -944,32 +944,32 @@\n     if !naotem%7B%0A\n+\n         fmt.Prin\n@@ -976,10 +976,8 @@\n t(%22N\n-%5Cn\n %22)%0A \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_18-19-31",
+            "content": "@@ -47,20 +47,30 @@\n todo\n-A\n+a\n lbum, \n-todas\n+qtdfigurinhas, \n figu\n@@ -78,14 +78,15 @@\n inha\n-s\n+ \n  int%0A\n+%0A\n   fm\n@@ -93,25 +93,25 @@\n t.Scan(&todo\n-A\n+a\n lbum)%0A  fmt.\n@@ -108,37 +108,35 @@\n um)%0A  fmt.Scan(&\n-todas\n+qtd\n figurinhas)%0A%0A  c\n@@ -140,118 +140,27 @@\n   co\n-lecao := make(%5B%5Dint, todasfigurinhas)%0A  temnoalbum := make(map%5Bint%5Dbool)%0A%0A  var repetidas %5B%5Dint%0A  ultimo := -1\n+ntando := %5B51%5Dint%7B%7D\n %0A%0A  \n@@ -175,21 +175,19 @@\n  0; i %3C \n-todas\n+qtd\n figurinh\n@@ -213,13 +213,8 @@\n an(&\n-todas\n figu\n@@ -222,172 +222,238 @@\n inha\n-s\n )\n+%0A\n %0A    \n-num := colecao%5Bi%5D%0A%0A    if num == ultimo %7B\n+if figurinha %3C= todoalbum && figurinha %3E 0%7B%0A        contando%5Bfigurinha%5D++%0A    %7D\n %0A  \n+%7D%0A\n       \n+se\n repet\n-idas = append(repetidas, num)%0A    %7D%0A    temnoalbum%5Bnum%5D = true%0A    ultimo = num%0A  %7D%0A%0A\n+e := false%0A      prepetida := true%0A%0A    for i := 1; i %3C= todoalbum; i++%7B%0A        if contando%5Bi%5D %3E 1%7B%0A         \n   \n+ \n if \n-len(\n+!p\n repetida\n s) =\n@@ -452,90 +452,66 @@\n tida\n-s) == 0 %7B%0A    fmt.Println(%22N%22)%0A  %7Delse%7B%0A    for i, f := range repetidas %7B%0A\n+%7B%0A                fmt.Print(%22%5Cn%22)%0A            %7D%0A  \n         \n fmt.\n@@ -498,32 +498,34 @@\n     %7D%0A          \n+  \n fmt.Print(f)%0A   \n@@ -518,17 +518,17 @@\n t.Print(\n-f\n+i\n )%0A      \n@@ -533,46 +533,101 @@\n     \n+ \n-if i %3C len(repetidas)-1 %7B\n+   serepete = true%0A            prepetida = false%0A        %7D\n %0A    \n+%7D%0A%0A\n  \n+   if !serepete%7B%0A\n        \n+ \n fmt.\n@@ -635,29 +635,22 @@\n rint\n-f\n (%22\n- %22)%0A   \n+N%5Cn%22)%0A\n     \n- \n %7D%0A\n-    \n     \n@@ -662,28 +662,27 @@\n rint\n-ln\n ()%0A    \n-%7D\n+%0A\n %0A    \n-falta\n+naotem\n  := \n@@ -692,21 +692,22 @@\n se%0A    p\n-falta\n+naotem\n  := true\n@@ -737,9 +737,9 @@\n todo\n-A\n+a\n lbum\n@@ -760,22 +760,24 @@\n  if \n-!temnoalbum%5Bi%5D\n+contando%5Bi%5D == 0\n %7B%0A  \n@@ -791,21 +791,22 @@\n    if !p\n-falta\n+naotem\n %7B%0A      \n@@ -826,17 +826,18 @@\n .Print(%22\n- \n+%5Cn\n %22)%0A     \n@@ -882,21 +882,22 @@\n         \n-falta\n+naotem\n  = true%0A\n@@ -909,21 +909,22 @@\n        p\n-falta\n+naotem\n  = false\n@@ -948,22 +948,18 @@\n     \n-%0A    if !falta\n+if !naotem\n %7B%0A  \n@@ -976,16 +976,18 @@\n Print(%22N\n+%5Cn\n %22)%0A    %7D\n@@ -1004,16 +1004,9 @@\n rint\n-ln()%0A   %7D\n+()\n %0A%7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-19_19-50-36",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,18 @@\n ain() %7B%0A\n-%09\n+  \n var todo\n@@ -56,26 +56,28 @@\n , to\n-talPossuid\n+dasfigurinh\n as int%0A\n-%09\n+  \n fmt.\n@@ -93,17 +93,18 @@\n oAlbum)%0A\n-%09\n+  \n fmt.Scan\n@@ -111,24 +111,68 @@\n (&to\n-talPossuid\n+dasfigurinhas)%0A%0A  colecao := make(%5B%5Dint, todasfigurinh\n as)%0A\n-%0A%09\n+  \n temn\n@@ -200,17 +200,19 @@\n t%5Dbool)%0A\n-%09\n+%0A  \n var repe\n@@ -223,17 +223,18 @@\n s %5B%5Dint%0A\n-%09\n+  \n ultimo :\n@@ -239,17 +239,18 @@\n  := -1%0A%0A\n-%09\n+  \n for i :=\n@@ -263,63 +263,86 @@\n %3C to\n-talPossuid\n+dasfigurinh\n as; i++\n- \n %7B%0A\n-%09%09var num int%0A%09%09fmt.Scan(&num) %0A%0A%09%09\n+    fmt.Scan(&todasfigurinhas)%0A    num := colecao%5Bi%5D%0A%0A    \n if n\n@@ -356,19 +356,24 @@\n ltimo %7B%0A\n-%09%09%09\n+        \n repetida\n@@ -399,22 +399,26 @@\n s, num)%0A\n-%09%09%7D%0A%09%09\n+    %7D%0A    \n temnoalb\n@@ -432,18 +432,20 @@\n  = true%0A\n-%09%09\n+    \n ultimo =\n@@ -449,21 +449,23 @@\n o = num%0A\n-%09%7D%0A%0A%09\n+  %7D%0A%0A  \n if len(r\n@@ -481,18 +481,20 @@\n  == 0 %7B%0A\n-%09%09\n+    \n fmt.Prin\n@@ -506,20 +506,21 @@\n N%22)%0A\n-%09%7D \n+  %7D\n else\n- \n %7B%0A\n-%09%09\n+    \n for \n@@ -545,19 +545,24 @@\n tidas %7B%0A\n-%09%09%09\n+        \n fmt.Prin\n@@ -566,19 +566,24 @@\n rint(f)%0A\n-%09%09%09\n+        \n if i %3C l\n@@ -600,20 +600,28 @@\n as)-1 %7B%0A\n-%09%09%09%09\n+            \n fmt.Prin\n@@ -625,25 +625,33 @@\n rint\n+f\n (%22 %22)%0A\n-%09%09%09%7D%0A%09%09%7D%0A%09%09\n+        %7D%0A        \n fmt.\n@@ -660,21 +660,26 @@\n intln()%0A\n-%09%7D%0A%0A%09\n+    %7D%0A    \n falta :=\n@@ -685,17 +685,20 @@\n = false%0A\n-%09\n+    \n pfalta :\n@@ -705,17 +705,20 @@\n = true%0A%0A\n-%09\n+    \n for i :=\n@@ -740,21 +740,26 @@\n bum; i++\n- \n %7B%0A\n-%09%09\n+        \n if !temn\n@@ -767,22 +767,30 @@\n album%5Bi%5D\n- \n %7B%0A\n-%09%09%09\n+            \n if !pfal\n@@ -795,38 +795,67 @@\n alta\n- \n %7B%0A\n-%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%09\n+                fmt.Print(%22 %22)%0A            %7D%0A            \n fmt.\n@@ -863,19 +863,28 @@\n rint(i)%0A\n-%09%09%09\n+            \n falta = \n@@ -892,11 +892,20 @@\n rue%0A\n-%09%09%09\n+            \n pfal\n@@ -919,17 +919,33 @@\n lse%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A    %0A    \n if !\n@@ -953,13 +953,18 @@\n alta\n- \n %7B%0A\n-%09%09\n+        \n fmt.\n@@ -978,12 +978,18 @@\n N%22)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n fmt.\n@@ -998,9 +998,15 @@\n intln()%0A\n-%7D\n+   %7D%0A%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-19_19-54-17",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar todoAlbum, totalPossuidas int\n\tfmt.Scan(&todoAlbum)\n\tfmt.Scan(&totalPossuidas)\n\n\ttemnoalbum := make(map[int]bool)\n\tvar repetidas []int\n\tultimo := -1\n\n\tfor i := 0; i < totalPossuidas; i++ {\n\t\tvar num int\n\t\tfmt.Scan(&num) \n\n\t\tif num == ultimo {\n\t\t\trepetidas = append(repetidas, num)\n\t\t}\n\t\ttemnoalbum[num] = true\n\t\tultimo = num\n\t}\n\n\tif len(repetidas) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, f := range repetidas {\n\t\t\tfmt.Print(f)\n\t\t\tif i < len(repetidas)-1 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t}\n\t\tfmt.Println()\n\t}\n\n\tfalta := false\n\tpfalta := true\n\n\tfor i := 1; i <= todoAlbum; i++ {\n\t\tif !temnoalbum[i] {\n\t\t\tif !pfalta {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(i)\n\t\t\tfalta = true\n\t\t\tpfalta = false\n\t\t}\n\t}\n\n\tif !falta {\n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n}",
+            "lines": "55"
+        }
+    ]
+}
