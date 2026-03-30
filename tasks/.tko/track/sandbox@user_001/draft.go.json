@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-29_22-12-06",
+            "content": "@@ -23,107 +23,8 @@\n mt%22%0A\n-%0Afunc SomaArray(arr %5B%5Dint) int%7B%0A%09soma := 0%0A%09for _, elemento := range arr%7B%0A%09%09soma += elemento%0A%09%7D%0A%7D%0A%0A\n func\n@@ -36,10 +36,11 @@\n ()%7B%0A%0A%0A%0A%0A\n+%09\n %0A%7D\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-03-29_22-22-07",
+            "content": "@@ -119,21 +119,8 @@\n %0A%09%7D%0A\n-%09return soma%0A\n %7D%0A%0Af\n@@ -135,81 +135,10 @@\n ()%7B%0A\n- nums := %5B%5Dint%7B10, 20, 30, 40%7D%0A%0Afmt.Printf(%22Soma: %25d%5Cn%22, SomaArray(nums))\n+%0A%0A\n %0A%0A%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-29_22-24-46",
+            "content": "package main\nimport \"fmt\"\n\nfunc SomaArray(arr []int) int{\n\tsoma := 0\n\tfor _, elemento := range arr{\n\t\tsoma += elemento\n\t}\n\treturn soma\n}\n\nfunc main(){\n nums := []int{10, 20, 30, 40}\n\nfmt.Printf(\"Soma: %d\\n\", SomaArray(nums))\n\n\n}",
+            "lines": "18"
+        }
+    ]
+}

@@ -1,0 +1,169 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_14-11-20",
+            "content": "@@ -37,21 +37,15 @@\n ) %7B%0A\n-   %0A\n    var \n-n_\n pess\n@@ -62,28 +62,8 @@\n %0A   \n-pessoas := %5B50%5Dint%7B%7D\n %0A   \n@@ -78,18 +78,16 @@\n (%22%25d%22, &\n-n_\n pessoas)\n@@ -117,78 +117,6 @@\n    %0A\n-   for i := 0; i %3C n_pessoas; i++%7B%0A      fmt.Scan(%22%25d%22, &pessoas)%0A   %7D%0A%0A\n %7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-03-24_14-26-32",
+            "content": "@@ -61,16 +61,40 @@\n , E int%0A\n+   pessoas := %5B50%5Dint%7B%7D%0A\n    fmt.S\n@@ -145,45 +145,8 @@\n    %0A\n-   pessoas := make(%5B%5Dint, n_pessoas)%0A\n    f\n@@ -186,37 +186,37 @@\n     \n-pessoas%5Bi%5D = i + 1%0A   %7D%0A%0A%0A%0A   \n+fmt.Scan(%22%25d%22, &pessoas)%0A   %7D%0A\n %0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-29_22-45-13",
+            "content": "@@ -224,218 +224,12 @@\n  %7D%0A%0A\n+%0A%0A\n    \n-indiceEspada := -1%0A   for i, p := range pessoas %7B%0A      if p == E %7B%0A         indiceEspada = i%0A         break%0A      %7D%0A   %7D%0A   if indiceEspada == -1%7B%0A      fmt.Println(%22N%C3%A3o Encontrado%22)%0A      return%0A   %7D%0A   im%0A\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-29_22-53-45",
+            "content": "@@ -428,12 +428,14 @@\n    %7D%0A   \n+im\n %0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_22-53-53",
+            "content": "@@ -124,37 +124,41 @@\n %0A   \n-vivos := %5B%5Dint%7B%7D%0A   pos := -1\n+pessoas := make(%5B%5Dint, n_pessoas)\n %0A   \n@@ -170,15 +170,14 @@\n  := \n-1\n+0\n ; i %3C\n-=\n  n_p\n@@ -199,32 +199,85 @@\n     \n-vivos = append(vivos, i)\n+pessoas%5Bi%5D = i + 1%0A   %7D%0A%0A   indiceEspada := -1%0A   for i, p := range pessoas %7B\n %0A   \n@@ -278,25 +278,25 @@\n  %7B%0A      if \n-i\n+p\n  == E %7B%0A    \n@@ -304,157 +304,136 @@\n     \n-pos = i - 1\n+indiceEspada = i\n %0A      \n-%7D%0A\n    \n-%7D%0A   for i, v := range vivos%7B\n+break%0A      %7D\n %0A   \n+%7D%0A\n    if i\n- == pos %7B%0A         fmt.Printf(%22%3E%25d %22, v)%0A      %7D else%7B%0A         fmt.Printf%0A   \n+ndiceEspada == -1%7B%0A      fmt.Println(%22N%C3%A3o Encontrado%22)%0A      return%0A\n    %7D%0A   \n %7D%0A%7D%0A\n@@ -428,12 +428,12 @@\n    %7D%0A   \n-%7D\n+%0A\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-30_21-32-03",
+            "content": "@@ -385,18 +385,8 @@\n intf\n-(%22%25d %22, v)\n %0A   \n@@ -399,58 +399,6 @@\n   %7D%0A\n-   fmt.Println()%0A%0A   alvo := (pos + 1) %25 len(vivos)%0A\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-30_21-33-32",
+            "content": "@@ -460,80 +460,7 @@\n vos)\n-%0A%0A   vivos = append(vivos, %5B:alvo%5D, vivos%5Balvo + 1:%5D...)%0A%0A   pos = alvo %25\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-30_21-35-14",
+            "content": "@@ -529,22 +529,11 @@\n = alvo %25\n- len(vivos)\n %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-30_21-35-37",
+            "content": "@@ -544,40 +544,7 @@\n vos)\n-%0A%0A   fmt.Printf(%22%25d%5Cn%22, vivos%5B0%5D)\n %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-30_21-37-09",
+            "content": "@@ -73,16 +73,22 @@\n mt.Scan(\n+%22%25d%22, \n &n_pesso\n@@ -103,16 +103,22 @@\n mt.Scan(\n+%22%25d%22, \n &E)%0A   %0A\n@@ -273,35 +273,8 @@\n   %7D%0A\n-%0A   for len(vivos) %3E 1%7B%0A   \n    f\n@@ -303,19 +303,16 @@\n %7B%0A      \n-   \n if i == \n@@ -317,19 +317,16 @@\n = pos %7B%0A\n-   \n         \n@@ -344,33 +344,24 @@\n (%22%3E%25d %22, v)%0A\n-         \n       %7D else\n@@ -371,25 +371,16 @@\n         \n-  \n-       \n fmt.Prin\n@@ -402,33 +402,18 @@\n     \n-         %7D%0A      \n+%7D%0A\n    %7D%0A   \n %0A   \n@@ -408,23 +408,16 @@\n    %7D%0A   \n-%0A      \n fmt.Prin\n@@ -423,19 +423,16 @@\n ntln()%0A%0A\n-   \n    alvo \n@@ -457,27 +457,24 @@\n (vivos)%0A%0A   \n- \n-  \n vivos = appe\n@@ -481,16 +481,18 @@\n nd(vivos\n+, \n %5B:alvo%5D,\n@@ -517,19 +517,16 @@\n ..)%0A%0A   \n-  \n- \n pos = al\n@@ -541,20 +541,16 @@\n (vivos)%0A\n-   %7D\n %0A   fmt.\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-30_21-42-54",
+            "content": "@@ -257,23 +257,17 @@\n  %7D%0A   %7D%0A\n-   %0A   \n+%0A\n    for l\n@@ -287,19 +287,16 @@\n %7B%0A      \n-   \n for i, v\n@@ -312,19 +312,16 @@\n  vivos%7B%0A\n-   \n         \n@@ -339,35 +339,32 @@\n s %7B%0A            \n-   \n fmt.Printf(%22%3E%25d \n@@ -361,35 +361,32 @@\n intf(%22%3E%25d %22, v)%0A\n-   \n                %7D\n@@ -402,35 +402,32 @@\n                 \n-   \n fmt.Printf(%22%25d %22\n@@ -446,24 +446,18 @@\n         \n-  \n- \n %7D%0A\n-   \n         \n@@ -462,23 +462,17 @@\n    %7D%0A   \n-  \n- %0A   \n+%0A\n       fm\n@@ -490,19 +490,16 @@\n %0A%0A      \n- \n-  \n alvo := \n@@ -522,19 +522,16 @@\n vivos)%0A%0A\n-   \n       vi\n@@ -581,27 +581,24 @@\n ...)%0A%0A      \n- \n-  \n pos = alvo %25\n@@ -609,19 +609,16 @@\n (vivos)%0A\n-   \n    %7D%0A   \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-30_21-49-49",
+            "content": "@@ -138,17 +138,16 @@\n s := -1%0A\n-%0A\n    for i\n@@ -261,38 +261,11 @@\n   %7D%0A\n-%0A\n    \n-for%7B%0A      fmt.Prinf(%22%5B %22)\n %0A   \n@@ -378,11 +378,11 @@\n tf(%22\n+%3E\n %25d\n-%3E\n  %22, \n@@ -695,30 +695,6 @@\n 0%5D)%0A\n-   fmt.Printf(%22%5D%22)%0A   %7D%0A\n %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-30_21-53-01",
+            "content": "@@ -281,17 +281,16 @@\n fmt.Prin\n-t\n f(%22%5B %22)%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_21-53-22",
+            "content": "@@ -735,17 +735,16 @@\n Printf(%22\n- \n %5D%22)%0A   %7D\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_21-53-36",
+            "content": "@@ -354,33 +354,8 @@\n os%7B%0A\n-            fmt.Print(v)%0A\n     \n@@ -404,12 +404,19 @@\n rint\n+f\n (%22\n-%3E%22\n+%25d%3E %22, v\n )%0A  \n@@ -424,33 +424,42 @@\n                %7D\n-%0A\n+ else%7B%0A   \n                 \n@@ -473,12 +473,18 @@\n rint\n+f\n (%22\n- %22\n+%25d %22, v\n )%0A  \n@@ -489,25 +489,52 @@\n             \n-%7D\n+      %7D%0A            %7D%0A      \n %0A         fm\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_21-57-03",
+            "content": "@@ -523,38 +523,10 @@\n tln(\n-%22%5D%22)%0A%0A         if len((vivos)\n )\n+%0A\n %0A   \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-30_21-58-48",
+            "content": "@@ -545,50 +545,16 @@\n len(\n+(\n vivos)\n- == 1%7B%0A            break%0A         %7D%0A\n+)\n %0A   \n@@ -688,19 +688,71 @@\n os)%0A      %7D%0A\n+   fmt.Printf(%22%25d%5Cn%22, vivos%5B0%5D)%0A   fmt.Printf(%22 %5D%22)%0A\n    %7D%0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_22-00-06",
+            "content": "@@ -224,32 +224,12 @@\n  == \n-i\n+E\n  %7B%0A\n-         if i == E%7B%0A\n     \n@@ -245,27 +245,16 @@\n = i - 1%0A\n-         %7D%0A\n       %7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_22-03-59",
+            "content": "@@ -249,28 +249,24 @@\n E%7B%0A         \n-    \n pos = i - 1%0A\n@@ -265,16 +265,16 @@\n = i - 1%0A\n+\n         \n@@ -298,17 +298,16 @@\n    for%7B%0A\n-%0A\n       fm\n@@ -321,17 +321,42 @@\n f(%22%5B %22)%0A\n+      for len(vivos) %3E 1%7B\n %0A\n-\n         \n@@ -521,33 +521,32 @@\n )%0A            %7D%0A\n-%0A\n          fmt.Pri\n@@ -750,21 +750,22 @@\n vivos)%0A      %7D%0A   %7D%0A\n+%7D\n %0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-30_22-05-27",
+            "content": "@@ -728,16 +728,17 @@\n en(vivos\n+)\n %0A      %7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-30_22-05-55",
+            "content": "@@ -741,108 +741,8 @@\n   %7D%0A\n-%0A      //lai laia laia laia laia laiil laia laia laia laia aia laial laialai laia laia alia laoa lai\n    %7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-30_22-12-29",
+            "content": "@@ -824,12 +824,27 @@\n ia laia \n+alia laoa lai  \n  %7D%0A%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-30_22-13-15",
+            "content": "@@ -739,15 +739,97 @@\n     %7D%0A%0A     \n+ //lai laia laia laia laia laiil laia laia laia laia aia laial laialai laia laia  \n %7D%0A%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-30_22-14-47",
+            "content": "@@ -728,17 +728,16 @@\n en(vivos\n-)\n %0A      %7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-30_22-14-55",
+            "content": "@@ -728,16 +728,17 @@\n en(vivos\n+)\n %0A      %7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-30_22-16-07",
+            "content": "@@ -733,218 +733,8 @@\n vos%0A\n-             %0A%0A%0A%0A%0A%0A%0A               ssnfdnfjndnjdnjnjdnnjdvvvr%0A               dokekeieffififkfirfrkoekfkekckfkekforkkdod%0A               ffkfififmorrfeewrfrswefddfd   %0A%0A               ijji jlkklkljokopkpo0o0o0o0%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-30_22-20-29",
+            "content": "@@ -898,92 +898,8 @@\n d   \n-hjjjokkokokkokokkkokkokokkokokokoooooooooooooooooooooooooooooooooooooooooooooooooooo\n %0A%0A  \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-30_22-23-46",
+            "content": "@@ -968,16 +968,26 @@\n oooooooo\n+oooooooooo\n %0A%0A      \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-30_22-24-52",
+            "content": "@@ -948,16 +948,36 @@\n oooooooo\n+oooooooooooooooooooo\n %0A%0A      \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-30_22-27-16",
+            "content": "@@ -899,16 +899,65 @@\n    hjjjo\n+kkokokkokokkkokkokokkokokokoooooooooooooooooooooo\n %0A%0A      \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-30_22-33-52",
+            "content": "@@ -876,16 +876,39 @@\n ififmorr\n+feewrfrswefddfd   hjjjo\n %0A%0A      \n@@ -933,16 +933,26 @@\n lkljokop\n+kpo0o0o0o0\n %0A      %7D\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-30_22-41-46",
+            "content": "@@ -728,17 +728,198 @@\n en(vivos\n-)\n+%0A             %0A%0A%0A%0A%0A%0A%0A               ssnfdnfjndnjdnjnjdnnjdvvvr%0A               dokekeieffififkfirfrkoekfkekckfkekforkkdod%0A               ffkfififmorr%0A%0A               ijji jlkklkljokop\n %0A      %7D\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-30_22-44-01",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   \n   var n_pessoas, E int\n   fmt.Scan(&n_pessoas)\n   fmt.Scan(&E)\n   \n   vivos := []int{}\n   pos := -1\n\n   for i := 1; i <= n_pessoas; i++{\n      vivos = append(vivos, i)\n      if i == i {\n         if i == E{\n             pos = i - 1\n         }\n      }\n   }\n\n   for{\n\n      fmt.Printf(\"[ \")\n\n         for i, v := range vivos{\n            fmt.Print(v)\n            if i == pos {\n               fmt.Print(\">\")\n                  }\n                  fmt.Print(\" \")\n            }\n\n         fmt.Println(\"]\")\n\n         if len(vivos) == 1{\n            break\n         }\n\n         alvo := (pos + 1) % len(vivos)\n\n         vivos = append(vivos[:alvo], vivos[alvo + 1:]...)\n\n         pos = alvo % len(vivos)\n      }\n\n     }\n\n",
+            "lines": "47"
+        }
+    ]
+}

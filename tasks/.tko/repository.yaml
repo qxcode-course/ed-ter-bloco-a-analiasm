@@ -19,8 +19,9 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisão
-- ed@main-quest
+- sandbox@00_rascunhos
+- ed@map_set
+- ed@basic
 tasks:
   ed@pintando: '{self:1, rate:100, study:61, friend:Nao, concept:1, debug:1}'
   ed@mumia: '{self:1, rate:100, study:92, friend:Nao, concept:1, problem:1, debug:1}'
@@ -30,12 +31,14 @@ tasks:
   ed@baruel: '{self:1, rate:100, study:163, friend:Nao, concept:1, problem:1, code:1,
     debug:1}'
   ed@gomos: '{self:1, rate:100, study:84, friend:Nao, concept:1, problem:1, debug:1}'
+  ed@princesa: '{self:1, rate:100, study:167, concept:1, debug:1}'
+  ed@apagando: '{self:1, rate:100, study:97, concept:1, debug:1}'
+  ed@manipulacao: '{self:1, rate:100, study:103, concept:1, debug:1}'
 flags:
-  painel: 0
-  quests: 0
-  tracks: 0
-  tasks: 0
+  panel: 0
+  inbox: 0
+  show_panel: 0
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@gomos
+selected: ed@baruel

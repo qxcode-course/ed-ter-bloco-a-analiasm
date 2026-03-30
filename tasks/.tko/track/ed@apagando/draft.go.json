@@ -1,0 +1,179 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-29_23-09-30",
+            "content": "@@ -279,191 +279,8 @@\n %0A%09%7D%0A\n-    %0A%09primeiro := true%0A%09for _, pessoa := range filaOrig%7B%0A%09%09if !saiu%5Bpessoa%5D%7B%0A%09%09%09if !primeiro%7B%0A%09%09%09%09fmt.Printf(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(pessoa)%0A%09%09%09primeiro = false%0A%09%09%7D%0A%09%7D%0A    fmt.Println()\n+%0A\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-29_23-14-52",
+            "content": "@@ -62,16 +62,22 @@\n mt.Scan(\n+%22%25d%22, \n &n)%0A%09fil\n@@ -169,16 +169,22 @@\n mt.Scan(\n+%22%25d%22, \n &m)%0A%09sai\n@@ -243,16 +243,22 @@\n mt.Scan(\n+%22%25d%22, \n &id)%0A%09%09s\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-16-57",
+            "content": "@@ -371,10 +371,8 @@\n tf(%22\n-%25d\n  %22)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-18-55",
+            "content": "@@ -373,27 +373,57 @@\n (%22%25d\n-%22, pessoa)%0A%09%09%09%7D%0A%09%09%09\n+ %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(pessoa)%0A%09%09%09primeiro = false\n %0A%09%09%7D\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-19-35",
+            "content": "@@ -369,17 +369,16 @@\n intf(%22%25d\n- \n %22, pesso\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-29_23-19-47",
+            "content": "@@ -371,57 +371,30 @@\n tf(%22\n- %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(pessoa)%0A%09%09%09primeiro = false\n+%25d %22, pessoa)%0A%09%09%09%7D%0A%09%09%09\n %0A%09%09%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-29_23-20-04",
+            "content": "@@ -367,16 +367,17 @@\n Printf(%22\n+ \n %22)%0A%09%09%09%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-20-11",
+            "content": "@@ -367,17 +367,16 @@\n Printf(%22\n- \n %22)%0A%09%09%09%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-20-17",
+            "content": "@@ -371,20 +371,10 @@\n tf(%22\n-%25d %22, pessoa\n+ %22\n )%0A%09%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-21-29",
+            "content": "@@ -367,18 +367,28 @@\n Printf(%22\n- %22\n+%25d %22, pessoa\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-21-50",
+            "content": "@@ -372,10 +372,8 @@\n f(%22 \n-%5Cn\n %22)%0A%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-23-19",
+            "content": "@@ -368,16 +368,18 @@\n rintf(%22 \n+%5Cn\n %22)%0A%09%09%09%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-23-35",
+            "content": "@@ -389,17 +389,16 @@\n t.Print(\n- \n pessoa)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-23-50",
+            "content": "@@ -389,16 +389,17 @@\n t.Print(\n+ \n pessoa)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-24-06",
+            "content": "@@ -424,10 +424,28 @@\n %0A%09%09%7D%0A%09%7D%0A\n+    fmt.Println()%0A\n %7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-24-21",
+            "content": "@@ -367,16 +367,17 @@\n Printf(%22\n+ \n %22)%0A%09%09%09%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-29_23-25-16",
+            "content": "@@ -367,17 +367,16 @@\n Printf(%22\n- \n %22)%0A%09%09%09%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-29_23-25-24",
+            "content": "@@ -367,17 +367,16 @@\n Printf(%22\n- \n  %22)%0A%09%09%09%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-29_23-25-47",
+            "content": "@@ -363,24 +363,25 @@\n fmt.Printf(%22\n+ \n  %22)%0A%09%09%09%7D%0A%09%09%09\n@@ -429,23 +429,6 @@\n %0A%09%7D%0A\n-%09fmt.Printf(%22 %22)%0A\n %7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-29_23-26-20",
+            "content": "@@ -441,10 +441,9 @@\n tf(%22\n-%5Cn\n+ \n %22)%0A%7D\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-26-35",
+            "content": "@@ -263,16 +263,32 @@\n %7D%0A    %0A%09\n+primeiro := true\n %0A%09for _,\n@@ -341,42 +341,94 @@\n %0A%09%09%09\n-fmt.Printf(%22%25d %22, pessoa)%0A%09%09%7D%0A\n+if !primeiro%7B%0A%09%09%09%09fmt.Printf(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(pessoa)%0A%09%09%09primeiro = false%0A%09\n %09%7D%0A%09\n+%7D\n %0A%09fm\n@@ -438,11 +438,14 @@\n rint\n-ln(\n+f(%22%5Cn%22\n )%0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_23-30-10",
+            "content": "@@ -257,16 +257,21 @@\n true%0A%09%7D%0A\n+    %0A\n %09%0A%09for _\n@@ -354,16 +354,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A%09fmt.Pr\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-29_23-30-30",
+            "content": "@@ -33,17 +33,16 @@\n ain() %7B%0A\n-%0A\n %09var n, \n@@ -51,16 +51,17 @@\n  id int%0A\n+%0A\n %09fmt.Sca\n@@ -145,16 +145,17 @@\n rig%5Bi%5D)%0A\n+%0A\n %09%7D%0A%0A    \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-29_23-31-11",
+            "content": "@@ -365,8 +365,9 @@\n ntln()%0A%7D\n+%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_23-31-53",
+            "content": "@@ -333,16 +333,17 @@\n (%22%25d %22, \n+p\n essoa)%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-30_16-15-38",
+            "content": "@@ -333,20 +333,20 @@\n (%22%25d %22, \n-p\n ess\n+o\n a)%0A%09%09%7D%0A%09\n@@ -367,113 +367,5 @@\n n()%0A\n-%0A%0A%0A%0A%0A%0A%09mkmkmmmkmmommmommmommmmommommoommmommommkkmkmkmkmkmkmmkmkkm m m m m m m m m m m m m m m m mkkmmkmkm %0A\n %7D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-30_16-23-47",
+            "content": "@@ -443,10 +443,37 @@\n  m m m m\n+ m m m m m m m m mkkmmkmkm \n %0A%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-29-39",
+            "content": "@@ -424,10 +424,29 @@\n mkmkmkmm\n+kmkkm m m m m m m m\n %0A%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-33-11",
+            "content": "@@ -382,10 +382,52 @@\n mmmkmmom\n+mmommmommmmommommoommmommommkkmkmkmkmkmkmm\n %0A%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-43-20",
+            "content": "@@ -365,9 +365,27 @@\n tln()%0A%0A%0A\n+%0A%0A%0A%0A%09mkmkmmmkmmom%0A\n %7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-45-44",
+            "content": "@@ -337,17 +337,16 @@\n  %22, pess\n-o\n a)%0A%09%09%7D%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_16-45-54",
+            "content": "@@ -333,16 +333,17 @@\n (%22%25d %22, \n+p\n essoa)%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_18-17-41",
+            "content": "@@ -333,17 +333,16 @@\n (%22%25d %22, \n-p\n essoa)%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_18-31-18",
+            "content": "@@ -365,9 +365,10 @@\n ntln()%0A%0A\n+%0A\n %7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_18-45-28",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n\tvar n, m, id int\n\tfmt.Scan(&n)\n\tfilaOrig := make([]int, n)\n\n\tfor i := 0; i < n; i++{\n\t\tfmt.Scan(&filaOrig[i])\n\t}\n\n    fmt.Scan(&m)\n\tsaiu := make(map[int]bool)\n\tfor i := 0; i < m; i++{\n\t\tfmt.Scan(&id)\n\t\tsaiu[id] = true\n\t}\n\t\n\tfor _, pessoa := range filaOrig{\n\t\tif !saiu[pessoa]{\n\t\t\tfmt.Printf(\"%d \", pessoa)\n\t\t}\n\t}\n\n\tfmt.Println()\n\n}",
+            "lines": "28"
+        }
+    ]
+}
