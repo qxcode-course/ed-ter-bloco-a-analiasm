@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_22-21-47",
+            "content": "@@ -85,101 +85,46 @@\n   %7D%0A\n-    divisaocresto(n/2)%0A    fmt.Printf(%22%25d %25d%5Cn%22, n/2, n%252)%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    \n+%7D%0Afunc main() %7B%0A    fmt.Println(%22Hello,\n %0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-04-06_22-24-34",
+            "content": "@@ -179,41 +179,7 @@\n     \n-fmt.Scan(&n)%0A%0A    divisaocresto(n)\n %0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-06_22-25-53",
+            "content": "@@ -22,17 +22,16 @@\n fmt%22%0Afun\n-c\n  divisao\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-06_22-26-07",
+            "content": "@@ -86,13 +86,8 @@\n   %7D%0A\n-    %0A\n     \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-06_22-26-28",
+            "content": "package main\nimport \"fmt\"\nfunc divisaocresto(n int){\n    if n == 0{\n        return\n    }\n    \n    divisaocresto(n/2)\n    fmt.Printf(\"%d %d\\n\", n/2, n%2)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    divisaocresto(n)\n}\n",
+            "lines": "17"
+        }
+    ]
+}
