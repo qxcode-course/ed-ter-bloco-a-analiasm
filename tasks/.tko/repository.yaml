@@ -2,43 +2,32 @@ version: '0.2'
 sources:
 - name: sandbox
   target: sandbox
+  index: README.md
   type: local
   writeable: true
   quests: null
   tasks: null
 - name: poo
   target: https://github.com/qxcodepoo/arcade.git
+  index: README.md
   type: git
   writeable: false
   quests: null
   tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
+  index: README.md
   type: git
   writeable: false
   quests: null
   tasks: null
 expanded:
-- sandbox@00_rascunhos
-- ed@map_set
-- ed@basic
-tasks:
-  ed@pintando: '{self:1, rate:100, study:61, friend:Nao, concept:1, debug:1}'
-  ed@mumia: '{self:1, rate:100, study:92, friend:Nao, concept:1, problem:1, debug:1}'
-  ed@fuga: '{self:1, rate:100, study:60, friend:Nao, concept:1, problem:1, debug:1}'
-  ed@pedra: '{self:1, rate:100, study:89, friend:Nao, concept:1, problem:1, debug:1}'
-  ed@casais: '{self:1, rate:100, study:65, friend:Nao, concept:1, problem:1, debug:1}'
-  ed@baruel: '{self:1, rate:100, study:163, friend:Nao, concept:1, problem:1, code:1,
-    debug:1}'
-  ed@gomos: '{self:1, rate:100, study:84, friend:Nao, concept:1, problem:1, debug:1}'
-  ed@princesa: '{self:1, rate:100, study:167, concept:1, debug:1}'
-  ed@apagando: '{self:1, rate:100, study:97, concept:1, debug:1}'
-  ed@manipulacao: '{self:1, rate:100, study:103, concept:1, debug:1}'
+- ed@rec
 flags:
-  panel: 0
-  inbox: 0
-  show_panel: 0
-  task_graph_mode: 0
-  show_time: 0
+  inbox: inbox
+  panel: help
+  show_panel: 'false'
+  task_graph_mode: executions
+  show_time: 'true'
 lang: go
-selected: ed@baruel
+selected: ed@mdc

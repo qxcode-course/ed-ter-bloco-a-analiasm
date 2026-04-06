@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_13-43-30",
+            "content": "@@ -170,18 +170,16 @@\n umc %7C%7C l\n-in\n  %3C 0 %7C%7C \n@@ -179,18 +179,16 @@\n %3C 0 %7C%7C l\n-in\n  %3E= numl\n@@ -289,122 +289,27 @@\n  %7B%0A%09\n-if e_valor(grid, l, c, '#')%7B%0A%09%09return %0A%09%7D%0A%0A%09grid%5Bl%5D%5Bc%5D = 'o'%0A%09burnTrees(grid, l, c - 1)%0A%09burnTrees(grid, l - 1\n+_, _, _ = mat, l\n , c\n-)\n %0A%09//\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-01_13-50-05",
+            "content": "@@ -381,33 +381,8 @@\n  1)%0A\n-%09burnTrees(grid, l, c+1)%0A\n %09bur\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-01_13-51-24",
+            "content": "@@ -402,11 +402,9 @@\n l, c\n- + \n++\n 1)%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-01_13-51-39",
+            "content": "@@ -435,36 +435,8 @@\n  c)%0A\n-%09burnTrees(grid, l + 1, c))%0A\n %09// \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-01_13-52-15",
+            "content": "@@ -457,16 +457,17 @@\n  + 1, c)\n+)\n %0A%09// se \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-01_13-52-25",
+            "content": "@@ -66,24 +66,26 @@\n  %5B%5D%5B%5Drune, l\n+in\n , c int, val\n@@ -101,17 +101,21 @@\n bool%7B%0A%09n\n-l\n+umlin\n  := len(\n@@ -123,16 +123,18 @@\n rid) %0A%09n\n+um\n c := len\n@@ -166,14 +166,18 @@\n %3E= n\n+um\n c %7C%7C l\n+in\n  %3C 0\n@@ -185,14 +185,20 @@\n %7C%7C l\n+in\n  %3E= n\n-l\n+umlin\n %7B%0A%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-01_13-54-41",
+            "content": "@@ -205,24 +205,26 @@\n eturn grid%5Bl\n+in\n %5D%5Bc%5D == valu\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-01_13-54-48",
+            "content": "@@ -66,26 +66,24 @@\n  %5B%5D%5B%5Drune, l\n-in\n , c int, val\n@@ -99,21 +99,17 @@\n bool%7B%0A%09n\n-umlin\n+l\n  := len(\n@@ -117,18 +117,16 @@\n rid) %0A%09n\n-um\n c := len\n@@ -158,18 +158,14 @@\n %3E= n\n-um\n c %7C%7C l\n-in\n  %3C 0\n@@ -173,20 +173,14 @@\n %7C%7C l\n-in\n  %3E= n\n-umlin\n+l\n %7B%0A%09%09\n@@ -205,26 +205,24 @@\n eturn grid%5Bl\n-in\n %5D%5Bc%5D == valu\n@@ -257,18 +257,16 @@\n %5Drune, l\n-in\n , c int)\n@@ -276,9 +276,8 @@\n %09if \n-!\n e_va\n@@ -287,18 +287,16 @@\n (grid, l\n-in\n , c, '#'\n@@ -319,18 +319,16 @@\n %0A%09grid%5Bl\n-in\n %5D%5Bc%5D = '\n@@ -344,26 +344,24 @@\n rees(grid, l\n-in\n , c - 1)%0A%09bu\n@@ -375,18 +375,16 @@\n (grid, l\n-in\n , c + 1)\n@@ -402,18 +402,16 @@\n (grid, l\n-in\n  - 1, c)\n@@ -429,18 +429,16 @@\n (grid, l\n-in\n  + 1, c)\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-01_13-57-04",
+            "content": "@@ -336,16 +336,17 @@\n urn %0A%09%7D%0A\n+%0A\n %09grid%5Bli\n@@ -473,18 +473,16 @@\n + 1, c)%0A\n-%0A%0A\n %09// se e\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-01_14-07-36",
+            "content": "@@ -469,16 +469,18 @@\n in + 1, \n+c)\n %0A%0A%0A%09// s\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-01_14-07-48",
+            "content": "@@ -469,18 +469,16 @@\n in + 1, \n-c)\n %0A%0A%0A%09// s\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-01_14-13-33",
+            "content": "@@ -469,16 +469,18 @@\n in + 1, \n+c)\n %0A%0A%0A%09// s\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-01_14-13-45",
+            "content": "@@ -469,18 +469,16 @@\n in + 1, \n-c)\n %0A%0A%0A%09// s\n@@ -672,17 +672,16 @@\n izinhos%0A\n-%09\n %7D%0A%0Afunc \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-06_18-52-07",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc e_valor(grid [][]rune, lin, c int, value rune) bool{\n\tnumlin := len(grid) \n\tnumc := len(grid[0])\n\tif c < 0 || c >= numc || lin < 0 || lin >= numlin{\n\t\treturn false\n\t}\n\treturn grid[lin][c] == value\n}\n\nfunc burnTrees(grid [][]rune, lin, c int) {\n\tif !e_valor(grid, lin, c, '#'){\n\t\treturn \n\t}\n\tgrid[lin][c] = 'o'\n\tburnTrees(grid, lin, c - 1)\n\tburnTrees(grid, lin, c + 1)\n\tburnTrees(grid, lin - 1, c)\n\tburnTrees(grid, lin + 1, c)\n\n\n\t// se estiver fora da matriz, retorne\n\t// se o elemento atual n\u00e3o for uma arvore, retorne\n\t// queime a arvore colocando o caractere 'o' na posi\u00e7\u00e3o atual\n\t// chame a recurs\u00e3o para todos os 4 vizinhos\n\t}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "56"
+        }
+    ]
+}

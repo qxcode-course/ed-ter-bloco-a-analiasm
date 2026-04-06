@@ -1,0 +1,31 @@
+2026-04-06 18:49:15, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-06 18:49:35, EXEC, v:1, k:ed@queimada, mode:FULL, fail:COMP
+2026-04-06 18:52:07, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100, size:56
+2026-04-06 18:52:15, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-04-06 18:53:06, SELF, v:1, k:ed@queimada, self:1, rate:100, study:44, guided:1
+2026-04-06 18:53:13, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-06 19:02:50, EXEC, v:1, k:ed@labirinto, mode:FULL, size:48, fail:COMP
+2026-04-06 19:15:04, EXEC, v:1, k:ed@labirinto, mode:FULL, size:63, fail:COMP
+2026-04-06 19:23:22, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:80
+2026-04-06 19:23:37, EXEC, v:1, k:ed@labirinto, mode:FULL, size:80, fail:COMP
+2026-04-06 19:24:12, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-04-06 19:24:31, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:80
+2026-04-06 19:24:42, EXEC, v:1, k:ed@labirinto, mode:FULL, size:80, fail:COMP
+2026-04-06 19:25:44, EXEC, v:1, k:ed@labirinto, mode:FULL, size:80, fail:COMP
+2026-04-06 19:30:14, EXEC, v:1, k:ed@labirinto, mode:FULL, size:80, fail:COMP
+2026-04-06 19:30:33, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:80
+2026-04-06 19:30:37, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-06 19:32:31, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:38, concept:1
+2026-04-06 19:34:29, MOVE, v:1, k:ed@eh_primo, mode:DOWN
+2026-04-06 19:34:29, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-06 19:41:56, EXEC, v:1, k:ed@eh_primo, mode:FULL, size:19, fail:COMP
+2026-04-06 19:53:35, EXEC, v:1, k:ed@eh_primo, mode:FULL, size:22, fail:COMP
+2026-04-06 20:05:14, EXEC, v:1, k:ed@eh_primo, mode:FULL, size:25, fail:COMP
+2026-04-06 20:14:16, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:31
+2026-04-06 20:14:26, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-06 20:15:54, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:39, concept:1
+2026-04-06 20:18:18, MOVE, v:1, k:ed@mdc, mode:DOWN
+2026-04-06 20:18:20, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-06 20:24:25, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100, size:20
+2026-04-06 20:24:28, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-06 20:25:18, SELF, v:1, k:ed@mdc, self:1, rate:100, study:6
