@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-11_14-42-38",
+            "content": "@@ -1725,140 +1725,10 @@\n Tree\n-(p *Pen, length float64)%7B%0A%09if length %3C 5%7B%0A%09%09return%0A%09%7D%0A%09p.Walk(length)%0A%09p.Left(30)%0A%09drawTree(p, length*0.7)%0A%09p.Right(60)%0A%09drawTree(p,)\n+%7B%0A%09\n %0A%7D%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-04-11_15-04-47",
+            "content": "@@ -1857,66 +1857,8 @@\n e(p,\n- length*0.7)%0A%09p.Left(30)%0A%09p.Up()%0A%09p.Walk(-length)%0A%09p.Down(\n )%0A%7D%0A\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-04-11_15-44-17",
+            "content": "@@ -144,23 +144,8 @@\n ext%0A\n-%09stack %5B%5DState%0A\n %7D%0A%0Af\n@@ -1919,266 +1919,4 @@\n )%0A%7D%0A\n-%0Atype State struct%7B%0A%09x, y, angle float64%0A%7D%0A%0Afunc (t *Pen) Push()%7B%0A%09t.stack = append(t.stack, State%7Bt.x, t.y, t.angle%7D)%0A%7D%0A%0Afunc (t *Pen) Pop()%7B%0A%09last := t.stack%5Blen(t.stack)-1%5D%0A%09t.x, t.y, t.angle = last.x, last.y, last.angle%0A%09t.stack = t.stack%5B:len(t.stack)-1%5D%0A%7D%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-04-11_16-04-00",
+            "content": "@@ -2196,324 +2196,4 @@\n %5D%0A%7D%0A\n-%0Afunc DrawCircleFractal(p *Pen, radius float64, depth int)%7B%0A%09if depth %3C= 0 %7C%7C radius %3C 2%7B%0A%09%09return%0A%09%7D%0A%0A%09p.DrawCircle(radius)%0A%0A%09angles := %5B%5Dfloat64%7B0, 90, 180, 270%7D%0A%0A%09for _, a := range angles%7B%0A%09%09p.Push()%0A%09%09p.SetHeading(a)%0A%09%09p.Up()%0A%09%09p.Walk(radius)%0A%09%09p.Down()%0A%0A%09%09DrawCircleFractal(p, radius *0.5, depth-1)%0A%0A%09%09p.Pop()%0A%09%7D%0A%7D%0A\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-04-11_16-39-12",
+            "content": "@@ -28,15 +28,8 @@\n th%22%0A\n-%09%22fmt%22%0A\n %09%22gi\n@@ -2507,14 +2507,13 @@\n p.Pop()%0A\n-%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-04-11_16-41-39",
+            "content": "@@ -2519,11 +2519,8 @@\n ()%0A%0A\n-%09%09%0A\n %09%7D%0A%7D\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-04-11_16-42-00",
+            "content": "@@ -24,16 +24,23 @@\n %09%22math%22%0A\n+%09%22fmt%22%0A\n %09%22github\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-04-11_16-42-35",
+            "content": "@@ -2507,19 +2507,17 @@\n p.Pop()%0A\n+%0A%09%09%0A\n %09%7D%0A%7D\n-%0A%0Afunc\n %0A\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-04-11_16-43-52",
+            "content": "@@ -2505,16 +2505,21 @@\n %09%09p.Pop()%0A%09%7D%0A%7D%0A%0A\n+func%0A\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-04-11_16-44-30",
+            "content": "@@ -2517,367 +2517,4 @@\n %0A%7D%0A%0A\n-func drawIceFractal(p *Pen, length float64, depth int)%7B%0A%09if depth %3C= 0%7B%0A%09%09return%0A%09%7D%0A%09p.Walk(length)%0A%0A%09p.Push()%0A%09p.Left(60)%0A%09drawIceFractal(p, length*0.5, depth-1)%0A%09p.Pop()%0A%7D%0A%0Afunc drawSnowflake(p *Pen, size float64, depth int)%7B%0A%09p.Up()%0A%09p.Down()%0A%0A%09for i := 0; i %3C 6; i++%7B%0A%09%09p.Push()%0A%09%09p.SetHeading(float64(i * 60))%0A%09%09drawIceFractal(p, size, depth)%0A%09%09p.Pop()%0A%09%7D%0A%7D%0A\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-04-12_12-13-34",
+            "content": "@@ -2880,292 +2880,4 @@\n %7D%0A%7D%0A\n-func drawScareTreeFractal(p, *Pen, size float64, depth int)%7B%0A%09if depth %3C= 0 %7C%7C size %3C 2%7B%0A%09%09return%0A%09%7D%0A%09p.FillSquare(size, size)%0A%09nextSize := size * 0.7%0A%09offser := (nextSize - size)/2%0A    %0A%09p.Push()%0A%09p.SetPosition(p.x + offset, p.y + size)%0A%09drawIceFractal(p, nextSize, depth-1)%0A%09p.Pop()%0A%7D%0A%0A\n",
+            "lines": "172"
+        },
+        {
+            "label": "2026-04-12_12-22-35",
+            "content": "@@ -2899,24 +2899,25 @@\n reeFractal(p\n+,\n  *Pen, size \n",
+            "lines": "186"
+        },
+        {
+            "label": "2026-04-12_12-22-47",
+            "content": "@@ -3032,17 +3032,17 @@\n 7%0A%09offse\n-t\n+r\n  := (nex\n",
+            "lines": "186"
+        },
+        {
+            "label": "2026-04-12_12-23-56",
+            "content": "package main\n\nimport (\n\t\"math\"\n\t\"github.com/fogleman/gg\"\n)\n\ntype Pen struct {\n\tx, y    float64\n\tangle   float64\n\tpenDown bool\n\tdc      *gg.Context\n\tstack []State\n}\n\nfunc NewPen(width, height int) *Pen {\n\tdc := gg.NewContext(width, height)\n\tdc.SetRGB(1, 1, 1)\n\tdc.Clear()\n\tdc.SetRGB(0, 0, 0)\n\tdc.SetLineWidth(2)\n\treturn &Pen{\n\t\tx: float64(width) / 2, y: float64(height) / 2,\n\t\tangle: 0, penDown: true, dc: dc,\n\t}\n}\n\nfunc (t *Pen) Walk(dist float64) {\n\tnewX := t.x + dist*math.Cos(t.angle*math.Pi/180)\n\tnewY := t.y - dist*math.Sin(t.angle*math.Pi/180)\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, newX, newY)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = newX, newY\n}\n\nfunc (t *Pen) Left(deg float64)  { t.angle += deg }\nfunc (t *Pen) Right(deg float64) { t.angle -= deg }\n\nfunc (t *Pen) Up()   { t.penDown = false }\nfunc (t *Pen) Down() { t.penDown = true }\n\nfunc (t *Pen) Goto(x, y float64) {\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, x, y)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = x, y\n}\n\nfunc (t *Pen) SetPosition(x, y float64) {\n\tt.x = x\n\tt.y = y\n}\n\nfunc (t *Pen) SetHeading(angle float64) {\n\tt.angle = angle\n}\n\nfunc (t *Pen) DrawCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) DrawRect(w, h float64) {\n\tif t.penDown {\n\t\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) FillCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Fill()\n\t}\n}\n\nfunc (t *Pen) FillSquare(w, h float64) {\n\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\tt.dc.Fill()\n}\n\nfunc (t *Pen) SetRGB(r, g, b float64) {\n\tt.dc.SetRGB(r/255, g/255, b/255)\n}\n\nfunc (t *Pen) SetLineWidth(w float64) {\n\tt.dc.SetLineWidth(w)\n}\n\nfunc (t *Pen) SavePNG(path string) {\n\tt.dc.SavePNG(path)\n}\n  \nfunc drawTree(p *Pen, length float64){\n\tif length < 5{\n\t\treturn\n\t}\n\tp.Walk(length)\n\tp.Left(30)\n\tdrawTree(p, length*0.7)\n\tp.Right(60)\n\tdrawTree(p, length*0.7)\n\tp.Left(30)\n\tp.Up()\n\tp.Walk(-length)\n\tp.Down()\n}\n\ntype State struct{\n\tx, y, angle float64\n}\n\nfunc (t *Pen) Push(){\n\tt.stack = append(t.stack, State{t.x, t.y, t.angle})\n}\n\nfunc (t *Pen) Pop(){\n\tlast := t.stack[len(t.stack)-1]\n\tt.x, t.y, t.angle = last.x, last.y, last.angle\n\tt.stack = t.stack[:len(t.stack)-1]\n}\n\nfunc DrawCircleFractal(p *Pen, radius float64, depth int){\n\tif depth <= 0 || radius < 2{\n\t\treturn\n\t}\n\n\tp.DrawCircle(radius)\n\n\tangles := []float64{0, 90, 180, 270}\n\n\tfor _, a := range angles{\n\t\tp.Push()\n\t\tp.SetHeading(a)\n\t\tp.Up()\n\t\tp.Walk(radius)\n\t\tp.Down()\n\n\t\tDrawCircleFractal(p, radius *0.5, depth-1)\n\n\t\tp.Pop()\n\t}\n}\n\nfunc drawIceFractal(p *Pen, length float64, depth int){\n\tif depth <= 0{\n\t\treturn\n\t}\n\tp.Walk(length)\n\n\tp.Push()\n\tp.Left(60)\n\tdrawIceFractal(p, length*0.5, depth-1)\n\tp.Pop()\n}\n\nfunc drawSnowflake(p *Pen, size float64, depth int){\n\tp.Up()\n\tp.Down()\n\n\tfor i := 0; i < 6; i++{\n\t\tp.Push()\n\t\tp.SetHeading(float64(i * 60))\n\t\tdrawIceFractal(p, size, depth)\n\t\tp.Pop()\n\t}\n}\nfunc drawScareTreeFractal(p *Pen, size float64, depth int){\n\tif depth <= 0 || size < 2{\n\t\treturn\n\t}\n\tp.FillSquare(size, size)\n\tnextSize := size * 0.7\n\toffset := (nextSize - size)/2\n    \n\tp.Push()\n\tp.SetPosition(p.x + offset, p.y + size)\n\tdrawIceFractal(p, nextSize, depth-1)\n\tp.Pop()\n}\n\n",
+            "lines": "186"
+        }
+    ]
+}

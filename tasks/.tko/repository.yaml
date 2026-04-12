@@ -25,9 +25,9 @@ expanded:
 - ed@rec
 flags:
   inbox: inbox
-  panel: help
-  show_panel: 'false'
+  panel: graph
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@mdc
+selected: ed@fractais_png

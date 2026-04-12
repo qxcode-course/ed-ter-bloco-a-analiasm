@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_16-59-01",
+            "content": "@@ -364,37 +364,8 @@\n %0A%09%7D%0A\n-%09return equals(a%5B1:%5D, b%5B1:%5D)%0A\n %7D%0A%0Af\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-08_17-00-04",
+            "content": "@@ -211,11 +211,10 @@\n o(a)\n- &&\n+%7C%7C\n  EhV\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-08_17-01-27",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc EhVazio(vet []int) bool {\n\treturn fmt.Sprint(vet) == \"[]\"\n}\n\n// n\u00e3o altere a assinatura\nfunc equals(a []int, b []int) bool {\n\tif EhVazio(a) && EhVazio(b){\n\t\treturn true\n\t}\n\n\tif EhVazio(a)||EhVazio(b){\n\t\treturn false\n\t}\n\n\tif a[0] != b[0]{\n\t\treturn false\n\t}\n\n\tif a[0] != b[0]{\n\t\treturn false\n\t}\n\treturn equals(a[1:], b[1:])\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tscanner.Scan()\n\tvet1 := str2slice(scanner.Text())\n\tscanner.Scan()\n\tvet2 := str2slice(scanner.Text())\n\tif equals(vet1, vet2) {\n\t\tfmt.Println(\"iguais\")\n\t} else {\n\t\tfmt.Println(\"diferentes\")\n\t}\n}\n\nfunc str2slice(line string) []int {\n\tparts := strings.Fields(line)\n\tnums := make([]int, 0)\n\tfor i := 1; i < len(parts)-1; i++ {\n\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\tnums = append(nums, value)\n\t}\n\treturn nums\n}\n",
+            "lines": "57"
+        }
+    ]
+}

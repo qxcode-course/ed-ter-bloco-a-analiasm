@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_16-21-52",
+            "content": "@@ -125,147 +125,8 @@\n %0A%09%7D%0A\n-%09if len(vet) %3E 1%7B%0A%09%09auxiliar := make(%5B%5Dint, len(vet)-1)%0A%0A%09%09for i := 0; i %3C len(vet)-1; i++%7B%0A%09%09%09auxiliar%5Bi%5D = vet%5Bi%5D + vet%5Bi + 1%5D%0A%09%09%7D%0A%09%09%0A%09%7D%0A\n %7D%0A%0Af\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-08_16-25-09",
+            "content": "@@ -260,26 +260,8 @@\n %7D%0A%09%09\n-processa(auxiliar)\n %0A%09%7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-08_16-25-46",
+            "content": "@@ -282,51 +282,8 @@\n %0A%09%7D%0A\n-    fmt.Printf(%22%5B %25s %5D%5Cn%22, Join(vet, %22 %22))%0A\n %7D%0A%0Af\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-08_16-30-40",
+            "content": "@@ -116,16 +116,17 @@\n %0A%09%09retur\n+n\n %0A%09%7D%0A%09if \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-08_16-31-14",
+            "content": "@@ -112,25 +112,24 @@\n = 0%7B%0A%09%09retur\n-n\n %0A%09%7D%0A%09if len(\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-08_16-34-27",
+            "content": "@@ -116,16 +116,17 @@\n %0A%09%09retur\n+n\n %0A%09%7D%0A%09if \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-08_16-35-25",
+            "content": "@@ -112,25 +112,24 @@\n = 0%7B%0A%09%09retur\n-n\n %0A%09%7D%0A%09if len(\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-08_16-42-07",
+            "content": "@@ -248,16 +248,17 @@\n et%5Bi + 1\n+%5D\n %0A%09%09%7D%0A%09%09p\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-08_16-42-49",
+            "content": "@@ -248,17 +248,16 @@\n et%5Bi + 1\n-%5D\n %0A%09%09%7D%0A%09%09p\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-08_16-46-55",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc processa(vet []int) {\n\tif len(vet) == 0{\n\t\treturn\n\t}\n\tif len(vet) > 1{\n\t\tauxiliar := make([]int, len(vet)-1)\n\n\t\tfor i := 0; i < len(vet)-1; i++{\n\t\t\tauxiliar[i] = vet[i] + vet[i + 1]\n\t\t}\n\t\tprocessa(auxiliar)\n\t}\n    fmt.Printf(\"[ %s ]\\n\", Join(vet, \" \"))\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tvet := []int{}\n\tfor _, part := range parts {\n\t\tif value, err := strconv.Atoi(part); err == nil {\n\t\t\tvet = append(vet, value)\n\t\t}\n\t}\n\tprocessa(vet)\n}\n\nfunc Join[T any](v []T, sep string) string {\n\tif len(v) == 0 {\n\t\treturn \"\"\n\t}\n\ts := \"\"\n\tfor i, x := range v {\n\t\tif i > 0 {\n\t\t\ts += sep\n\t\t}\n\t\ts += fmt.Sprintf(\"%v\", x)\n\t}\n\treturn s\n}\n",
+            "lines": "54"
+        }
+    ]
+}
