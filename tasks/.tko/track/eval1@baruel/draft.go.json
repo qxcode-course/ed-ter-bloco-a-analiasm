@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-28-16",
+            "content": "@@ -110,10 +110,43 @@\n  bfig)%0A%0A\n+    fmt.Println(%22Hello, World!%22)%0A\n %7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-04-14_13-28-31",
+            "content": "@@ -41,23 +41,19 @@\n     var \n-qtdtalb\n+fig\n , bfig i\n@@ -60,17 +60,16 @@\n nt%0A    %0A\n-%0A\n     fmt.\n@@ -83,15 +83,11 @@\n d%22, \n-qtdtalb\n+fig\n )%0A  \n@@ -103,13 +103,17 @@\n n(%22%25d%22, \n+bfig\n )%0A%0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-14_13-30-55",
+            "content": "@@ -50,19 +50,16 @@\n tdtalb, \n-qtd\n bfig int\n@@ -116,15 +116,8 @@\n d%22, \n-qtdbfig\n )%0A%0A%7D\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-04-14_13-31-05",
+            "content": "@@ -70,23 +70,8 @@\n     \n-var seq%5B100%5Dint\n %0A%0A  \n@@ -128,32 +128,7 @@\n ig)%0A\n-    fmt.Scan(%22%25d%22, seq)%0A%0A\n %0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-04-14_13-33-53",
+            "content": "@@ -61,11 +61,8 @@\n bfig\n-, i\n  int\n@@ -143,43 +143,8 @@\n ig)%0A\n-%0A    for i = 0; i %3C qtdbfig; i++%7B%0A \n     \n@@ -167,12 +167,8 @@\n eq)%0A\n-    %7D\n+%0A\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-04-14_13-39-59",
+            "content": "@@ -99,16 +99,22 @@\n mt.Scan(\n+%22%25d%22, \n qtdtalb)\n@@ -127,16 +127,22 @@\n mt.Scan(\n+%22%25d%22, \n qtdbfig)\n@@ -190,16 +190,22 @@\n mt.Scan(\n+%22%25d%22, \n seq)%0A   \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-14_13-40-25",
+            "content": "@@ -64,19 +64,8 @@\n g, i\n-, duplicada\n  int\n@@ -192,66 +192,7 @@\n    %7D\n-%0A%0A    if seq%5Bi%5D == seq%5Bi + 1%5D%7B%0A        duplicada += 1%0A    %7D\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-14_13-44-32",
+            "content": "@@ -60,16 +60,27 @@\n dbfig, i\n+, duplicada\n  int%0A   \n@@ -99,30 +99,8 @@\n %5Dint\n-%0A    var duplicada = 0\n %0A%0A  \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-14_13-45-30",
+            "content": "@@ -157,24 +157,8 @@\n g)%0A%0A\n-%0A    for %7B%0A%0A    \n     \n@@ -187,27 +187,24 @@\n ; i++%7B%0A     \n- \n-  \n fmt.Scan(seq\n@@ -205,35 +205,27 @@\n an(seq)%0A    \n-    %7D%0A%0A    \n+%7D%0A%0A\n     if seq%5Bi\n@@ -268,48 +268,8 @@\n = 1%0A\n-        %7D%0A%0A        fmt.Print(duplicada)%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_13-49-41",
+            "content": "@@ -158,16 +158,21 @@\n )%0A%0A%0A    \n+for %7B\n %0A%0A      \n@@ -335,11 +335,12 @@\n da)%0A    \n+%7D\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_13-52-18",
+            "content": "@@ -168,71 +168,8 @@\n     \n-for i = 0; i %3C qtdbfig; i++%7B%0A    fmt.Scan(seq)%0A    %7D%0A        %0A%0A\n     \n@@ -196,16 +196,48 @@\n ig; i++%7B\n+%0A        fmt.Scan(seq)%0A        %7D\n %0A%0A      \n@@ -271,20 +271,16 @@\n         \n-    \n duplicad\n@@ -305,15 +305,8 @@\n     \n-%7D%0A    %0A\n     \n@@ -330,17 +330,8 @@\n da)%0A\n-        %0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_13-55-31",
+            "content": "@@ -327,28 +327,36 @@\n 1%0A        %7D%0A\n+%0A\n     \n+%7D%0A    %0A\n     fmt.Prin\n@@ -368,22 +368,16 @@\n licada)%0A\n-    %7D%0A\n         \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_13-57-16",
+            "content": "@@ -325,50 +325,8 @@\n = 1%0A\n-        %7Delse%7B%0A            fmt.Print(%22N%22)%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_14-35-44",
+            "content": "@@ -334,43 +334,12 @@\n    %7D\n-%0A        %0A        if duplicada == 0\n+else\n %7B%0A  \n@@ -369,24 +369,53 @@\n )%0A        %7D%0A\n+        fmt.Print(duplicada)%0A\n     %7D%0A      \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_14-37-31",
+            "content": "@@ -154,16 +154,22 @@\n bfig)%0A%0A%0A\n+    %0A%0A\n     for \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_14-57-38",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtdtalb, qtdbfig, i int\n    var seq[100]int\n    var duplicada = 0\n\n    fmt.Scan(qtdtalb)\n    fmt.Scan(qtdbfig)\n\n\n    for i = 0; i < qtdbfig; i++{\n    fmt.Scan(seq)\n    }\n        \n\n    for i = 0; i < qtdbfig; i++{\n\n        if seq[i] == seq[i + 1]{\n            duplicada += 1\n        }\n        \n        if duplicada == 0{\n            fmt.Print(\"N\")\n        }\n    }\n        \n    \n}\n",
+            "lines": "29"
+        }
+    ]
+}

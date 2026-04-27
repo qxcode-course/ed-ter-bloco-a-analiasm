@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-11-47",
+            "content": "@@ -56,16 +56,25 @@\n pfsaiu, \n+idpfsaiu,\n  i int%0Av\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_14-12-03",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\nvar pfinicial, pfsaiu,  i int\nvar idpf[100]int\nfmt.Scan(pfinicial)\n\nfor i = 0; i < pfinicial; i++{\n\tfmt.Scan(idpf)\n}\n\nfmt.Scan(pfsaiu)\n\n\n\n\n\n}\n",
+            "lines": "18"
+        }
+    ]
+}
