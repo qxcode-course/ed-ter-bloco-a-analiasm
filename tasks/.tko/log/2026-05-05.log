@@ -1,0 +1,20 @@
+2026-05-05 13:30:15, MOVE, v:1, k:ed@editor, mode:DOWN
+2026-05-05 13:30:17, MOVE, v:1, k:ed@editor, mode:PICK
+2026-05-05 13:30:31, MOVE, v:1, k:ed@editor, mode:BACK
+2026-05-05 13:30:35, MOVE, v:1, k:ed@editorint, mode:DOWN
+2026-05-05 13:30:37, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 13:30:15, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-05 13:30:15, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-05 13:30:15, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-05 13:30:35, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 13:30:35, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 13:30:35, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 13:30:35, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 13:30:35, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 13:32:49, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 13:37:17, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-05 13:46:51, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-05 13:48:29, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-05 21:20:37, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 22:05:42, EXEC, v:1, k:ed@editorint, mode:FULL, size:310, fail:COMP
+2026-05-05 22:10:08, MOVE, v:1, k:ed@editorint, mode:BACK

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-27_18-21-18",
+            "content": "@@ -134,10 +134,10 @@\n %5Dint\n-%7B%7D\n+%5B%5D\n %7D%0A%7D%0A\n@@ -269,362 +269,15 @@\n lue%0A\n+\n %09%7D)%0A%7D%0A%0A\n-func (s *OrderedSet) Contains(value int) bool%7B%0A%09idx := s.findIndex(value)%0A%09return idx %3C len(s.items) && s.items%5Bidx%5D == value%0A%7D%0A%0Afunc (s *OrderedSet) Insert(value int)%7B%0A%09idx := s.findIndex(value)%0A%0A%09if idx %3C len(s.items) && s.items%5Bidx%5D == value%7B%0A%09%09return%0A%09%7D%0A%0A%09s.items = append(s.items, 0)%0A%09copy(s.items%5Bidx+1:%5D, s.items%5Bidx:%5D)%0A%09s.items%5Bidx%5D = %0A%7D%0A%0A\n func\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-27_18-29-51",
+            "content": "@@ -73,47 +73,8 @@\n s%22%0A)\n-%0Atype OrderedSet struct%7B%0A%09items %5B%5Dint%0A%7D\n %0A%0Afu\n@@ -615,21 +615,16 @@\n %5Bidx%5D = \n-value\n %0A%7D%0A%0Afunc\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-27_18-31-07",
+            "content": "@@ -667,184 +667,8 @@\n %0A%7D%0A%0A\n-func (s *OrderedSet) String() string%7B%0A%09res := strings.Trim(fmt.Sprint(s.items), %22%5B%5D%22)%0A%09if res == %22%22%7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%09return %22%5B%22 + strings.ReplaceAll(res, %22 %22, %22, %22) + %22%5D%22%0A%7D%0A%0A\n func\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-27_18-35-21",
+            "content": "@@ -126,20 +126,8 @@\n Set(\n-capacity int\n ) *O\n@@ -168,32 +168,15 @@\n ms: \n-make(%5B%5Dint, 0, capacity)\n+%5B%5Dint%7B%7D\n %7D%0A%7D%0A\n@@ -688,366 +688,101 @@\n et) \n-Erase(value int) bool%7B%0A%09idx := s.findIndex(value)%0A%09if idx %3C len(s.items) && s.items%5Bidx%5D == value%7B%0A%09%09s.item\n+String() string%7B%0A%09re\n s \n+:\n = \n-append(s.items%5Bidx:%5D, s.items%5Bidx+1:%5D... )%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0Afunc (s *OrderedSet) String() string%7B%0A%09if len(s.items) == 0 %7B%0A%09%09return\n+strings.Trim(fmt.Sprint(s.items),\n  %22%5B%5D%22\n+)\n %0A%09\n-%7D%0A%09\n+if \n res \n-:= make(%5B%5Dstring, len(s.items))%0A%09for i, v := range s.items%7B%0A%09%09res%5Bi%5D = strconv.Itoa(v)\n+== %22%22%7B%0A%09%09return %22%5B%5D%22\n %0A%09%7D%0A\n@@ -807,16 +807,27 @@\n ngs.\n-Join(res\n+ReplaceAll(res, %22 %22\n , %22,\n@@ -853,16 +853,38 @@\n ain() %7B%0A\n+%09var line, cmd string%0A\n %09scanner\n@@ -918,31 +918,8 @@\n in)%0A\n-    var set *OrderedSet\n %0A%09//\n@@ -960,16 +960,32 @@\n ) %7B%0A\n+%09%09fmt.Print(%22$%22)%0A\n %09%09line \n-:\n = sc\n@@ -997,16 +997,36 @@\n .Text()%0A\n+%09%09fmt.Println(line)%0A\n %09%09parts \n@@ -1094,17 +1094,16 @@\n %7D%0A%09%09cmd \n-:\n = parts%5B\n@@ -1108,36 +1108,8 @@\n s%5B0%5D\n-%0A%09%09fmt.Printf(%22$%25s%5Cn%22, line)\n %0A%0A%09%09\n@@ -1163,19 +1163,24 @@\n it%22:%0A%09%09%09\n-cap\n+// value\n , _ := s\n@@ -1204,19 +1204,20 @@\n %5B1%5D)%0A%09%09%09\n-set\n+// v\n  = NewSe\n@@ -1222,11 +1222,13 @@\n Set(\n-cap\n+value\n )%0A%09%09\n@@ -1244,19 +1244,19 @@\n ert%22:%0A%09%09\n-   \n+%09//\n  for _, \n@@ -1287,13 +1287,18 @@\n %7B%0A%09%09\n+%09//\n  %09val\n+ue\n , _ \n@@ -1326,72 +1326,27 @@\n %0A%09%09%09\n-set.Insert(val)%0A%09%09%09%7D%0A%09%09case %22show%22:%0A%09%09%09fmt.Println(set.String())\n+// %7D%0A%09%09case %22show%22:\n %0A%09%09c\n@@ -1364,14 +1364,17 @@\n :%0A%09%09\n-  \n+%09//\n  val\n+ue\n , _ \n@@ -1403,74 +1403,8 @@\n 1%5D)%0A\n-%09%09   if !set.Erase(val)%7B%0A%09%09%09fmt.Println(%22value not found%22)%0A%09%09   %7D%0A\n %09%09ca\n@@ -1420,20 +1420,25 @@\n ins%22:%0A%09%09\n+%09//\n  val\n+ue\n , _ := s\n@@ -1463,42 +1463,8 @@\n 1%5D)%0A\n-%09%09 fmt.Println(set.Contains(val))%0A\n %09%09ca\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-03_19-34-25",
+            "content": "@@ -1200,16 +1200,33 @@\n redSet%0A%09\n+// v := NewSet(0)\n %0A%09for sc\n@@ -1842,18 +1842,11 @@\n rint\n-f(%22%25t%5Cn%22, \n+ln(\n set.\n@@ -1860,16 +1860,32 @@\n s(val))%0A\n+%09%09case %22clear%22:%0A\n %09%09defaul\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_19-53-01",
+            "content": "@@ -1851,16 +1851,66 @@\n (val))%0A%09\n+%09default:%0A%09%09%09fmt.Println(%22fail: comando invalido%22)\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-03_19-57-47",
+            "content": "@@ -1855,61 +1855,8 @@\n ))%0A%09\n-    default:%0A%09%09%09fmt.Println(%22fail: comando invalido%22)\n %0A%09%09%7D\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-05-03_19-58-05",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"sort\"\n\t\"strings\"\n)\ntype OrderedSet struct{\n\titems []int\n}\n\nfunc NewSet(capacity int) *OrderedSet{\n\treturn &OrderedSet{items: make([]int, 0, capacity)}\n}\n\nfunc (s *OrderedSet) findIndex(value int) int{\n\treturn sort.Search(len(s.items), func(i int) bool{\n\t\treturn s.items[i] >= value\n\t})\n}\n\nfunc (s *OrderedSet) Contains(value int) bool{\n\tidx := s.findIndex(value)\n\treturn idx < len(s.items) && s.items[idx] == value\n}\n\nfunc (s *OrderedSet) Insert(value int){\n\tidx := s.findIndex(value)\n\n\tif idx < len(s.items) && s.items[idx] == value{\n\t\treturn\n\t}\n\n\ts.items = append(s.items, 0)\n\tcopy(s.items[idx+1:], s.items[idx:])\n\ts.items[idx] = value\n}\n\nfunc (s *OrderedSet) Erase(value int) bool{\n\tidx := s.findIndex(value)\n\tif idx < len(s.items) && s.items[idx] == value{\n\t\ts.items = append(s.items[idx:], s.items[idx+1:]... )\n\t\treturn true\n\t}\n\treturn false\n}\n\nfunc (s *OrderedSet) String() string{\n\tif len(s.items) == 0 {\n\t\treturn \"[]\"\n\t}\n\tres := make([]string, len(s.items))\n\tfor i, v := range s.items{\n\t\tres[i] = strconv.Itoa(v)\n\t}\n\treturn \"[\" + strings.Join(res, \", \") + \"]\"\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n    var set *OrderedSet\n\t\n\tfor scanner.Scan() {\n\t\tline := scanner.Text()\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd := parts[0]\n\t\tfmt.Printf(\"$%s\\n\", line)\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tcap, _ := strconv.Atoi(parts[1])\n\t\t\tset = NewSet(cap)\n\t\tcase \"insert\":\n\t\t    for _, part := range parts[1:] {\n\t\t \tval, _ := strconv.Atoi(part)\n\t\t\tset.Insert(val)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(set.String())\n\t\tcase \"erase\":\n\t\t   val, _ := strconv.Atoi(parts[1])\n\t\t   if !set.Erase(val){\n\t\t\tfmt.Println(\"value not found\")\n\t\t   }\n\t\tcase \"contains\":\n\t\t val, _ := strconv.Atoi(parts[1])\n\t\t fmt.Printf(\"%t\\n\", set.Contains(val))\n\t    default:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "100"
+        }
+    ]
+}

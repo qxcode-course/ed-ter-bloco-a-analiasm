@@ -1,0 +1,114 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-27_13-50-30",
+            "content": "@@ -56,149 +56,8 @@\n %0A)%0A%0A\n-type MultiSet struct%7B%0A%09data %5B%5Dint%0A%7D%0A%0Afunc NewMultiSet(capacity int) *MultiSet%7B%0A%09return &MultiSet%7B%0A%09%09data: make(%5B%5Dint, 0, capacity),%0A%09%7D%0A%7D%0A%0A%0A%0A%0A\n func\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-27_14-10-39",
+            "content": "@@ -194,296 +194,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) betterSearch(value int) (bool, int) %7B%0A%09low := 0%0A%09high := len(ms.data)%0A%0A%09for low %3C high %7B%0A%09%09mid := low + (high-low)/2%0A%09%09if ms.data%5Bmid%5D == value%7B%0A%09%09%09return true, mid%0A%09%09%7D else if ms.data%5Bmid%5D %3C value%7B%0A%09%09%09low = mid + 1%0A%09%09%7D else%7B%0A%09%09%09high = mid%0A%09%09%7D%0A%09%7D%0A%09return false, low%0A%7D%0A\n %0A%0A%0Af\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-04-27_14-17-39",
+            "content": "@@ -483,83 +483,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Insert(value int)%7B%0A%09_, pos := ms.betterSearch(value)%0A%7D%0A\n %0A%0Afu\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-27_14-27-25",
+            "content": "@@ -555,39 +555,8 @@\n lue)\n-%0A%0A%09ms.data = append(ms.data, 0)\n %0A%7D%0A%0A\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-27_14-28-02",
+            "content": "@@ -587,72 +587,9 @@\n  0)%0A\n-%0A%09copy(ms.data%5Bpos+1:%5D, ms.data%5Bpos:%5D)%0A%0A%09ms.data%5Bpos%5D = value%0A%7D%0A\n+%7D\n %0A%0A%0Af\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-04-27_14-29-24",
+            "content": "@@ -652,86 +652,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Erase(value int) %7B%0A%09found, pos := ms.betterSearch(value)%0A%7D\n %0A%0Afu\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-04-27_14-30-25",
+            "content": "@@ -729,122 +729,8 @@\n ue)%0A\n-%09if !found%7B%0A%09%09fmt.Println(%22value not found%22)%0A%09%09return%0A%09%7D%0A%09ms.data = append(ms.data, %5B:pos%5D, ms.datapos%5Bpos+1%5D...)%0A\n %7D%0A%0Af\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-04-27_14-32-24",
+            "content": "@@ -846,54 +846,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Count(value int) int%7B%0A%0A%7D%0A%0A\n func\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-04-27_14-51-18",
+            "content": "@@ -888,219 +888,8 @@\n nt%7B%0A\n-%09found, pos := ms.betterSearch(value)%0A%0A%09if !found %7B%0A%09%09return 0%0A%09%7D%0A%09count := 0%0A%0A%09for i := pos; i %3E= 0 && ms.data%5Bi%5D == value; i++%7B%0A%09%09count++%0A%09%7D%0A%09return count%0A%7D%0A%0Afunc (ms *MultiSet) Clear()%7B%0A%09ms.data = ms.data%5B:0%5D\n %0A%7D%0A%0A\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-04-27_14-55-48",
+            "content": "@@ -1185,41 +1185,60 @@\n %09%7D%0A%09\n-var sb strings.Builder%0A\n+result := fmt.Sprintf(%22%25d%22, slice%5B0%5D)\n %0A%09for \n-i\n+_\n , v\n+alue \n := r\n@@ -1251,95 +1251,57 @@\n lice\n-%7B%0A%09%09sb.WriteString(strconv.Itoa(v))%0A%0A%09%09if i %3C len(slice)-1 %7B%0A%09%09%09sb.WriteString(sep)%0A%09%09%7D\n+%5B1:%5D %7B%0A%09%09result += sep + fmt.Sprintf(%22%25d%22, value)\n %0A%09%7D%0A\n@@ -1312,18 +1312,14 @@\n urn \n-sb.Sting()\n+result\n %0A%7D%0A%0A\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-04-27_14-59-45",
+            "content": "@@ -1355,16 +1355,38 @@\n ain() %7B%0A\n+%09var line, cmd string%0A\n %09scanner\n@@ -1421,24 +1421,28 @@\n n)%0A%09\n-var\n+//\n  ms \n-*\n+:= New\n MultiSet\n %0A%0A%09f\n@@ -1437,16 +1437,19 @@\n MultiSet\n+(0)\n %0A%0A%09for s\n@@ -1464,16 +1464,33 @@\n can() %7B%0A\n+%09%09fmt.Print(%22$%22)%0A\n %09%09line =\n@@ -1509,24 +1509,78 @@\n t()%0A\n-%0A%09%09if line\n+%09%09args := strings.Fields(line)%0A%09%09fmt.Println(line)%0A%09%09if len(args)\n  == \n-%22%22\n+0\n  %7B%0A%09\n@@ -1598,39 +1598,8 @@\n %09%09%7D%0A\n-%09%09args := strings.Fields(line)%0A\n %09%09cm\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-04-27_15-03-17",
+            "content": "@@ -1557,17 +1557,16 @@\n h cmd %7B%0A\n-%0A\n %09%09case %22\n@@ -1573,16 +1573,8 @@\n end%22\n-, %22$end%22\n :%0A%09%09\n@@ -1581,17 +1581,16 @@\n %09return%0A\n-%0A\n %09%09case %22\n@@ -1598,25 +1598,21 @@\n nit%22\n-, %22$init%22:%0A%09%09%09cap\n+:%0A%09%09%09// value\n , _ \n@@ -1639,16 +1639,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n ms = New\n@@ -1663,13 +1663,14 @@\n Set(\n-cap)%0A\n+value)\n %0A%09%09c\n@@ -1685,24 +1685,16 @@\n ert%22\n-, %22$insert%22\n :%0A%09%09%09\n+// \n for \n@@ -1722,17 +1722,23 @@\n %5B1:%5D\n+ \n %7B%0A%09%09%09\n+// \n %09val\n+ue\n , _ \n@@ -1766,136 +1766,55 @@\n %0A%09%09%09\n-%09ms.Isert(val)%0A%09%09%09%7D%0A%09%09case %22show%22, %22$show%22:%0A%09%09%09fmt.Printf(%22%5B%25s%5D%5Cn%22, Join(ms.data, %22, %22))%0A%0A%09%09case %22contains%22, %22$contains\n+// %7D%0A%09%09case %22show%22:%0A%09%09case %22erase\n %22:%0A%09%09%09\n+// \n val\n+ue\n , _ \n@@ -1844,127 +1844,36 @@\n )%0A%09%09\n-%09if ms.Contains(val)%7B%0A%09%09%09%09fmt.Println(%22true%22)%0A%09%09%09%7Delse%7B%0A%09%09%09%09fmt.Println(%22false%22)%0A%09%09%09%7D%0A%0A%09%09case %22erase%22, %22$erase%22:%0A%09%09%09\n+case %22contains%22:%0A%09%09%09// \n val\n+ue\n , _ \n@@ -1901,25 +1901,8 @@\n 1%5D)%0A\n-%09%09%09ms.Erase(val)%0A\n %09%09ca\n@@ -1915,26 +1915,21 @@\n unt%22\n-, %22$count%22\n :%0A%09%09%09\n+// \n val\n+ue\n , _ \n@@ -1957,36 +1957,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Println(ms.Unique())%0A\n %09%09ca\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-04-27_15-23-02",
+            "content": "@@ -2177,25 +2177,23 @@\n ntln(ms.\n-Count(val\n+Unique(\n ))%0A%09%09cas\n@@ -2206,48 +2206,9 @@\n que%22\n-, %22$unique%22:%0A%09%09%09fmt.Println(ms.Unique())\n+:\n %0A%09%09c\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-27_15-28-28",
+            "content": "@@ -2263,33 +2263,9 @@\n ear%22\n-, %22$clear%22:%0A%09%09%09ms.Clear()\n+:\n %0A%09%09d\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-04-27_15-28-58",
+            "content": "@@ -807,16 +807,18 @@\n (ms.data\n+, \n %5B:pos%5D, \n@@ -824,23 +824,25 @@\n  ms.data\n+pos\n %5Bpos+1\n-:\n %5D...)%0A%7D%0A\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-27_15-30-30",
+            "content": "@@ -53,19 +53,8 @@\n gs%22%0A\n-%09%22strconv%22%0A\n )%0A%0At\n@@ -1210,17 +1210,16 @@\n for i, v\n- \n := range\n@@ -1328,17 +1328,16 @@\n rn sb.St\n-r\n ing()%0A%7D%0A\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-27_15-37-10",
+            "content": "@@ -1451,17 +1451,16 @@\n %0A%09%09line \n-:\n = scanne\n@@ -1540,17 +1540,16 @@\n )%0A%09%09cmd \n-:\n = args%5B0\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-04-27_15-37-52",
+            "content": "@@ -1790,17 +1790,16 @@\n %09%09%09%09ms.I\n-n\n sert(val\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-04-27_15-40-00",
+            "content": "@@ -663,107 +663,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Contains(value int) bool%7B%0A%09found, _ := ms.betterSearch(value)%0A%09return found%0A%7D%0A%0A\n func\n@@ -1055,201 +1055,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Unique() int%7B%0A%09if len(ms.data) == 0%7B%0A%09%09return 0%0A%09%7D%0A%09uniques := 1%0A%09for i := 1; i %3C len(ms.data); i++%7B%0A%09%09if ms.data%5Bi%5D != ms.data%5Bi-1%5D%7B%0A%09%09%09uniques++%0A%09%09%7D%0A%09%7D%0A%09return uniques%0A%7D%0A%0A\n func\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-04-27_15-47-15",
+            "content": "@@ -1118,82 +1118,8 @@\n lue;\n- i--%7B%0A%09%09count++%0A%09%7D%0A%09for i := pos; i %3C len(ms.data) && ms.data%5Bi%5D == value;\n  i++\n@@ -1137,10 +1137,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09ret\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-04-27_15-55-48",
+            "content": "@@ -1133,17 +1133,16 @@\n nt++%0A%09%7D%0A\n-%0A\n %09for i :\n@@ -1146,20 +1146,16 @@\n i := pos\n- + 1\n ; i %3C le\n@@ -1207,16 +1207,17 @@\n nt++%0A%09%7D%0A\n+%09\n %0A%09return\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-04-27_16-18-49",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\ntype MultiSet struct{\n\tdata []int\n}\n\nfunc NewMultiSet(capacity int) *MultiSet{\n\treturn &MultiSet{\n\t\tdata: make([]int, 0, capacity),\n\t}\n}\n\nfunc (ms *MultiSet) betterSearch(value int) (bool, int) {\n\tlow := 0\n\thigh := len(ms.data)\n\n\tfor low < high {\n\t\tmid := low + (high-low)/2\n\t\tif ms.data[mid] == value{\n\t\t\treturn true, mid\n\t\t} else if ms.data[mid] < value{\n\t\t\tlow = mid + 1\n\t\t} else{\n\t\t\thigh = mid\n\t\t}\n\t}\n\treturn false, low\n}\n\nfunc (ms *MultiSet) Insert(value int){\n\t_, pos := ms.betterSearch(value)\n\n\tms.data = append(ms.data, 0)\n\n\tcopy(ms.data[pos+1:], ms.data[pos:])\n\n\tms.data[pos] = value\n}\n\nfunc (ms *MultiSet) Contains(value int) bool{\n\tfound, _ := ms.betterSearch(value)\n\treturn found\n}\n\nfunc (ms *MultiSet) Erase(value int) {\n\tfound, pos := ms.betterSearch(value)\n\tif !found{\n\t\tfmt.Println(\"value not found\")\n\t\treturn\n\t}\n\tms.data = append(ms.data[:pos], ms.data[pos+1:]...)\n}\n\nfunc (ms *MultiSet) Count(value int) int{\n\tfound, pos := ms.betterSearch(value)\n\n\tif !found {\n\t\treturn 0\n\t}\n\tcount := 0\n\n\tfor i := pos; i >= 0 && ms.data[i] == value; i--{\n\t\tcount++\n\t}\n\n\tfor i := pos + 1; i < len(ms.data) && ms.data[i] == value; i++{\n\t\tcount++\n\t}\n\n\treturn count\n}\n\nfunc (ms *MultiSet) Unique() int{\n\tif len(ms.data) == 0{\n\t\treturn 0\n\t}\n\tuniques := 1\n\tfor i := 1; i < len(ms.data); i++{\n\t\tif ms.data[i] != ms.data[i-1]{\n\t\t\tuniques++\n\t\t}\n\t}\n\treturn uniques\n}\n\nfunc (ms *MultiSet) Clear(){\n\tms.data = ms.data[:0]\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tvar sb strings.Builder\n\n\tfor i, v := range slice{\n\t\tsb.WriteString(strconv.Itoa(v))\n\n\t\tif i < len(slice)-1 {\n\t\t\tsb.WriteString(sep)\n\t\t}\n\t}\n\treturn sb.String()\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tvar ms *MultiSet\n\n\tfor scanner.Scan() {\n\t\tline := scanner.Text()\n\n\t\tif line == \"\" {\n\t\t\tcontinue\n\t\t}\n\t\targs := strings.Fields(line)\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\n\t\tcase \"end\", \"$end\":\n\t\t\treturn\n\n\t\tcase \"init\", \"$init\":\n\t\t\tcap, _ := strconv.Atoi(args[1])\n\t\t\tms = NewMultiSet(cap)\n\n\t\tcase \"insert\", \"$insert\":\n\t\t\tfor _, part := range args[1:]{\n\t\t\t\tval, _ := strconv.Atoi(part)\n\t\t\t\tms.Insert(val)\n\t\t\t}\n\t\tcase \"show\", \"$show\":\n\t\t\tfmt.Printf(\"[%s]\\n\", Join(ms.data, \", \"))\n\n\t\tcase \"contains\", \"$contains\":\n\t\t\tval, _ := strconv.Atoi(args[1])\n\t\t\tif ms.Contains(val){\n\t\t\t\tfmt.Println(\"true\")\n\t\t\t}else{\n\t\t\t\tfmt.Println(\"false\")\n\t\t\t}\n\n\t\tcase \"erase\", \"$erase\":\n\t\t\tval, _ := strconv.Atoi(args[1])\n\t\t\tms.Erase(val)\n\t\tcase \"count\", \"$count\":\n\t\t\tval, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Println(ms.Count(val))\n\t\tcase \"unique\", \"$unique\":\n\t\t\tfmt.Println(ms.Unique())\n\t\tcase \"clear\", \"$clear\":\n\t\t\tms.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "166"
+        }
+    ]
+}
