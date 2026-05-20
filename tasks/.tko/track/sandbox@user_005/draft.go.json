@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_14-23-45",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n    var animaist int\n    fmt.Scan(&animaist)\n\n    naocasais := [50]int{}\n    qtdnaocasais := 0\n    casais := 0\n\n    for i := 0; i < animaist; i++{\n        var animal int\n        fmt.Scan(&animal)\n        achou := false\n\n        for j := 0; j < qtdnaocasais; j++{\n            if naocasais[j] == -animal && naocasais[j] != 0{\n                casais++\n                naocasais[j] = 0\n                achou  = true\n                break\n             }\n        }\n\n        if !achou{\n            naocasais[qtdnaocasais] = animal\n            qtdnaocasais++\n        }\n    }\n        fmt.Printf(\"%d\\n\", casais)\n}\n",
+            "lines": "32"
+        }
+    ]
+}
