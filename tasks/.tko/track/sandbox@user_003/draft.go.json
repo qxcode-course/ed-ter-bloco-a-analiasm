@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_13-53-03",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var H, P, F, D int\n\n    fmt.Scanf(\"%d, %d, %d, %d\", &H, &P, &F, &D)\n\n    for{\n        F += D\n\n        if F > 15{\n            F = 0\n        }else if F < 0{\n            F = 15\n        }\n\n        if F == H{\n            fmt.Printf(\"S\\n\")\n            break\n        }\n\n        if F == P{\n            fmt.Printf(\"N\\n\")\n            break\n        }\n    }\n}\n",
+            "lines": "27"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_17-12-27",
+            "content": "@@ -167,266 +167,8 @@\n ing%0A\n-%09for it := l.Front(); it != l.End(); it = it.Next()%7B%0A%09%09valueStr := fmt.Sprint(it.Value)%0A%09%09if it == sword%7B%0A%09%09%09elements = append(elements, %22%3E%22+valueStr)%0A%09%09%7Delse %7B%0A%09%09%09elements = append(elements, valueStr)%0A%09%09%7D%0A%09%7D%0A%09return %22%5B%22 + strings.Join(elements, %22, %22) + %22%5D%22%0A\n %7D%0A%0A/\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-12_17-18-31",
+            "content": "@@ -522,95 +522,18 @@\n  %7B%0A%09\n-proximo := it.next%0A%0A%09if proximo == l.root%7B%0A%09%09proximo = proximo.next%0A%09%7D%0A%0A%09return proximo\n+return nil\n %0A%7D%0A%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-12_17-20-43",
+            "content": "@@ -807,16 +807,17 @@\n sen - 1 \n+%7B\n %0A%09%09sword\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-12_17-21-11",
+            "content": "@@ -807,17 +807,16 @@\n sen - 1 \n-%7B\n %0A%09%09sword\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-12_17-47-46",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar elements []string\n\tfor it := l.Front(); it != l.End(); it = it.Next(){\n\t\tvalueStr := fmt.Sprint(it.Value)\n\t\tif it == sword{\n\t\t\telements = append(elements, \">\"+valueStr)\n\t\t}else {\n\t\t\telements = append(elements, valueStr)\n\t\t}\n\t}\n\treturn \"[\" + strings.Join(elements, \", \") + \"]\"\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tproximo := it.next\n\n\tif proximo == l.root{\n\t\tproximo = proximo.next\n\t}\n\n\treturn proximo\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tfmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "51"
+        }
+    ]
+}

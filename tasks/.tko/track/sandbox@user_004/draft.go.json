@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_14-05-58",
+            "content": "@@ -677,17 +677,16 @@\n %22%25d%5Cn%22, \n-&\n campid)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-20_14-06-08",
+            "content": "@@ -149,16 +149,18 @@\n petidore\n+re\n s)%0A%0A    \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-20_14-06-27",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var competidores, pedraA, pedraB int\n\n    campid := -1\n    menordiferenca := 0\n\n    fmt.Scanf(\"%d\", &competidores)\n\n    for i := 0; i < competidores; i++{\n        fmt.Scanf(\"%d %d\", &pedraA, pedraB)\n\n        if pedraA >= 10 && pedraB >= 10 {\n            diferenca := pedraA - pedraB\n\n            if diferenca <0{\n                diferenca = -diferenca\n            }\n\n            if campid == -1 || diferenca < menordiferenca{\n                menordiferenca = diferenca\n                campid = 1\n            }\n        }\n    }\n        if campid == -1{\n            fmt.Printf(\"sem ganhador\\n\")\n        }else{\n            fmt.Printf(\"%d\\n\", &campid)\n        }\n}\n",
+            "lines": "32"
+        }
+    ]
+}

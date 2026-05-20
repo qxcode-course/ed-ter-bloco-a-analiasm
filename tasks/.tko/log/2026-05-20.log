@@ -1,0 +1,51 @@
+2026-05-20 13:12:05, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-05-20 13:15:01, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:17
+2026-05-20 13:15:08, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-05-20 13:15:01, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-05-20 13:15:29, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-05-20 13:15:31, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-05-20 13:20:26, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-05-20 13:21:18, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0, size:15
+2026-05-20 13:21:37, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0, size:15
+2026-05-20 13:22:23, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0, size:15
+2026-05-20 13:22:36, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0, size:17
+2026-05-20 13:23:05, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-05-20 13:24:05, SELF, v:1, k:sandbox@user_001, self:1, study:31
+2026-05-20 13:22:35, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-05-20 13:22:36, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-05-20 13:25:21, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-05-20 13:25:38, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-05-20 13:25:59, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-05-20 13:30:54, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-05-20 13:30:57, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-05-20 13:31:10, MOVE, v:1, k:sandbox@user_002, mode:PICK
+2026-05-20 13:35:28, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-05-20 13:36:47, MOVE, v:1, k:sandbox@user_002, mode:BACK
+2026-05-20 13:38:34, MOVE, v:1, k:sandbox@user_002, mode:PICK
+2026-05-20 13:38:38, EXEC, v:1, k:sandbox@user_002, mode:LOCK, rate:100, size:9
+2026-05-20 13:40:28, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-05-20 13:38:38, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-05-20 13:45:18, EXEC, v:1, k:sandbox@user_002, mode:LOCK, rate:0, size:21
+2026-05-20 13:45:28, MOVE, v:1, k:sandbox@user_002, mode:BACK
+2026-05-20 13:45:07, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-05-20 13:45:18, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-05-20 13:46:00, SELF, v:1, k:sandbox@user_002, self:1, study:14
+2026-05-20 13:46:44, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-05-20 13:47:46, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-05-20 13:48:07, MOVE, v:1, k:sandbox@user_003, mode:PICK
+2026-05-20 13:50:38, MOVE, v:1, k:sandbox@user_003, mode:EDIT
+2026-05-20 13:47:58, MOVE, v:1, k:sandbox@user_003, mode:EDIT
+2026-05-20 13:53:03, EXEC, v:1, k:sandbox@user_003, mode:LOCK, rate:0, size:27
+2026-05-20 13:53:07, MOVE, v:1, k:sandbox@user_003, mode:BACK
+2026-05-20 13:53:42, SELF, v:1, k:sandbox@user_003, self:1, study:5
+2026-05-20 13:53:50, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-05-20 13:54:49, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-05-20 13:55:50, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-05-20 13:58:23, MOVE, v:1, k:sandbox@user_004, mode:EDIT
+2026-05-20 13:55:47, MOVE, v:1, k:sandbox@user_004, mode:EDIT
+2026-05-20 14:03:19, MOVE, v:1, k:sandbox@user_004, mode:EDIT
+2026-05-20 14:05:58, EXEC, v:1, k:sandbox@user_004, mode:FULL, size:32, fail:COMP
+2026-05-20 14:06:08, EXEC, v:1, k:sandbox@user_004, mode:FULL, size:32, fail:COMP
+2026-05-20 14:06:27, EXEC, v:1, k:sandbox@user_004, mode:LOCK, rate:0, size:32
+2026-05-20 14:06:30, MOVE, v:1, k:sandbox@user_004, mode:BACK
+2026-05-20 14:07:07, SELF, v:1, k:sandbox@user_004, self:1, study:10
