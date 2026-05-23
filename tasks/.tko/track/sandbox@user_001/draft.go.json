@@ -12,8 +12,28 @@
         },
         {
             "label": "2026-03-29_22-24-46",
-            "content": "package main\nimport \"fmt\"\n\nfunc SomaArray(arr []int) int{\n\tsoma := 0\n\tfor _, elemento := range arr{\n\t\tsoma += elemento\n\t}\n\treturn soma\n}\n\nfunc main(){\n nums := []int{10, 20, 30, 40}\n\nfmt.Printf(\"Soma: %d\\n\", SomaArray(nums))\n\n\n}",
+            "content": "@@ -10,197 +10,178 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0Afunc main() %7B%0A    var a, b, c, s, area float64%0A%0A    fmt.Scanf(%22%25f %25f %25f %22, &a, &b, &c)%0A%0A    s = (a+b+c)/2%0A    are\n+%0Afunc SomaArray(arr %5B%5Dint) int%7B%0A%09soma := 0%0A%09for _, elemento := range arr%7B%0A%09%09som\n a \n++\n = \n-math.Sqrt(s *(s - a) * (s - b)* (s - c))%0A    \n+elemento%0A%09%7D%0A%09return soma%0A%7D%0A%0Afunc main()%7B%0A nums := %5B%5Dint%7B10, 20, 30, 40%7D%0A%0A\n fmt.\n@@ -189,23 +189,40 @@\n rint\n+f\n (%22\n-%25.2f%5Cn%22, area)%0A%7D%0A\n+Soma: %25d%5Cn%22, SomaArray(nums))%0A%0A%0A%7D\n",
             "lines": "18"
+        },
+        {
+            "label": "2026-05-20_13-21-18",
+            "content": "@@ -204,17 +204,16 @@\n mt.Print\n-f\n (%22%25.2f%5Cn\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-20_13-21-37",
+            "content": "@@ -163,17 +163,16 @@\n Sqrt(s *\n- \n (s - a) \n@@ -180,17 +180,16 @@\n  (s - b)\n- \n * (s - c\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-20_13-22-23",
+            "content": "@@ -143,13 +143,8 @@\n )/2%0A\n-    %0A\n     \n@@ -193,17 +193,16 @@\n s - c))%0A\n-%0A\n     fmt.\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-20_13-22-36",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\nfunc main() {\n    var a, b, c, s, area float64\n\n    fmt.Scanf(\"%f %f %f \", &a, &b, &c)\n\n    s = (a+b+c)/2\n    \n    area = math.Sqrt(s * (s - a) * (s - b) * (s - c))\n\n    fmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "17"
         }
     ]
 }

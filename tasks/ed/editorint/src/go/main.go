@@ -7,97 +7,104 @@ import (
 )
 
 type Editor struct {
-	texto *List[*List[rune]]
-	lines  *List[*List[rune]]
-	line   *Node[*List[rune]]
-	cursor *Node[rune]
-	screen tcell.Screen
-	style  tcell.Style
+	texto   *List[*List[rune]]
+	it_line *Node[*List[rune]]
+	it_char *Node[rune]
+	screen  tcell.Screen
+	style   tcell.Style
 }
 
 func (e *Editor) InsertChar(r rune) {
-	e.cursor = e.line.Value.Insert(e.cursor, r)
-	e.cursor = e.cursor.Next()
+	e.it_char = e.it_line.Value.Insert(e.it_char, r)
+	e.it_char = e.it_char.Next()
 }
 
 func (e *Editor) KeyLeft() {
-	if e.cursor != e.line.Value.Front() { // Se o cursor não está no início da linha
-		e.cursor = e.cursor.Prev() // Move o cursor para a esquerda
-		return
-	}
-	// Estamos no início da linha
-	if e.line != e.lines.Front() { // Se não está na primeira linha
-		e.line = e.line.Prev()        // Move para a linha anterior
-		e.cursor = e.line.Value.End() // Move o cursor para o final da linha
+	if e.it_char.Prev() != e.it_line.Value.End() {
+		e.it_char = e.it_char.Prev() // Move o cursor para a esquerda
 	}
 }
 
 func (e *Editor) KeyEnter() {
-	novaLinha := NewList[rune]()
+	nova := NewList[rune]()
+	e.texto.Insert(e.it_line.Next(), nova)
+	e.it_line = e.it_line.Next()
 
-	if e.cursor != e.line.Value.End(){
-		noAtual := e.cursor
-		for noAtual != e.line.Value.End(){
-			proximo := noAtual.Next()
+	for e.it_char != e.it_line.Value.End() {
+        temp := e.it_char
+        e.it_char = e.it_char.Next()
+        
+        nova.PushBack(temp.Value)
+        e.it_line.Value.Erase(temp)
+    }
 
-			char := e.line.Value.Remove(noAtual)
-			novaLinha.PushBack(char)
-			noAtual = proximo
-		}
-	}
-
-	e.lines.Insert(e.line.Next(), novaLinha)
-	e.line = e.line.Next()
-	e.cursor = e.line.Value.Front()
+	e.it_char = e.it_line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
-	if e.cursor != e.line.Value.End(){
-		e.cursor = e.cursor.Next()
-	} else{
-	if e.line.Next() != e.lines.End(){
-		e.line = e.lines.Next()
-		e.cursor = e.line.Value.Front()
-	}
-  }
+	e.it_char = e.it_char.Next() // Move o cursor para a direita
 }
 
 func (e *Editor) KeyUp() {
-	if e.line != e.lines.Front(){
-		coluna := e.getColunaAtual()
-		e.line = e.line.Prev()
-		e.setCursorNaColuna(coluna)
-	}
-}
-
-func (e *Editor) getColunaAtual() int{
-	count := 0
-	for n := e.line.Value.Front(); n != e.cursor; n = n.Next(){
-		count ++
-	}
-	return count
-}
-
-func (e *Editor) setCursorNaColuna(col int){
-	e.cursor = e.line.Value.Front()
-	for i := 0; i < col && e.cursor != e.line.Value.End(); i++{
-		e.cursor = e.cursor.Next()
-	}
+	if e.it_line.Prev() != e.texto.End() {
+        coluna := e.it_line.Value.IndexOf(e.it_char)
+        e.it_line = e.it_line.Prev()
+        
+        e.it_char = e.it_line.Value.Front()
+        for i := 0; i < coluna && e.it_char != e.it_line.Value.End(); i++ {
+            e.it_char = e.it_char.Next()
+        }
+    }
 }
 
 func (e *Editor) KeyDown() {
+
+	if e.it_line.Next() != e.texto.End() {
+        coluna := e.it_line.Value.IndexOf(e.it_char)
+        e.it_line = e.it_line.Next()
+        
+        e.it_char = e.it_line.Value.Front()
+        for i := 0; i < coluna && e.it_char != e.it_line.Value.End(); i++ {
+            e.it_char = e.it_char.Next()
+        }
+    }
 }
 
 func (e *Editor) KeyBackspace() {
-	if e.cursor != e.line.Value.Front(){
-		alvo := e.cursor.Prev()
-		e.line.Value.Remove(alvo)
-	}else if e.line != e.lines.Front(){
+if e.it_char != e.it_line.Value.Front() {
 
-	}
+	e.it_line.Value.Erase(e.it_char.Prev())
+    } else if e.it_line.Prev() != e.texto.End() {
+        linhaAcima := e.it_line.Prev()
+        e.it_char = linhaAcima.Value.End() 
+
+        for char := e.it_line.Value.Front(); char != e.it_line.Value.End(); {
+            proximo := char.Next()
+            linhaAcima.Value.Insert(linhaAcima.Value.End(), char.Value)
+            e.it_line.Value.Erase(char)
+            char = proximo
+        }
+        
+        e.texto.Erase(e.it_line) 
+        e.it_line = linhaAcima
+    }
 }
 
 func (e *Editor) KeyDelete() {
+	if e.it_char != e.it_line.Value.End() {
+        e.it_char = e.it_line.Value.Erase(e.it_char)
+    } else if e.it_line.Next() != e.texto.End() {
+        proximaLinha := e.it_line.Next()
+        
+        for char := proximaLinha.Value.Front(); char != proximaLinha.Value.End(); {
+            proximoNode := char.Next()
+            e.it_line.Value.Insert(e.it_line.Value.End(), char.Value)
+            proximaLinha.Value.Erase(char)
+            char = proximoNode
+        }
+        e.texto.Erase(proximaLinha)
+        // O it_char permanece no End() original, que agora aponta para o novo conteúdo
+    }
 }
 
 func main() {
@@ -154,14 +161,12 @@ func NewEditor() *Editor {
 		fmt.Printf("erro ao iniciar a tela: %v", err)
 	}
 	e.screen = screen
-	e.lines = NewList[*List[rune]]()
-	e.lines.PushBack(NewList[rune]())
-	e.line = e.lines.Front()
-	e.cursor = e.line.Value.Back()
-	// Define o estilo do texto (branco com fundo preto)
+	e.texto = NewList[*List[rune]]()
+	e.texto.PushBack(NewList[rune]())
+	e.it_line = e.texto.Front()
+	e.it_char = e.it_line.Value.Back()
 	e.style = tcell.StyleDefault.Foreground(tcell.ColorWhite).Background(tcell.ColorBlack)
 
-	// Limpa a tela e define o estilo base
 	e.screen.SetStyle(e.style)
 	e.screen.Clear()
 	return e
@@ -171,7 +176,7 @@ func (e *Editor) Draw() {
 	e.screen.Clear()
 	x := 0
 	y := 0
-	for line := e.lines.Front(); line != e.lines.End(); line = line.Next() {
+	for line := e.texto.Front(); line != e.texto.End(); line = line.Next() {
 		for char := line.Value.Front(); ; char = char.Next() {
 			data := char.Value
 			if char == line.Value.End() {
@@ -180,7 +185,7 @@ func (e *Editor) Draw() {
 			if data == ' ' {
 				data = '·'
 			}
-			if char == e.cursor {
+			if char == e.it_char {
 				e.screen.SetContent(x, y, data, nil, e.style.Reverse(true))
 			} else {
 				e.screen.SetContent(x, y, data, nil, e.style)
@@ -195,3 +200,4 @@ func (e *Editor) Draw() {
 	}
 	e.screen.Show()
 }
+

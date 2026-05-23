@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-22_23-10-52",
+            "content": "@@ -258,52 +258,8 @@\n ord)\n-%0A%0A%09if wordLen %3E rows*cols%7B%0A%09%09return false%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-22_23-11-39",
+            "content": "@@ -302,167 +302,8 @@\n e%0A%09%7D\n-%0A%0A%09gridCounts := make(map%5Bbyte%5Dint)%0A%09for r := 0; r %3C rows; r++%7B%0A%09%09for c := 0; c %3C cols; c++%7B%0A%09%09%09gridCounts%5Bgrid%5Br%5D%5Bc%5D%5D++%0A%09%09%7D%0A%09%7D%0A%0A%09wordCounts := make(%5Bbyte%5Dint)\n %0A%7D%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_23-16-34",
+            "content": "@@ -462,67 +462,8 @@\n nt)%0A\n-%09for i := 0; i %3C wordLen; i ++%7B%0A%09%09wordCounts%5Bword%5Bi%5D%5D++%0A%09%7D%0A\n %7D%0A%0Af\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-22_23-20-31",
+            "content": "@@ -520,101 +520,8 @@\n +%0A%09%7D\n-%0A%0A%09for char, count := range wordCounts%7B%0A%09%09if gridCounts%5Bchar%5D %3C count%7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-22_23-21-34",
+            "content": "@@ -613,200 +613,8 @@\n %7D%0A%09%7D\n-%0A%0A%09if gridCounts%5Bword%5BwordLen-1%5D%5D %3C gridCounts%5Bword%5B0%5D%5D%7B%0A%09%09reversed := make(%5B%5Dbyte, wordLen)%0A%09%09for i := 0; i %3C wordLen; i++%7B%0A%09%09%09reversed%5Bi%5D = word%5BwordLen-1-i%5D%0A%09%09%7D%0A%09%09word = string(reversed)%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-22_23-25-47",
+            "content": "@@ -805,126 +805,8 @@\n )%0A%09%7D\n-%0A%0A%09var dfs func(r, c, index int)bool%0A%09dfs = func(r, c, index int)bool%7B%0A%09%09if index == wordLen%7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-22_23-27-20",
+            "content": "@@ -918,297 +918,10 @@\n %09%09%7D%0A\n-%0A\n %09%09\n-if r %3C 0 %7C%7C c %3C 0 %7C%7C r %3E= rows %7C%7C c %3E= cols %7C%7C grid%5Br%5D%5Bc%5D != word%5Bindex%5D %7B%0A%09%09%09return false%0A%09%09%7D%0A%0A%09%09temp := grid%5Br%5D%5Bc%5D%0A%09%09grid%5Br%5D%5Bc%5D = '#'%0A%0A%09%09found := dfs(r+1, c, index+1) %7C%7C%0A%09%09%09dfs(r-1, c, index+1) %7C%7C%0A%09%09%09dfs(r, c+1, index+1) %7C%7C%0A%09%09%09dfs(r, c-1, index+1)%0A%0A%09%09grid%5Br%5D%5Bc%5D = temp%0A%0A%09%09return found\n %0A%09%7D%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-05-22_23-36-00",
+            "content": "@@ -1211,128 +1211,8 @@\n %0A%09%7D%0A\n-%09for r := 0; r %3C rows; r++%7B%0A%09%09for c := 0; c %3C cols; c++%7B%0A%09%09%09if dfs(r, c, 0)%7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return false%0A%0A\n %7D%0A%0Af\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-05-22_23-37-42",
+            "content": "@@ -195,17 +195,16 @@\n ows == 0\n- \n %7B%0A%09%09retu\n@@ -215,17 +215,16 @@\n alse%0A%09%7D%0A\n-%0A\n %09cols :=\n@@ -242,21 +242,18 @@\n %5D)%0A%09\n-length := len\n+wordLen :=\n (wor\n@@ -264,24 +264,23 @@\n %09if \n-length\n+wordLen\n  %3E rows\n- * \n+*\n cols\n@@ -439,35 +439,32 @@\n dCounts := make(\n-map\n %5Bbyte%5Dint)%0A%09for \n@@ -471,36 +471,37 @@\n i := 0; i %3C \n-length\n+wordLen\n ; i\n+ \n ++\n- \n %7B%0A%09%09wordCoun\n@@ -631,22 +631,23 @@\n ts%5Bword%5B\n-length\n+wordLen\n -1%5D%5D %3C g\n@@ -693,22 +693,23 @@\n %5B%5Dbyte, \n-length\n+wordLen\n )%0A%09%09for \n@@ -724,20 +724,20 @@\n i %3C \n-length\n+wordLen\n ; i++\n- \n %7B%0A%09%09\n@@ -756,22 +756,23 @@\n  = word%5B\n-length\n+wordLen\n -1-i%5D%0A%09%09\n@@ -872,17 +872,16 @@\n t)bool%7B%0A\n-%0A\n %09%09if ind\n@@ -890,14 +890,15 @@\n  == \n-length\n+wordLen\n %7B%0A%09%09\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-05-22_23-44-09",
+            "content": "@@ -1091,16 +1091,18 @@\n ndex+1) \n+%7C%7C\n %0A%09%09%09dfs(\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-05-22_23-44-20",
+            "content": "@@ -1083,34 +1083,32 @@\n +1, c, index+1) \n-%7C%7C\n %0A%09%09%09dfs(r-1, c, \n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-05-22_23-55-33",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\trows := len(grid)\n\tif rows == 0 {\n\t\treturn false\n\t}\n\n\tcols := len(grid[0])\n\tlength := len(word)\n\n\tif length > rows * cols{\n\t\treturn false\n\t}\n\n\tgridCounts := make(map[byte]int)\n\tfor r := 0; r < rows; r++{\n\t\tfor c := 0; c < cols; c++{\n\t\t\tgridCounts[grid[r][c]]++\n\t\t}\n\t}\n\n\twordCounts := make(map[byte]int)\n\tfor i := 0; i < length; i++ {\n\t\twordCounts[word[i]]++\n\t}\n\n\tfor char, count := range wordCounts{\n\t\tif gridCounts[char] < count{\n\t\t\treturn false\n\t\t}\n\t}\n\n\tif gridCounts[word[length-1]] < gridCounts[word[0]]{\n\t\treversed := make([]byte, length)\n\t\tfor i := 0; i < length; i++ {\n\t\t\treversed[i] = word[length-1-i]\n\t\t}\n\t\tword = string(reversed)\n\t}\n\n\tvar dfs func(r, c, index int)bool\n\tdfs = func(r, c, index int)bool{\n\n\t\tif index == length{\n\t\t\treturn true\n\t\t}\n\n\t\tif r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] != word[index] {\n\t\t\treturn false\n\t\t}\n\n\t\ttemp := grid[r][c]\n\t\tgrid[r][c] = '#'\n\n\t\tfound := dfs(r+1, c, index+1) ||\n\t\t\tdfs(r-1, c, index+1) ||\n\t\t\tdfs(r, c+1, index+1) ||\n\t\t\tdfs(r, c-1, index+1)\n\n\t\tgrid[r][c] = temp\n\n\t\treturn found\n\t}\n\tfor r := 0; r < rows; r++{\n\t\tfor c := 0; c < cols; c++{\n\t\t\tif dfs(r, c, 0){\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n\treturn false\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "97"
+        }
+    ]
+}

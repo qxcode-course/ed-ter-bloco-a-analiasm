@@ -2,8 +2,78 @@
     "patches": [
         {
             "label": "2026-05-18_23-01-22",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -17,219 +17,59 @@\n ort \n-(%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22)%0A%0Afunc ehValido(s %5B%5Dbyte, digito byte, pos int, L int) bool%7B%0A    n := len(s)%0A    %0A    inicio := pos - len%0A    if inicio %3C 0 %7B%0A        inicio = 0%0A    %7D%0A%7D%0Afunc main() %7B%0A%0A\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-20_17-18-47",
+            "content": "@@ -212,94 +212,8 @@\n   %7D%0A\n-    %0A    for i := inicio; i %3C pos; i++ %7B%0A%09%09if s%5Bi%5D == digito %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A\n %7D%0Afu\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-05-23_00-48-29",
+            "content": "@@ -208,16 +208,20 @@\n 0%0A    %7D%0A\n+    \n %0A    for\n@@ -294,17 +294,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %7D%0Afunc m\n@@ -314,49 +314,8 @@\n ) %7B%0A\n-    scanner := bufio.NewScanner(os.Stdin)\n %0A%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-05-23_00-49-20",
+            "content": "@@ -354,79 +354,6 @@\n n)%0A%0A\n-    linhaSeq := strings.TrimSpace(scanner.Text())%0A%09s := %5B%5Dbyte(linhaSeq)%0A\n %7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-23_00-49-45",
+            "content": "@@ -426,86 +426,7 @@\n Seq)\n-%0A%0A    linhaL := strings.TrimSpace(scanner.Text())%0A%09L, _ := strconv.Atoi(linhaL)\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-23_00-50-04",
+            "content": "@@ -505,63 +505,7 @@\n haL)\n-%0A%0A    if resolver(s, 0, L) %7B%0A%09%09fmt.Println(string(s))%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-23_00-50-15",
+            "content": "@@ -294,148 +294,11 @@\n %0A%09%7D%0A\n-    %0A    fim := pos + L%0A%09if fim %3E= n %7B%0A%09%09fim = n - 1%0A%09%7D%0A%0A%09for i := pos + 1; i %3C= fim; i++ %7B%0A%09%09if s%5Bi%5D == digito %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n-%0A\n func\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-23_00-51-36",
+            "content": "@@ -430,25 +430,8 @@\n %7D%0A%09%7D\n-%0A%0A    return true\n %0A%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-23_00-51-49",
+            "content": "@@ -451,304 +451,8 @@\n %0A%7D%0A%0A\n-func resolver(s %5B%5Dbyte, index int, L int) bool %7B%0A%09if index == len(s) %7B%0A%09%09return true%0A%09%7D%0A%0A%09if s%5Bindex%5D != '.' %7B%0A%09%09// Garante que o n%C3%BAmero fixo inicial n%C3%A3o quebra as regras%0A%09%09if !ehValido(s, s%5Bindex%5D, index, L) %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09return resolver(s, index+1, L)%0A%09%7D%0A%0A    %0A%0A%09%0A%09%0A%0A%09return false%0A%7D%0A%0A\n func\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-23_01-04-30",
+            "content": "@@ -718,197 +718,18 @@\n %0A%09%7D%0A\n-    for d := 0; d %3C= L; d++ %7B%0A%09%09digitoChar := byte('0' + d)%0A%0A%09%09if ehValido(s, digitoChar, index, L) %7B%0A%09%09%09s%5Bindex%5D = digitoChar %0A%0A%09%09%09if resolver(s, index+1, L) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%0A%09%09%7D%0A%09%7D\n+%0A    %0A%0A%09%0A%09\n %0A%0A%09r\n@@ -742,16 +742,17 @@\n false%0A%7D%0A\n+%0A\n func mai\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-05-23_01-20-46",
+            "content": "@@ -900,34 +900,8 @@\n %09%09%7D%0A\n-            s%5Bindex%5D = '.'\n %0A%09%09%7D\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-05-23_01-21-13",
+            "content": "@@ -159,17 +159,19 @@\n = pos - \n-L\n+len\n %0A    if \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-05-23_01-21-53",
+            "content": "@@ -118,21 +118,16 @@\n ) bool%7B%0A\n-    %0A\n     n :=\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-05-23_01-22-40",
+            "content": "@@ -946,25 +946,24 @@\n urn false%0A%7D%0A\n-%0A\n func main() \n@@ -1011,47 +1011,8 @@\n n)%0A%0A\n-%0A    if !scanner.Scan() %7B%0A%09%09return%0A%09%7D%0A%0A\n     \n@@ -1085,45 +1085,8 @@\n q)%0A%0A\n-    if !scanner.Scan() %7B%0A%09%09return%0A%09%7D%0A\n     \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-23_01-33-02",
+            "content": "package main\nimport (\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\")\n\nfunc ehValido(s []byte, digito byte, pos int, L int) bool{\n    \n    n := len(s)\n    \n    inicio := pos - L\n    if inicio < 0 {\n        inicio = 0\n    }\n\n    for i := inicio; i < pos; i++ {\n\t\tif s[i] == digito {\n\t\t\treturn false\n\t\t}\n\t}\n    \n    fim := pos + L\n\tif fim >= n {\n\t\tfim = n - 1\n\t}\n\n\tfor i := pos + 1; i <= fim; i++ {\n\t\tif s[i] == digito {\n\t\t\treturn false\n\t\t}\n\t}\n\n    return true\n}\n\nfunc resolver(s []byte, index int, L int) bool {\n\tif index == len(s) {\n\t\treturn true\n\t}\n\n\tif s[index] != '.' {\n\t\t// Garante que o n\u00famero fixo inicial n\u00e3o quebra as regras\n\t\tif !ehValido(s, s[index], index, L) {\n\t\t\treturn false\n\t\t}\n\t\treturn resolver(s, index+1, L)\n\t}\n    for d := 0; d <= L; d++ {\n\t\tdigitoChar := byte('0' + d)\n\n\t\tif ehValido(s, digitoChar, index, L) {\n\t\t\ts[index] = digitoChar \n\n\t\t\tif resolver(s, index+1, L) {\n\t\t\t\treturn true\n\t\t\t}\n            s[index] = '.'\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\n\n    if !scanner.Scan() {\n\t\treturn\n\t}\n\n    linhaSeq := strings.TrimSpace(scanner.Text())\n\ts := []byte(linhaSeq)\n\n    if !scanner.Scan() {\n\t\treturn\n\t}\n    linhaL := strings.TrimSpace(scanner.Text())\n\tL, _ := strconv.Atoi(linhaL)\n\n    if resolver(s, 0, L) {\n\t\tfmt.Println(string(s))\n\t}\n}\n",
+            "lines": "85"
         }
     ]
 }

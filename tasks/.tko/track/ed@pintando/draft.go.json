@@ -77,7 +77,12 @@
         },
         {
             "label": "2026-03-16_19-10-59",
-            "content": "package main\nimport(\"fmt\"\n\"math\")\n\nfunc main(){\nvar a, b, c, s, area float64;\n\nfmt.Scanf(\"%f \", &a)\nfmt.Scanf(\"%f \", &b)\nfmt.Scanf(\"%f \", &c)\n\ns = (a+b+c)/2\narea = math.Sqrt(s * (s - a) * (s - b) * (s - c))\n\nfmt.Printf(\"%.2f\\n\", area)\n\n}",
+            "content": "@@ -230,9 +230,8 @@\n area)%0A%0A%7D\n-%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-20_13-15-01",
+            "content": "package main\nimport(\"fmt\"\n\"math\")\n\nfunc main(){\nvar a, b, c, s, area float64;\n\nfmt.Scanf(\"%f \", &a)\nfmt.Scanf(\"%f \", &b)\nfmt.Scanf(\"%f \", &c)\n\ns = (a+b+c)/2\narea = math.Sqrt(s * (s - a) * (s - b) * (s - c))\n\nfmt.Printf(\"%.2f\\n\", area)\n\n}\n",
             "lines": "17"
         }
     ]

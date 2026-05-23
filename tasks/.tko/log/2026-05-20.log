@@ -49,3 +49,31 @@
 2026-05-20 14:06:27, EXEC, v:1, k:sandbox@user_004, mode:LOCK, rate:0, size:32
 2026-05-20 14:06:30, MOVE, v:1, k:sandbox@user_004, mode:BACK
 2026-05-20 14:07:07, SELF, v:1, k:sandbox@user_004, self:1, study:10
+2026-05-20 14:15:12, MOVE, v:1, k:ed@casais, mode:PICK
+2026-05-20 14:15:56, MOVE, v:1, k:ed@casais, mode:BACK
+2026-05-20 14:16:11, MOVE, v:1, k:sandbox@user_005, mode:PICK
+2026-05-20 14:12:09, MOVE, v:1, k:sandbox@user_005, mode:EDIT
+2026-05-20 14:21:28, MOVE, v:1, k:sandbox@user_005, mode:EDIT
+2026-05-20 14:23:45, EXEC, v:1, k:sandbox@user_005, mode:LOCK, rate:0, size:32
+2026-05-20 14:24:14, MOVE, v:1, k:sandbox@user_005, mode:BACK
+2026-05-20 14:25:09, SELF, v:1, k:sandbox@user_005, self:1, study:8
+2026-05-20 14:26:06, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-05-20 14:26:18, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-05-20 14:26:25, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-05-20 14:27:34, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-05-20 14:27:39, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-05-20 14:32:28, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-05-20 14:32:34, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-05-20 14:32:57, MOVE, v:1, k:sandbox@user_006, mode:EDIT
+2026-05-20 17:08:21, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-05-20 17:10:34, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-20 17:11:15, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-05-20 17:08:21, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-20 17:08:21, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-20 17:08:21, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-20 17:13:55, SELF, v:1, k:ed@resto, self:1, study:6, concept:1
+2026-05-20 17:14:45, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-20 17:14:55, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0
+2026-05-20 17:14:55, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-20 17:16:55, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-20 17:18:47, EXEC, v:1, k:ed@distancia, mode:FULL, size:19, fail:COMP
