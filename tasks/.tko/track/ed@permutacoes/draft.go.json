@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_12-59-56",
+            "content": "@@ -323,17 +323,27 @@\n  = true%0A\n+          \n %0A\n-\n %09%09%09atual\n@@ -496,17 +496,18 @@\n %09%7D%0A%09%7D%0A%7D%0A\n+%7D\n %0A\n-\n func mai\n@@ -516,159 +516,39 @@\n ) %7B%0A\n-%0A\n     \n-scanner := bufio.NewScanner(os.Stdin)%0A%0A    if !scanner.Scan() %7B%0A%09%09return%0A%09%7D%0A%0A    input := strings.TrimSpace(scanner.Text())%0A%09chars := %5B%5Dbyte(input\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-23_13-01-05",
+            "content": "@@ -657,91 +657,7 @@\n put)\n-%0A%0A    sort.Slice(chars, func(i, j int) bool %7B%0A%09%09return chars%5Bi%5D %3C chars%5Bj%5D%0A%09%7D)%0A%0A    \n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-23_13-01-31",
+            "content": "@@ -741,81 +741,7 @@\n     \n-visitado := make(%5B%5Dbool, len(chars))%0A%09atual := make(%5B%5Dbyte, 0, len(chars))\n %0A%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-23_13-01-41",
+            "content": "@@ -815,53 +815,7 @@\n rs))\n-%0A%0A    gerarPermutacoes(chars, visitado, atual)\n %0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-23_13-01-56",
+            "content": "@@ -852,11 +852,16 @@\n itado, a\n+tual)\n %0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-23_13-02-34",
+            "content": "@@ -852,16 +852,11 @@\n itado, a\n-tual)\n %0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-23_13-19-01",
+            "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"sort\"\n    \"strings\"\n)\nfunc gerarPermutacoes(chars []byte, visitado []bool, atual []byte){\n\n    if len(atual) == len(chars){\n        fmt.Println(string(atual))\n        return\n    }\n\n    for i := 0; i < len(chars); i++ {\n      if !visitado[i] {\n          visitado[i] = true\n\n\t\t\tatual = append(atual, chars[i])\n            gerarPermutacoes(chars, visitado, atual)\n\n            atual = atual[:len(atual)-1]\n\t\t\tvisitado[i] = false\n\t\t}\n\t}\n}\n\nfunc main() {\n\n    scanner := bufio.NewScanner(os.Stdin)\n\n    if !scanner.Scan() {\n\t\treturn\n\t}\n\n    input := strings.TrimSpace(scanner.Text())\n\tchars := []byte(input)\n\n    sort.Slice(chars, func(i, j int) bool {\n\t\treturn chars[i] < chars[j]\n\t})\n\n    visitado := make([]bool, len(chars))\n\tatual := make([]byte, 0, len(chars))\n\n    gerarPermutacoes(chars, visitado, atual)\n}\n",
+            "lines": "48"
+        }
+    ]
+}

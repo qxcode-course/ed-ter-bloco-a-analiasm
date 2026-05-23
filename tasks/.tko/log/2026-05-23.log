@@ -62,3 +62,52 @@
 2026-05-23 01:33:51, SELF, v:1, k:ed@distancia, self:1, rate:100, study:53, concept:1
 2026-05-23 01:33:52, MOVE, v:1, k:ed@distancia, mode:PICK
 2026-05-23 01:33:55, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-23 12:55:10, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-05-23 12:55:11, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-23 12:55:10, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-23 12:55:10, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-23 12:59:45, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-23 12:59:56, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:31, fail:COMP
+2026-05-23 13:01:05, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:39, fail:COMP
+2026-05-23 13:01:31, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:0, size:45
+2026-05-23 13:01:41, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:46, fail:COMP
+2026-05-23 13:01:56, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:48
+2026-05-23 13:02:07, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-23 13:02:26, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-23 13:02:34, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:48, fail:COMP
+2026-05-23 13:02:39, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-23 13:19:01, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:48
+2026-05-23 13:19:12, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-23 13:21:38, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:24, concept:1
+2026-05-23 13:21:49, MOVE, v:1, k:ed@sudoku, mode:DOWN
+2026-05-23 13:21:50, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-05-23 13:25:05, EXEC, v:1, k:ed@sudoku, mode:FULL, size:22, fail:COMP
+2026-05-23 13:25:21, EXEC, v:1, k:ed@sudoku, mode:FULL, size:24, fail:COMP
+2026-05-23 13:25:44, EXEC, v:1, k:ed@sudoku, mode:FULL, size:27, fail:COMP
+2026-05-23 13:26:19, EXEC, v:1, k:ed@sudoku, mode:FULL, size:33, fail:COMP
+2026-05-23 13:21:49, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-05-23 13:21:49, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-05-23 13:26:24, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-05-23 13:34:38, EXEC, v:1, k:ed@sudoku, mode:FULL, size:40, fail:COMP
+2026-05-23 13:35:28, EXEC, v:1, k:ed@sudoku, mode:FULL, size:45, fail:COMP
+2026-05-23 13:35:25, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-05-23 13:39:56, EXEC, v:1, k:ed@sudoku, mode:FULL, size:47, fail:COMP
+2026-05-23 13:40:14, EXEC, v:1, k:ed@sudoku, mode:FULL, size:50, fail:COMP
+2026-05-23 13:40:30, EXEC, v:1, k:ed@sudoku, mode:FULL, size:61, fail:COMP
+2026-05-23 13:41:12, EXEC, v:1, k:ed@sudoku, mode:FULL, size:64, fail:COMP
+2026-05-23 13:41:18, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-05-23 13:41:37, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-05-23 13:41:41, EXEC, v:1, k:ed@sudoku, mode:FULL, fail:COMP
+2026-05-23 13:42:26, EXEC, v:1, k:ed@sudoku, mode:FULL, size:69, fail:COMP
+2026-05-23 13:44:42, EXEC, v:1, k:ed@sudoku, mode:FULL, size:71, fail:COMP
+2026-05-23 13:44:54, EXEC, v:1, k:ed@sudoku, mode:FULL, size:77, fail:COMP
+2026-05-23 13:45:10, EXEC, v:1, k:ed@sudoku, mode:FULL, size:80, fail:COMP
+2026-05-23 13:45:16, EXEC, v:1, k:ed@sudoku, mode:FULL, size:82, fail:COMP
+2026-05-23 13:45:15, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-05-23 13:46:37, EXEC, v:1, k:ed@sudoku, mode:FULL, size:86, fail:COMP
+2026-05-23 13:46:50, EXEC, v:1, k:ed@sudoku, mode:FULL, size:90, fail:COMP
+2026-05-23 13:47:07, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100, size:93
+2026-05-23 13:47:13, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-05-23 13:47:30, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-05-23 13:47:32, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-05-23 13:47:46, SELF, v:1, k:ed@sudoku, self:1, rate:100, study:25, concept:1

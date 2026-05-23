@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_13-25-05",
+            "content": "@@ -248,58 +248,6 @@\n    %0A\n-    var n int%0A%09fmt.Sscanf(scanner.Text(), %22%25d%22, &n)%0A\n %7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-05-23_13-25-21",
+            "content": "@@ -239,16 +239,20 @@\n turn%0A%09%7D%0A\n+    \n %0A    var\n@@ -299,66 +299,7 @@\n  &n)\n-%0A%0A    matriz := make(%5B%5D%5B%5Drune, n)%0A%09for i := 0; i %3C n; i++ %7B\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-23_13-25-44",
+            "content": "@@ -354,118 +354,7 @@\n ++ %7B\n-%0A%0A        if scanner.Scan() %7B%0A%09%09%09linha := strings.TrimSpace(scanner.Text())%0A%09%09%09matriz%5Bi%5D = %5B%5Drune(linha)%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-23_13-26-19",
+            "content": "@@ -465,114 +465,7 @@\n %7D%0A%09%7D\n-%0A%0A    if resolver(matriz, 0) %7B%0A        %0A%09%09for i := 0; i %3C n; i++ %7B%0A%09%09%09fmt.Println(string(matriz%5Bi%5D))%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-23_13-34-38",
+            "content": "@@ -147,114 +147,8 @@\n z)%0A%0A\n-    for i := 0; i %3C n; i++ %7B%0A%09%09if matriz%5Blin%5D%5Bi%5D == num %7C%7C matriz%5Bi%5D%5Bcol%5D == num %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A\n %0Afun\n@@ -492,16 +492,24 @@\n z, 0) %7B%0A\n+        \n %0A%09%09for i\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-23_13-35-28",
+            "content": "@@ -254,56 +254,8 @@\n %09%7D%0A%0A\n-    tamanhoBloco := int(math.Sqrt(float64(n)))%0A%0A\n func\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-23_13-39-56",
+            "content": "@@ -302,112 +302,8 @@\n ))%0A%0A\n-    lInicio := (lin / tamanhoBloco) * tamanhoBloco%0A%09cInicio := (col / tamanhoBloco) * tamanhoBloco%0A    %0A\n func\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-23_13-40-14",
+            "content": "@@ -401,188 +401,12 @@\n oco%0A\n-%0A\n     \n-for r := lInicio; r %3C lInicio+tamanhoBloco; r++ %7B%0A%09%09for c := cInicio; c %3C cInicio+tamanhoBloco; c++ %7B%0A%09%09%09if matriz%5Br%5D%5Bc%5D == num %7B%0A%09%09%09%09return false%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return true%0A%7D%0A\n %0Afun\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-23_13-40-30",
+            "content": "@@ -582,76 +582,8 @@\n %0A%7D%0A%0A\n-func resolver(matriz %5B%5D%5B%5Drune, index int) bool %7B%0A%09n := len(matriz)%0A%0A\n func\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-23_13-41-12",
+            "content": "@@ -650,53 +650,8 @@\n z)%0A%0A\n-    if index == n*n %7B%0A%09%09return true%0A%09%7D%0A    %0A%0A\n func\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-23_13-42-26",
+            "content": "@@ -689,43 +689,12 @@\n %0A%09%7D%0A\n-%0A\n     \n-l := index / n%0A%09c := index %25 n\n %0A%0Afu\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-05-23_13-44-42",
+            "content": "@@ -726,82 +726,8 @@\n  n%0A%0A\n-%0A    if matriz%5Bl%5D%5Bc%5D != '.' %7B%0A%09%09return resolver(matriz, index+1)%0A%09%7D%0A%0A    %0A\n func\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-05-23_13-44-54",
+            "content": "@@ -795,78 +795,8 @@\n %09%7D%0A%0A\n-    for d := 1; d %3C= n; d++ %7B%0A%09%09numChar := rune('0' + d)%0A        %0A    \n     \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-05-23_13-45-10",
+            "content": "@@ -869,83 +869,8 @@\n     \n-if ehValido(matriz, l, c, numChar) %7B%0A%09%09%09matriz%5Bl%5D%5Bc%5D = numChar%0A            \n %0Afun\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-23_13-45-16",
+            "content": "@@ -931,72 +931,8 @@\n Char\n-%0A%0A           if resolver(matriz, index+1) %7B%0A%09%09%09%09return true%0A%09%09%09%7D\n %0A   \n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-23_13-46-37",
+            "content": "@@ -1009,85 +1009,8 @@\n    %0A\n-            matriz%5Bl%5D%5Bc%5D = '.' // Desfaz a tentativa (Backtrack)%0A%09%09%7D%0A%09%7D%0A    %0A\n func\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-05-23_13-46-50",
+            "content": "@@ -1036,24 +1036,57 @@\n %5D = '.' \n+// Desfaz a tentativa (Backtrack)\n %0A%09%09%7D%0A%09%7D%0A\n %0A    ret\n@@ -1081,29 +1081,12 @@\n %0A%09%7D%0A\n-%0A\n     \n-return false %0A%7D%0A\n %0Afun\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-05-23_13-47-07",
+            "content": "package main\nimport (\n    \"bufio\"\n\t\"fmt\"\n\t\"math\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc ehValido(matriz [][]rune, lin, col int, num rune) bool {\n\tn := len(matriz)\n\n    for i := 0; i < n; i++ {\n\t\tif matriz[lin][i] == num || matriz[i][col] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\n    tamanhoBloco := int(math.Sqrt(float64(n)))\n\n    lInicio := (lin / tamanhoBloco) * tamanhoBloco\n\tcInicio := (col / tamanhoBloco) * tamanhoBloco\n\n    for r := lInicio; r < lInicio+tamanhoBloco; r++ {\n\t\tfor c := cInicio; c < cInicio+tamanhoBloco; c++ {\n\t\t\tif matriz[r][c] == num {\n\t\t\t\treturn false\n\t\t\t}\n\t\t}\n\t}\n\n\treturn true\n}\n\nfunc resolver(matriz [][]rune, index int) bool {\n\tn := len(matriz)\n\n    if index == n*n {\n\t\treturn true\n\t}\n\n    l := index / n\n\tc := index % n\n\n\n    if matriz[l][c] != '.' {\n\t\treturn resolver(matriz, index+1)\n\t}\n\n    for d := 1; d <= n; d++ {\n\t\tnumChar := rune('0' + d)\n        \n        if ehValido(matriz, l, c, numChar) {\n\t\t\tmatriz[l][c] = numChar\n\n           if resolver(matriz, index+1) {\n\t\t\t\treturn true\n\t\t\t}\n            \n            matriz[l][c] = '.' \n\t\t}\n\t}\n\n    return false \n}\n\nfunc main() {\n\n    scanner := bufio.NewScanner(os.Stdin)\n\n    if !scanner.Scan() {\n\t\treturn\n\t}\n\n    var n int\n\tfmt.Sscanf(scanner.Text(), \"%d\", &n)\n\n    matriz := make([][]rune, n)\n\tfor i := 0; i < n; i++ {\n\n        if scanner.Scan() {\n\t\t\tlinha := strings.TrimSpace(scanner.Text())\n\t\t\tmatriz[i] = []rune(linha)\n\t\t}\n\t}\n\n    if resolver(matriz, 0) {\n\n\t\tfor i := 0; i < n; i++ {\n\t\t\tfmt.Println(string(matriz[i]))\n\t\t}\n\t}\n}\n",
+            "lines": "93"
+        }
+    ]
+}
