@@ -6,19 +6,48 @@ import (
 	"os"
 )
 
-func burnTrees(grid [][]rune, l, c int) {
-	stack := NewStack[Pos]()
-	_ , _ , _ = mat, l, c
-
-	// Essa função deve usar uma list como pilha
-	// e marcar as árvores na matriz como queimados
-	// Uma sugestão de como fazer isso é:
-	// - adicionar a primeira posição na pilha
-	// - enquanto a pilha não estiver vazia:
-	//   - retirar o elemento do topo
-	//   - se puder ser queimado, queime e adicione seus vizinhos à pilha
-
+type Pos struct {
+	l, c int
 }
+
+func burnTrees(grid [][]rune, l, c int) {
+
+	nl := len(grid)
+
+	if nl == 0 {
+		return
+	}
+
+    nc := len(grid[0])
+
+	stack := []Pos{{l: l, c: c}}
+
+	dRow := []int{-1, 1, 0, 0}
+	dCol := []int{0, 0, -1, 1}
+
+	for len(stack) > 0 {
+	
+		topoIdx := len(stack) - 1
+		atual := stack[topoIdx]
+		stack = stack[:topoIdx]
+
+		if grid[atual.l][atual.c] == '#' {
+			grid[atual.l][atual.c] = 'o'
+
+			for i := 0; i < 4; i++ {
+				novoL := atual.l + dRow[i]
+				novoC := atual.c + dCol[i]
+
+				if novoL >= 0 && novoL < nl && novoC >= 0 && novoC < nc {
+					if grid[novoL][novoC] == '#' {
+						stack = append(stack, Pos{l: novoL, c: novoC})
+					}
+				}
+			}
+		}
+	}
+}
+
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

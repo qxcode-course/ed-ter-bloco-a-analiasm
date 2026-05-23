@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_15-00-00",
+            "content": "@@ -119,49 +119,55 @@\n  %7B%0A%09\n-nl := len(grid)%0A%09if nl == 0 %7B%0A%09%09return%0A%09%7D\n+stack := NewStack%5BPos%5D()%0A%09_ , _ , _ = mat, l, c\n %0A%0A%0A%7D\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-05-23_15-00-40",
+            "content": "@@ -114,17 +114,16 @@\n  int) %7B%0A\n-%0A\n %09nl := l\n@@ -131,17 +131,16 @@\n n(grid)%0A\n-%0A\n %09if nl =\n@@ -162,31 +162,8 @@\n %09%7D%0A%0A\n-    nc := len(grid%5B0%5D)%0A\n %0A%7D%0A%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-23_15-01-11",
+            "content": "@@ -188,95 +188,8 @@\n %5D)%0A%0A\n-%09stack := %5B%5DPos%7B%7Bl: l, c: c%7D%7D%0A%0A%09dRow := %5B%5Dint%7B-1, 1, 0, 0%7D%0A%09dCol := %5B%5Dint%7B0, 0, -1, 1%7D%0A\n %7D%0A%0Af\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-23_15-04-34",
+            "content": "@@ -275,117 +275,8 @@\n  1%7D%0A\n-%0A%09for len(stack) %3E 0 %7B%0A%09%0A%09%09topoIdx := len(stack) - 1%0A%09%09atual := stack%5BtopoIdx%5D%0A%09%09stack = stack%5B:topoIdx%5D%0A%09%09%0A%0A\n %7D%0A%0Af\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-23_15-05-20",
+            "content": "@@ -380,168 +380,10 @@\n dx%5D%0A\n-%0A\n %09%09\n-if grid%5Batual.l%5D%5Batual.c%5D == '#' %7B%0A%09%09%09grid%5Batual.l%5D%5Batual.c%5D = 'o'%0A%0A%09%09%09for i := 0; i %3C 4; i++ %7B%0A%09%09%09%09novoL := atual.l + dRow%5Bi%5D%0A%09%09%09%09novoC := atual.c + dCol%5Bi%5D\n %0A%0A%7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-23_15-07-44",
+            "content": "@@ -542,186 +542,9 @@\n i%5D%0A%0A\n-%09%09%09%09if novoL %3E= 0 && novoL %3C nl && novoC %3E= 0 && novoC %3C nc %7B%0A%09%09%09%09%09if grid%5BnovoL%5D%5BnovoC%5D == '#' %7B%0A%09%09%09%09%09%09stack = append(stack, Pos%7Bl: novoL, c: novoC%7D)%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%7D%0A\n+%7D\n %0A%0Afu\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-23_15-09-32",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\n\tnl := len(grid)\n\n\tif nl == 0 {\n\t\treturn\n\t}\n\n    nc := len(grid[0])\n\n\tstack := []Pos{{l: l, c: c}}\n\n\tdRow := []int{-1, 1, 0, 0}\n\tdCol := []int{0, 0, -1, 1}\n\n\tfor len(stack) > 0 {\n\t\n\t\ttopoIdx := len(stack) - 1\n\t\tatual := stack[topoIdx]\n\t\tstack = stack[:topoIdx]\n\n\t\tif grid[atual.l][atual.c] == '#' {\n\t\t\tgrid[atual.l][atual.c] = 'o'\n\n\t\t\tfor i := 0; i < 4; i++ {\n\t\t\t\tnovoL := atual.l + dRow[i]\n\t\t\t\tnovoC := atual.c + dCol[i]\n\n\t\t\t\tif novoL >= 0 && novoL < nl && novoC >= 0 && novoC < nc {\n\t\t\t\t\tif grid[novoL][novoC] == '#' {\n\t\t\t\t\t\tstack = append(stack, Pos{l: novoL, c: novoC})\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "73"
+        }
+    ]
+}

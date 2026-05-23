@@ -25,9 +25,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
 - ed@dfs
-- ed@backtrack
 flags:
   inbox: all
   panel: graph
@@ -35,5 +33,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@sudoku
-selected_index: 17
+selected: ed@tree
+selected_index: 16

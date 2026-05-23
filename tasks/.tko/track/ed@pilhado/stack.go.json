@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_16-44-54",
+            "content": "@@ -7,16 +7,54 @@\n e main%0A%0A\n+type Stack%5BT any%5D struct %7B%0A%09data %5B%5DT%0A%7D\n %0A%0Afunc N\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-23_17-02-50",
+            "content": "package main\n\n\n\nfunc NewStack[T any]() *Stack[T] {\n\treturn &Stack[T]{data: []T{}}\n}\n\nfunc (s *Stack[T]) Push(value T) {\n\ts.data = append(s.data, value)\n}\n\nfunc (s *Stack[T]) Top() T {\n\tif len(s.data) == 0 {\n\t\tpanic(\"stack is empty\")\n\t}\n\treturn s.data[len(s.data)-1]\n}\n\nfunc (s *Stack[T]) IsEmpty() bool {\n\treturn len(s.data) == 0\n}\n\nfunc (s *Stack[T]) Pop() T {\n\tif s.IsEmpty() {\n\t\tpanic(\"stack is empty\")\n\t}\n\tvalue := s.data[len(s.data)-1]\n\ts.data = s.data[:len(s.data)-1]\n\treturn value\n}\n",
+            "lines": "31"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_15-12-39",
+            "content": "@@ -97,100 +97,7 @@\n din)\n-%0A%0A%09var fila %5B%5Dstring%0A%09for i := 0; i %3C 16; i++ %7B%0A%09%09fila = append(fila, string(rune('A'+i)))%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-23_15-12-46",
+            "content": "@@ -114,17 +114,16 @@\n %5Dstring%0A\n-%0A\n %09for i :\n@@ -190,126 +190,7 @@\n )%0A%09%7D\n-%0A%0A%09for len(fila) %3E 1 %7B%0A%0A%09%09timeA := fila%5B0%5D%0A%09%09timeB := fila%5B1%5D%0A%09%09fila = fila%5B2:%5D%0A%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-23_15-14-12",
+            "content": "@@ -308,84 +308,9 @@\n %09%09%7D%0A\n-%0A\n %09%09\n-var golsA, golsB int%0A%09%09fmt.Sscanf(scanner.Text(), %22%25d %25d%22, &golsA, &golsB)\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-23_15-14-27",
+            "content": "@@ -385,107 +385,7 @@\n lsB)\n-%0A%0A%09%09if golsA %3E golsB %7B%0A%09%09%09fila = append(fila, timeA)%0A%09%09%7D else %7B%0A%09%09%09fila = append(fila, timeB)%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-23_15-14-41",
+            "content": "@@ -485,30 +485,7 @@\n %7D%0A%09%7D\n-%0A%0A%09fmt.Println(fila%5B0%5D)\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-23_15-23-16",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar fila []string\n\n\tfor i := 0; i < 16; i++ {\n\t\tfila = append(fila, string(rune('A'+i)))\n\t}\n\n\tfor len(fila) > 1 {\n\n\t\ttimeA := fila[0]\n\t\ttimeB := fila[1]\n\t\tfila = fila[2:]\n\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\n\t\tvar golsA, golsB int\n\t\tfmt.Sscanf(scanner.Text(), \"%d %d\", &golsA, &golsB)\n\n\t\tif golsA > golsB {\n\t\t\tfila = append(fila, timeA)\n\t\t} else {\n\t\t\tfila = append(fila, timeB)\n\t\t}\n\t}\n\n\tfmt.Println(fila[0])\n}\n",
+            "lines": "39"
+        }
+    ]
+}
