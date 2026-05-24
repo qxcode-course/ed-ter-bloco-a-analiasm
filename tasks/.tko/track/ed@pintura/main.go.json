@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_15-39-17",
+            "content": "@@ -185,84 +185,32 @@\n  %7B%0A%09\n-%0A%09corOriginal := image%5Bsr%5D%5Bsc%5D%0A%0A%09if corOriginal == color %7B%0A%09%09return image%0A%09%7D\n+//%0A%09_ := image%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-24_15-40-01",
+            "content": "@@ -261,48 +261,8 @@\n e%0A%09%7D\n-%0A%0A%09nl := len(image)%0A%09nc := len(image%5B0%5D)\n %0A%7D%0A%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-24_15-40-13",
+            "content": "@@ -301,158 +301,8 @@\n %5B0%5D)\n-%0A%0A%09type Pixel struct %7B%0A%09%09r, c int%0A%09%7D%0A%0A%09stack := %5B%5DPixel%7B%7Br: sr, c: sc%7D%7D%0A%09image%5Bsr%5D%5Bsc%5D = color%0A%0A%09dr := %5B%5Dint%7B-1, 1, 0, 0%7D%0A%09dc := %5B%5Dint%7B0, 0, -1, 1%7D%0A%0A%09\n %0A%7D%0A%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-24_15-49-07",
+            "content": "@@ -451,91 +451,8 @@\n %7D%0A%0A%09\n-for len(stack) %3E 0 %7B%0A%0A%09%09atual := stack%5Blen(stack)-1%5D%0A%09%09stack = stack%5B:len(stack)-1%5D\n %0A%7D%0A%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-05-24_15-49-34",
+            "content": "@@ -534,90 +534,8 @@\n )-1%5D\n-%0A%0A%09%09for i := 0; i %3C 4; i++ %7B%0A%09%09%09nr := atual.r + dr%5Bi%5D%0A%09%09%09nc := atual.c + dc%5Bi%5D%0A%09%09%09\n %0A%7D%0A%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-24_16-01-36",
+            "content": "@@ -613,212 +613,11 @@\n %5Bi%5D%0A\n-%0A\n %09%09%09\n-if nr %3E= 0 && nr %3C nl && nc %3E= 0 && nc %3C nc %7B%0A%0A%09%09%09%09if image%5Bnr%5D%5Bnc%5D == corOriginal %7B%0A%09%09%09%09%09%0A%09%09%09%09%09image%5Bnr%5D%5Bnc%5D = color%0A%09%09%09%09%09stack = append(stack, Pixel%7Br: nr, c: nc%7D)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return image%0A%7D\n %0A%7D%0A%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-24_16-07-10",
+            "content": "@@ -698,16 +698,21 @@\n ginal %7B%0A\n+%09%09%09%09%09\n %0A%09%09%09%09%09im\n@@ -814,16 +814,17 @@\n image%0A%7D%0A\n+%7D\n %0A%0A// N%C3%A3o\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-05-24_16-07-20",
+            "content": "@@ -63,16 +63,66 @@\n ngs%22%0A)%0A%0A\n+// N%C3%A3o modifique a assinatura da fun%C3%A7%C3%A3o floodFill%0A\n func flo\n@@ -180,16 +180,18 @@\n %5B%5Dint %7B%0A\n+%09%0A\n %09corOrig\n@@ -213,18 +213,16 @@\n r%5D%5Bsc%5D%0A%0A\n-%09%0A\n %09if corO\n@@ -698,16 +698,17 @@\n ginal %7B%0A\n+%0A\n %09%09%09%09%09ima\n@@ -810,16 +810,48 @@\n mage%0A%7D%0A%0A\n+%0A// N%C3%A3o modifique a fun%C3%A7%C3%A3o main%0A\n func mai\n@@ -1265,16 +1265,38 @@\n row%0A%09%7D%0A%0A\n+%09// L%C3%AA sr, sc e color%0A\n %09scanner\n@@ -1495,16 +1495,48 @@\n color)%0A%0A\n+%09// Imprime a matriz resultante%0A\n %09for _, \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-05-24_16-09-54",
+            "content": "@@ -20,15 +20,8 @@\n t (%0A\n-%09%22fmt%22%0A\n %09%22bu\n@@ -27,23 +27,19 @@\n ufio%22%0A%09%22\n-strings\n+fmt\n %22%0A%09%22os%22%0A\n@@ -49,18 +49,28 @@\n trconv%22%0A\n+%09%22strings%22%0A\n )\n-%0A\n %0A%0Afunc f\n@@ -230,19 +230,16 @@\n age)%0A%09nc\n-Max\n  := len(\n@@ -247,17 +247,16 @@\n mage%5B0%5D)\n- \n %0A%0A%09type \n@@ -564,12 +564,8 @@\n i%5D%0A%0A\n-%09%09%09%0A\n %09%09%09i\n@@ -610,11 +610,8 @@\n %3C nc\n-Max\n  %7B%0A%0A\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-05-24_16-12-54",
+            "content": "@@ -129,16 +129,17 @@\n %5B%5D%5B%5Dint \n+%7B\n %0A%09corOri\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_16-13-38",
+            "content": "@@ -129,17 +129,16 @@\n %5B%5D%5B%5Dint \n-%7B\n %0A%09corOri\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_16-25-30",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"bufio\"\n\t\"strings\"\n\t\"os\"\n\t\"strconv\"\n)\n\n\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\tcorOriginal := image[sr][sc]\n\n\t\n\tif corOriginal == color {\n\t\treturn image\n\t}\n\n\tnl := len(image)\n\tncMax := len(image[0]) \n\n\ttype Pixel struct {\n\t\tr, c int\n\t}\n\n\tstack := []Pixel{{r: sr, c: sc}}\n\timage[sr][sc] = color\n\n\tdr := []int{-1, 1, 0, 0}\n\tdc := []int{0, 0, -1, 1}\n\n\tfor len(stack) > 0 {\n\n\t\tatual := stack[len(stack)-1]\n\t\tstack = stack[:len(stack)-1]\n\n\t\tfor i := 0; i < 4; i++ {\n\t\t\tnr := atual.r + dr[i]\n\t\t\tnc := atual.c + dc[i]\n\n\t\t\t\n\t\t\tif nr >= 0 && nr < nl && nc >= 0 && nc < ncMax {\n\n\t\t\t\tif image[nr][nc] == corOriginal {\n\t\t\t\t\timage[nr][nc] = color\n\t\t\t\t\tstack = append(stack, Pixel{r: nr, c: nc})\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn image\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "92"
+        }
+    ]
+}

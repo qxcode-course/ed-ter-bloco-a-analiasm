@@ -24,6 +24,9 @@ func numIslands(grid [][]byte) int {
 		}
 		grid[r][c] = '0'
 
+
+		
+
 		dfs(r+1, c) 
 		dfs(r-1, c) 
 		dfs(r, c+1) 
