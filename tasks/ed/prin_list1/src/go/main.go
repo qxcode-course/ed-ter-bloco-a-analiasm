@@ -40,6 +40,8 @@ func main() {
 	}
 	sword := l.Front()
 	for range chosen - 1 {
+
+		
 		sword = Next(l, sword)
 	}
 	for range qtd - 1 {

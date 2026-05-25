@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_16-49-03",
+            "content": "@@ -645,111 +645,8 @@\n %0A%7D%0A%0A\n-func (q *Queue%5BT%5D) Enqueue(value T) %7B%0A%09newNode := &Node%5BT%5D%7BValue: value, next: nil%7D%0A%09if q.IsEmpty() %7B%0A%0A\n func\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-25_16-54-52",
+            "content": "@@ -746,102 +746,8 @@\n () %7B\n-%0A%09%09q.head = newNode%0A%09%09q.tail = newNode%0A%09%7D else %7B%0A%09%09q.tail.next = newNode%0A%09%09q.tail = newNode%0A%09%7D\n %0A%0Afu\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-05-25_16-55-08",
+            "content": "@@ -840,20 +840,8 @@\n e%0A%09%7D\n-%0A%09q.size++%0A%7D\n %0A%0Afu\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-25_16-55-29",
+            "content": "@@ -53,21 +53,47 @@\n gs%22%0A\n-%09%22strconv%22%0A)%0A\n+)%0A%0A func (q *Queue%5BT%5D) Enqueue(value T)\n %0Afun\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-25_16-57-06",
+            "content": "@@ -615,17 +615,16 @@\n  %22%5D%22%0A%7D%0A%0A\n-%09\n func (q \n@@ -653,17 +653,16 @@\n ue T) %7B%0A\n-%09\n %09newNode\n@@ -699,17 +699,16 @@\n t: nil%7D%0A\n-%09\n %09if q.Is\n@@ -717,17 +717,16 @@\n pty() %7B%0A\n-%09\n %09%09q.head\n@@ -730,33 +730,32 @@\n ead = newNode%0A%09%09\n-%09\n q.tail = newNode\n@@ -755,17 +755,16 @@\n newNode%0A\n-%09\n %09%7D else \n@@ -765,17 +765,16 @@\n  else %7B%0A\n-%09\n %09%09q.tail\n@@ -791,17 +791,16 @@\n wNode%0A%09%09\n-%09\n q.tail =\n@@ -808,21 +808,19 @@\n newNode%0A\n-%09\n %09%7D%0A\n-%09\n %09q.size+\n@@ -825,221 +825,8 @@\n e++%0A\n-%09%7D%0A%0A%09func (q *Queue%5BT%5D) Dequeue() (T, bool) %7B%0A%09var zero T%0A%09if q.IsEmpty() %7B%0A%09%09return zero, false%0A%09%7D%0A%0A%09value := q.head.Value%0A%09q.head = q.head.next%0A%09q.size--%0A%0A%09if q.IsEmpty() %7B%0A%09%09q.tail = nil%0A%09%7D%0A%09return value, true%0A\n %7D%0A%0Af\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-25_16-58-19",
+            "content": "@@ -63,16 +63,123 @@\n onv%22%0A)%0A%0A\n+func (q *Queue%5BT%5D) Dequeue() (T, bool)%0A func (q *Queue%5BT%5D) Peek() (T, bool)%0A func (q *Queue%5BT%5D) Size() int%0A\n func (q \n@@ -877,17 +877,16 @@\n bool) %7B%0A\n-%0A\n %09var zer\n@@ -1051,183 +1051,8 @@\n %0A%7D%0A%0A\n-%0A%09func (q *Queue%5BT%5D) Peek() (T, bool) %7B%0A%09var zero T%0A%09if q.IsEmpty() %7B%0A%09%09return zero, false%0A%09%7D%0A%09return q.head.Value, true%0A%7D%0A%0A%09func (q *Queue%5BT%5D) Size() int %7B%0A%09return q.size%0A%7D%0A%0A\n func\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-05-25_17-02-31",
+            "content": "@@ -63,16 +63,79 @@\n onv%22%0A)%0A%0A\n+func (q *Queue%5BT%5D) IsEmpty() bool%0Afunc (q *Queue%5BT%5D) Clear()%0A%0A%0A\n type Nod\n@@ -1120,141 +1120,8 @@\n %0A%7D%0A%0A\n-%09func (q *Queue%5BT%5D) IsEmpty() bool %7B%0A%09return q.size == 0%0A%7D%0A%0A%09func (q *Queue%5BT%5D) Clear() %7B%0A%09q.head = nil%0A%09q.tail = nil%0A%09q.size = 0%0A%7D%0A%0A\n func\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-05-25_17-24-37",
+            "content": "@@ -1389,16 +1389,17 @@\n lds(line\n+)\n %0A%09%09if le\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-05-25_17-24-58",
+            "content": "@@ -1389,17 +1389,16 @@\n lds(line\n-)\n %0A%09%09if le\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-05-25_17-50-49",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\ntype Node[T any] struct {\n\tValue T\n\tnext  *Node[T]\n}\n\ntype Queue[T any] struct {\n\thead *Node[T]\n\ttail *Node[T]\n\tsize int\n}\n\nfunc NewQueue[T any]() *Queue[T] {\n\treturn &Queue[T]{}\n}\n\nfunc (q *Queue[T]) String() string {\n\tresult := \"[\"\n\tfor n := q.head; n != nil; n = n.next {\n\t\tif n != q.head {\n\t\t\tresult += \", \"\n\t\t}\n\t\tresult += fmt.Sprintf(\"%v\", n.Value)\n\t}\n\treturn result + \"]\"\n}\n\n\tfunc (q *Queue[T]) Enqueue(value T) {\n\t\tnewNode := &Node[T]{Value: value, next: nil}\n\t\tif q.IsEmpty() {\n\t\t\tq.head = newNode\n\t\t\tq.tail = newNode\n\t\t} else {\n\t\t\tq.tail.next = newNode\n\t\t\tq.tail = newNode\n\t\t}\n\t\tq.size++\n\t}\n\n\tfunc (q *Queue[T]) Dequeue() (T, bool) {\n\n\tvar zero T\n\tif q.IsEmpty() {\n\t\treturn zero, false\n\t}\n\n\tvalue := q.head.Value\n\tq.head = q.head.next\n\tq.size--\n\n\tif q.IsEmpty() {\n\t\tq.tail = nil\n\t}\n\treturn value, true\n}\n\n\n\tfunc (q *Queue[T]) Peek() (T, bool) {\n\tvar zero T\n\tif q.IsEmpty() {\n\t\treturn zero, false\n\t}\n\treturn q.head.Value, true\n}\n\n\tfunc (q *Queue[T]) Size() int {\n\treturn q.size\n}\n\n\tfunc (q *Queue[T]) IsEmpty() bool {\n\treturn q.size == 0\n}\n\n\tfunc (q *Queue[T]) Clear() {\n\tq.head = nil\n\tq.tail = nil\n\tq.size = 0\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tqueue := NewQueue[int]()\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(\"$\" + line)\n\t\targs := strings.Fields(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\tbreak\n\t\tcase \"show\":\n\t\t\tfmt.Println(queue)\n\t\tcase \"push\":\n\t\t\t for _, arg := range args[1:] {\n\t\t\t \tvalue, _ := strconv.Atoi(arg)\n\t\t\t \tqueue.Enqueue(value)\n\t\t\t }\n\t\tcase \"pop\":\n\t\t\t if _, ok := queue.Dequeue(); !ok {\n\t\t\t \tfmt.Println(\"falha: fila vazia\")\n\t\t\t }\n\t\tcase \"peek\":\n\t\t\t if value, ok := queue.Peek(); ok {\n\t\t\t \tfmt.Println(value)\n\t\t\t } else {\n\t\t\t \tfmt.Println(\"falha: fila vazia\")\n\t\t\t }\n\t\tdefault:\n\t\t\tfmt.Println(\"Unknown command:\", args[0])\n\t\t}\n\t}\n}\n",
+            "lines": "127"
+        }
+    ]
+}

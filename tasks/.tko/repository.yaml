@@ -25,23 +25,21 @@ sources:
   writeable: false
   quests: null
 expanded:
-- sandbox@sandbox
-- poo@sandbox
-- ed@list
-- ed@dfs
-- poo@polimorfismo
-- ed@basic
-- ed@vector
-- poo@access
-- poo@arrays
-- poo@env
-- ed@linear
-- ed@map_set
-- poo@intro
-- ed@rec
-- ed@backtrack
 - poo@agreg
 - poo@crud
+- ed@rec
+- poo@intro
+- ed@vector
+- poo@polimorfismo
+- poo@sandbox
+- poo@env
+- poo@arrays
+- ed@linear
+- sandbox@sandbox
+- ed@backtrack
+- poo@access
+- ed@basic
+- ed@map_set
 flags:
   inbox: all
   panel: graph
@@ -49,5 +47,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@pintura
-selected_index: 137
+selected: ed@pilha
+selected_index: 116
