@@ -25,21 +25,8 @@ sources:
   writeable: false
   quests: null
 expanded:
-- poo@agreg
-- poo@crud
-- ed@rec
-- poo@intro
-- ed@vector
-- poo@polimorfismo
-- poo@sandbox
-- poo@env
-- poo@arrays
-- ed@linear
-- sandbox@sandbox
 - ed@backtrack
-- poo@access
-- ed@basic
-- ed@map_set
+- ed@rec
 flags:
   inbox: all
   panel: graph
@@ -47,5 +34,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@pilha
-selected_index: 116
+selected: ed@basic
+selected_index: 9

@@ -139,3 +139,16 @@
 2026-05-25 20:31:17, MOVE, v:1, k:ed@pilha, mode:PICK
 2026-05-25 20:31:24, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0
 2026-05-25 20:31:27, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-05-25 23:44:04, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:45
+2026-05-25 23:44:41, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:64
+2026-05-25 23:45:02, SELF, v:1, k:ed@iterador, self:1, rate:100, study:69
+2026-05-25 23:45:50, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-25 23:46:08, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:131
+2026-05-25 23:46:08, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:131
+2026-05-25 23:46:08, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:131
+2026-05-25 23:46:36, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:130
+2026-05-25 23:46:37, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-25 23:46:58, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:53
+2026-05-25 23:47:27, SELF, v:1, k:ed@queimada, self:1, rate:100, study:48
+2026-05-25 23:46:29, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-25 23:46:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
