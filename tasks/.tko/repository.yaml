@@ -24,15 +24,13 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- ed@backtrack
-- ed@rec
+expanded: []
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
+  panel: skills
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@eval1
-selected_index: 49
+selected: ed@map_set
+selected_index: 10

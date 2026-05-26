@@ -52,7 +52,12 @@
         },
         {
             "label": "2026-03-19_19-54-17",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar todoAlbum, totalPossuidas int\n\tfmt.Scan(&todoAlbum)\n\tfmt.Scan(&totalPossuidas)\n\n\ttemnoalbum := make(map[int]bool)\n\tvar repetidas []int\n\tultimo := -1\n\n\tfor i := 0; i < totalPossuidas; i++ {\n\t\tvar num int\n\t\tfmt.Scan(&num) \n\n\t\tif num == ultimo {\n\t\t\trepetidas = append(repetidas, num)\n\t\t}\n\t\ttemnoalbum[num] = true\n\t\tultimo = num\n\t}\n\n\tif len(repetidas) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, f := range repetidas {\n\t\t\tfmt.Print(f)\n\t\t\tif i < len(repetidas)-1 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t}\n\t\tfmt.Println()\n\t}\n\n\tfalta := false\n\tpfalta := true\n\n\tfor i := 1; i <= todoAlbum; i++ {\n\t\tif !temnoalbum[i] {\n\t\t\tif !pfalta {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(i)\n\t\t\tfalta = true\n\t\t\tpfalta = false\n\t\t}\n\t}\n\n\tif !falta {\n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n}",
+            "content": "@@ -40,29 +40,25 @@\n  %7B%0A%09var \n+todo\n Album\n-completo\n , totalP\n@@ -81,29 +81,25 @@\n t.Scan(&\n+todo\n Album\n-completo\n )%0A%09fmt.S\n@@ -604,21 +604,17 @@\n  %3C= \n+todo\n Album\n-completo\n ; i+\n@@ -786,9 +786,8 @@\n ntln()%0A%7D\n-%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-26_13-41-00",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar Albumcompleto, totalPossuidas int\n\tfmt.Scan(&Albumcompleto)\n\tfmt.Scan(&totalPossuidas)\n\n\ttemnoalbum := make(map[int]bool)\n\tvar repetidas []int\n\tultimo := -1\n\n\tfor i := 0; i < totalPossuidas; i++ {\n\t\tvar num int\n\t\tfmt.Scan(&num) \n\n\t\tif num == ultimo {\n\t\t\trepetidas = append(repetidas, num)\n\t\t}\n\t\ttemnoalbum[num] = true\n\t\tultimo = num\n\t}\n\n\tif len(repetidas) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, f := range repetidas {\n\t\t\tfmt.Print(f)\n\t\t\tif i < len(repetidas)-1 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t}\n\t\tfmt.Println()\n\t}\n\n\tfalta := false\n\tpfalta := true\n\n\tfor i := 1; i <= Albumcompleto; i++ {\n\t\tif !temnoalbum[i] {\n\t\t\tif !pfalta {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(i)\n\t\t\tfalta = true\n\t\t\tpfalta = false\n\t\t}\n\t}\n\n\tif !falta {\n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n}\n",
             "lines": "55"
         }
     ]

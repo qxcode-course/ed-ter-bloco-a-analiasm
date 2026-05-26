@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var todoAlbum, totalPossuidas int
-	fmt.Scan(&todoAlbum)
+	var Albumcompleto, totalPossuidas int
+	fmt.Scan(&Albumcompleto)
 	fmt.Scan(&totalPossuidas)
 
 	temnoalbum := make(map[int]bool)
@@ -37,7 +37,7 @@ func main() {
 	falta := false
 	pfalta := true
 
-	for i := 1; i <= todoAlbum; i++ {
+	for i := 1; i <= Albumcompleto; i++ {
 		if !temnoalbum[i] {
 			if !pfalta {
 				fmt.Print(" ")

@@ -62,8 +62,13 @@
         },
         {
             "label": "2026-03-17_17-22-14",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n   \nvar H, P, F, D int\n\nfmt.Scanf(\"%d\", &H)\nfmt.Scanf(\"%d\", &P)\nfmt.Scanf(\"%d\", &F)\nfmt.Scanf(\"%d\", &D)\n\n\nfor {\n    F += D\n\n    if F > 15{\n        F = 0\n    }else if F < 0{\n        F = 15\n    }\n\n    if F == H{\n        fmt.Printf(\"S\\n\")\n        break\n    }\n\n    if F == P{\n        fmt.Printf(\"N\\n\")\n        break\n    }\n}\n\n}\n\n",
+            "content": "@@ -74,30 +74,69 @@\n (%22%25d\n- %25d %25d %25d%22, &H, &P, &F\n+%22, &H)%0Afmt.Scanf(%22%25d%22, &P)%0Afmt.Scanf(%22%25d%22, &F)%0Afmt.Scanf(%22%25d%22\n , &D\n",
             "lines": "34"
+        },
+        {
+            "label": "2026-05-26_13-29-19",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   \nvar H, P, F, D int\n\nfmt.Scanf(\"%d %d %d %d\", &H, &P, &F, &D)\n\n\nfor {\n    F += D\n\n    if F > 15{\n        F = 0\n    }else if F < 0{\n        F = 15\n    }\n\n    if F == H{\n        fmt.Printf(\"S\\n\")\n        break\n    }\n\n    if F == P{\n        fmt.Printf(\"N\\n\")\n        break\n    }\n}\n\n}\n\n",
+            "lines": "31"
         }
     ]
 }

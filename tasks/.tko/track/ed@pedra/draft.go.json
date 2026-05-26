@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2026-03-17_23-00-33",
-            "content": "package main\nimport \"fmt\"\n\nfunc main(){\n\nvar competidores int\nvar pedraA, pedraB int\n\ncampeaoid := -1\nmenordiferenca := 0\n\nfmt.Scanf(\"%d\", &competidores)\n\t    \nfor i := 0; i < competidores ; i++{\n    fmt.Scanf(\"%d\", &pedraA)\n    fmt.Scanf(\"%d\", &pedraB)\n\n\tif pedraA >= 10 && pedraB >= 10{\n\t\tdiferenca := pedraA - pedraB\n\n\t\tif diferenca < 0 {\n\t\t\tdiferenca = -diferenca\n\t\t}\n\n\t\tif campeaoid == -1 || diferenca < menordiferenca{\n\t\t\tmenordiferenca = diferenca\n\t\t\tcampeaoid = i\n\t\t}\n\t}\n}\n \n    if campeaoid == -1 {\n\t\tfmt.Printf(\"sem ganhador\\n\")\n\t}else{\n\t\tfmt.Printf(\"%d\\n\", campeaoid)\n\t}\n\n}",
+            "content": "@@ -68,34 +68,32 @@\n edra\n-1\n+A\n , pedra\n-2\n+B\n  int%0A%0A\n-iddo\n campeao\n+id\n  := \n@@ -215,17 +215,17 @@\n , &pedra\n-1\n+A\n )%0A    fm\n@@ -244,17 +244,17 @@\n , &pedra\n-2\n+B\n )%0A%0A%09if p\n@@ -257,17 +257,17 @@\n if pedra\n-1\n+A\n  %3E= 10 &\n@@ -273,17 +273,17 @@\n && pedra\n-2\n+B\n  %3E= 10%7B%0A\n@@ -306,17 +306,17 @@\n edra\n-1\n+A\n  - pedra\n 2%0A%0A%09\n@@ -315,9 +315,9 @@\n edra\n-2\n+B\n %0A%0A%09%09\n@@ -371,27 +371,25 @@\n %7D%0A%0A%09%09if \n-iddo\n campeao\n+id\n  == -1 %7C\n@@ -451,27 +451,25 @@\n enca%0A%09%09%09\n-iddo\n campeao\n+id\n  = i%0A%09%09%7D\n@@ -487,19 +487,17 @@\n  if \n-iddo\n campeao\n+id\n  == \n@@ -577,9 +577,8 @@\n d)%0A%09%7D%0A%0A%7D\n-%0A\n",
             "lines": "38"
+        },
+        {
+            "label": "2026-05-26_13-37-38",
+            "content": "@@ -573,25 +573,21 @@\n n%22, \n-iddo\n campeao\n+id\n )%0A%09%7D%0A%0A\n-%09%0A\n %7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_13-38-04",
+            "content": "package main\nimport \"fmt\"\n\nfunc main(){\n\nvar competidores int\nvar pedra1, pedra2 int\n\niddocampeao := -1\nmenordiferenca := 0\n\nfmt.Scanf(\"%d\", &competidores)\n\t    \nfor i := 0; i < competidores ; i++{\n    fmt.Scanf(\"%d\", &pedra1)\n    fmt.Scanf(\"%d\", &pedra2)\n\n\tif pedra1 >= 10 && pedra2 >= 10{\n\t\tdiferenca := pedra1 - pedra2\n\n\t\tif diferenca < 0 {\n\t\t\tdiferenca = -diferenca\n\t\t}\n\n\t\tif iddocampeao == -1 || diferenca < menordiferenca{\n\t\t\tmenordiferenca = diferenca\n\t\t\tiddocampeao = i\n\t\t}\n\t}\n}\n \n    if iddocampeao == -1 {\n\t\tfmt.Printf(\"sem ganhador\\n\")\n\t}else{\n\t\tfmt.Printf(\"%d\\n\", iddocampeao)\n\t}\n\n\t\n}\n",
+            "lines": "39"
         }
     ]
 }

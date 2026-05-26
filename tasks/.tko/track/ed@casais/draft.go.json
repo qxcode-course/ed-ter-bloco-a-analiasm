@@ -32,7 +32,12 @@
         },
         {
             "label": "2026-03-19_17-09-54",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\nvar animaist int\nfmt.Scan(&animaist)\n\nnaocasais := [50]int{}\nqtdnaocasais := 0\ncasais := 0\n\nfor i := 0; i < animaist; i++{\n    var animal int\n    fmt.Scan(&animal)\n    achou := false\n\n    for j := 0; j < qtdnaocasais; j++{\n        if naocasais[j] == -animal && naocasais[j] != 0{\n            casais++\n            naocasais[j] = 0\n            achou = true\n            break\n        }\n    }\n    \n    if !achou{\n        naocasais[qtdnaocasais] = animal\n        qtdnaocasais++\n    }\n}\n    fmt.Printf(\"%d\\n\", casais)\n}\n",
+            "content": "@@ -74,19 +74,16 @@\n st)%0A%0Anao\n-sao\n casais :\n@@ -96,27 +96,24 @@\n int%7B%7D%0Aqtdnao\n-sao\n casais := 0%0A\n@@ -239,27 +239,24 @@\n ; j %3C qtdnao\n-sao\n casais; j++%7B\n@@ -266,27 +266,24 @@\n       if nao\n-sao\n casais%5Bj%5D ==\n@@ -293,27 +293,24 @@\n nimal && nao\n-sao\n casais%5Bj%5D !=\n@@ -345,27 +345,24 @@\n          nao\n-sao\n casais%5Bj%5D = \n@@ -453,19 +453,16 @@\n      nao\n-sao\n casais%5Bq\n@@ -462,27 +462,24 @@\n asais%5Bqtdnao\n-sao\n casais%5D = an\n@@ -501,11 +501,8 @@\n dnao\n-sao\n casa\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-26_13-34-28",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\nvar animaist int\nfmt.Scan(&animaist)\n\nnaosaocasais := [50]int{}\nqtdnaosaocasais := 0\ncasais := 0\n\nfor i := 0; i < animaist; i++{\n    var animal int\n    fmt.Scan(&animal)\n    achou := false\n\n    for j := 0; j < qtdnaosaocasais; j++{\n        if naosaocasais[j] == -animal && naosaocasais[j] != 0{\n            casais++\n            naosaocasais[j] = 0\n            achou = true\n            break\n        }\n    }\n    \n    if !achou{\n        naosaocasais[qtdnaosaocasais] = animal\n        qtdnaosaocasais++\n    }\n}\n    fmt.Printf(\"%d\\n\", casais)\n}\n",
             "lines": "31"
         }
     ]

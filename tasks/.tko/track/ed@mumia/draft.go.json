@@ -12,7 +12,12 @@
         },
         {
             "label": "2026-03-17_16-18-22",
-            "content": "package main\nimport \"fmt\"\n\nfunc main() {\nvar nome string\nvar idade int\n\nfmt.Scanf(\"%s\", &nome)  \nfmt.Scanf(\"%d\", &idade)\n\nif idade < 12{\n   fmt.Printf(\"%s eh crianca\\n\", nome)\n}else if idade >= 12 && idade < 18{\n\tfmt.Printf(\"%s eh jovem\\n\", nome)\n}else if idade >= 18 && idade < 65{\n\tfmt.Printf(\"%s eh adulto\\n\", nome)\n}else if idade >= 65 && idade < 1000{\n\tfmt.Printf(\"%s eh idoso\\n\", nome)\n}else{\n\tfmt.Printf(\"%s eh mumia\\n\", nome)\n}\n\n\n\n}\n",
+            "content": "@@ -38,22 +38,20 @@\n ) %7B%0Avar \n-pessoa\n+nome\n  string%0A\n@@ -82,22 +82,20 @@\n (%22%25s%22, &\n-pessoa\n+nome\n )  %0Afmt.\n@@ -159,30 +159,28 @@\n crianca%5Cn%22, \n-pessoa\n+nome\n )%0A%7Delse if i\n@@ -230,30 +230,28 @@\n h jovem%5Cn%22, \n-pessoa\n+nome\n )%0A%7Delse if i\n@@ -302,30 +302,28 @@\n  adulto%5Cn%22, \n-pessoa\n+nome\n )%0A%7Delse if i\n@@ -379,22 +379,20 @@\n oso%5Cn%22, \n-pessoa\n+nome\n )%0A%7Delse%7B\n@@ -425,14 +425,12 @@\n n%22, \n-pessoa\n+nome\n )%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-05-26_13-23-43",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\nvar pessoa string\nvar idade int\n\nfmt.Scanf(\"%s\", &pessoa)  \nfmt.Scanf(\"%d\", &idade)\n\nif idade < 12{\n   fmt.Printf(\"%s eh crianca\\n\", pessoa)\n}else if idade >= 12 && idade < 18{\n\tfmt.Printf(\"%s eh jovem\\n\", pessoa)\n}else if idade >= 18 && idade < 65{\n\tfmt.Printf(\"%s eh adulto\\n\", pessoa)\n}else if idade >= 65 && idade < 1000{\n\tfmt.Printf(\"%s eh idoso\\n\", pessoa)\n}else{\n\tfmt.Printf(\"%s eh mumia\\n\", pessoa)\n}\n\n\n\n}\n",
             "lines": "25"
         }
     ]

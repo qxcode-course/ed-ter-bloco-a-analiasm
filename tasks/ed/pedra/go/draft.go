@@ -4,35 +4,36 @@ import "fmt"
 func main(){
 
 var competidores int
-var pedraA, pedraB int
+var pedra1, pedra2 int
 
-campeaoid := -1
+iddocampeao := -1
 menordiferenca := 0
 
 fmt.Scanf("%d", &competidores)
 	    
 for i := 0; i < competidores ; i++{
-    fmt.Scanf("%d", &pedraA)
-    fmt.Scanf("%d", &pedraB)
+    fmt.Scanf("%d", &pedra1)
+    fmt.Scanf("%d", &pedra2)
 
-	if pedraA >= 10 && pedraB >= 10{
-		diferenca := pedraA - pedraB
+	if pedra1 >= 10 && pedra2 >= 10{
+		diferenca := pedra1 - pedra2
 
 		if diferenca < 0 {
 			diferenca = -diferenca
 		}
 
-		if campeaoid == -1 || diferenca < menordiferenca{
+		if iddocampeao == -1 || diferenca < menordiferenca{
 			menordiferenca = diferenca
-			campeaoid = i
+			iddocampeao = i
 		}
 	}
 }
  
-    if campeaoid == -1 {
+    if iddocampeao == -1 {
 		fmt.Printf("sem ganhador\n")
 	}else{
-		fmt.Printf("%d\n", campeaoid)
+		fmt.Printf("%d\n", iddocampeao)
 	}
 
+	
 }

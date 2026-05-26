@@ -4,10 +4,7 @@ func main() {
    
 var H, P, F, D int
 
-fmt.Scanf("%d", &H)
-fmt.Scanf("%d", &P)
-fmt.Scanf("%d", &F)
-fmt.Scanf("%d", &D)
+fmt.Scanf("%d %d %d %d", &H, &P, &F, &D)
 
 
 for {

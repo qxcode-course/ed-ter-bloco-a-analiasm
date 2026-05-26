@@ -57,7 +57,12 @@
         },
         {
             "label": "2026-03-19_21-20-50",
-            "content": "package main\nimport \"fmt\"\ntype Ponto struct{\n    x, y int\n}\nfunc main() {\n    var q int\n    var direcao string\n    fmt.Scan(&q, &direcao)\n\n    corpinho := make([]Ponto, q)\n    \n    for i := 0; i < q; i++{\n        fmt.Scan(&corpinho[i].x, &corpinho[i].y)\n    }\n\nposicoesanteriores := make([]Ponto, q)\ncopy(posicoesanteriores, corpinho)\n\nswitch direcao{\ncase \"U\":\n    corpinho[0].y--\ncase \"D\":\n    corpinho[0].y++\ncase \"L\":\n    corpinho[0].x--\ncase \"R\":\n    corpinho[0].x++\n}\n      \nfor i := 1; i < q; i++{        \n    corpinho[i] = posicoesanteriores[i-1]                                     \n}\n\nfor _, c := range corpinho{\n    fmt.Printf(\"%d %d\\n\", c.x, c.y)\n}\n\n}\n",
+            "content": "@@ -144,25 +144,16 @@\n corpinho\n-debolinha\n  := make\n@@ -220,33 +220,24 @@\n an(&corpinho\n-debolinha\n %5Bi%5D.x, &corp\n@@ -240,25 +240,16 @@\n corpinho\n-debolinha\n %5Bi%5D.y)%0A \n@@ -326,25 +326,16 @@\n corpinho\n-debolinha\n )%0A%0Aswitc\n@@ -363,33 +363,24 @@\n     corpinho\n-debolinha\n %5B0%5D.y--%0Acase\n@@ -393,33 +393,24 @@\n     corpinho\n-debolinha\n %5B0%5D.y++%0Acase\n@@ -423,33 +423,24 @@\n     corpinho\n-debolinha\n %5B0%5D.x--%0Acase\n@@ -457,25 +457,16 @@\n corpinho\n-debolinha\n %5B0%5D.x++%0A\n@@ -518,25 +518,16 @@\n corpinho\n-debolinha\n %5Bi%5D = po\n@@ -618,17 +618,8 @@\n inho\n-debolinha\n %7B%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-26_13-43-47",
+            "content": "package main\nimport \"fmt\"\ntype Ponto struct{\n    x, y int\n}\nfunc main() {\n    var q int\n    var direcao string\n    fmt.Scan(&q, &direcao)\n\n    corpinhodebolinha := make([]Ponto, q)\n    \n    for i := 0; i < q; i++{\n        fmt.Scan(&corpinhodebolinha[i].x, &corpinhodebolinha[i].y)\n    }\n\nposicoesanteriores := make([]Ponto, q)\ncopy(posicoesanteriores, corpinhodebolinha)\n\nswitch direcao{\ncase \"U\":\n    corpinhodebolinha[0].y--\ncase \"D\":\n    corpinhodebolinha[0].y++\ncase \"L\":\n    corpinhodebolinha[0].x--\ncase \"R\":\n    corpinhodebolinha[0].x++\n}\n      \nfor i := 1; i < q; i++{        \n    corpinhodebolinha[i] = posicoesanteriores[i-1]                                     \n}\n\nfor _, c := range corpinhodebolinha{\n    fmt.Printf(\"%d %d\\n\", c.x, c.y)\n}\n\n}\n",
             "lines": "39"
         }
     ]

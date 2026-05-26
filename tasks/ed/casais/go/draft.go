@@ -4,8 +4,8 @@ func main() {
 var animaist int
 fmt.Scan(&animaist)
 
-naocasais := [50]int{}
-qtdnaocasais := 0
+naosaocasais := [50]int{}
+qtdnaosaocasais := 0
 casais := 0
 
 for i := 0; i < animaist; i++{
@@ -13,18 +13,18 @@ for i := 0; i < animaist; i++{
     fmt.Scan(&animal)
     achou := false
 
-    for j := 0; j < qtdnaocasais; j++{
-        if naocasais[j] == -animal && naocasais[j] != 0{
+    for j := 0; j < qtdnaosaocasais; j++{
+        if naosaocasais[j] == -animal && naosaocasais[j] != 0{
             casais++
-            naocasais[j] = 0
+            naosaocasais[j] = 0
             achou = true
             break
         }
     }
     
     if !achou{
-        naocasais[qtdnaocasais] = animal
-        qtdnaocasais++
+        naosaocasais[qtdnaosaocasais] = animal
+        qtdnaosaocasais++
     }
 }
     fmt.Printf("%d\n", casais)

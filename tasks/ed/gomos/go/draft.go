@@ -8,31 +8,31 @@ func main() {
     var direcao string
     fmt.Scan(&q, &direcao)
 
-    corpinho := make([]Ponto, q)
+    corpinhodebolinha := make([]Ponto, q)
     
     for i := 0; i < q; i++{
-        fmt.Scan(&corpinho[i].x, &corpinho[i].y)
+        fmt.Scan(&corpinhodebolinha[i].x, &corpinhodebolinha[i].y)
     }
 
 posicoesanteriores := make([]Ponto, q)
-copy(posicoesanteriores, corpinho)
+copy(posicoesanteriores, corpinhodebolinha)
 
 switch direcao{
 case "U":
-    corpinho[0].y--
+    corpinhodebolinha[0].y--
 case "D":
-    corpinho[0].y++
+    corpinhodebolinha[0].y++
 case "L":
-    corpinho[0].x--
+    corpinhodebolinha[0].x--
 case "R":
-    corpinho[0].x++
+    corpinhodebolinha[0].x++
 }
       
 for i := 1; i < q; i++{        
-    corpinho[i] = posicoesanteriores[i-1]                                     
+    corpinhodebolinha[i] = posicoesanteriores[i-1]                                     
 }
 
-for _, c := range corpinho{
+for _, c := range corpinhodebolinha{
     fmt.Printf("%d %d\n", c.x, c.y)
 }
 
