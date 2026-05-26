@@ -9,12 +9,14 @@ import (
 )
 
 type Stack[T any] struct {
-	data []T
+	data     []T
+	capacity int 
 }
 
 func NewStack[T any](capacity int) *Stack[T] {
 	return &Stack[T]{
-		data: make([]T, 0, capacity),
+		data:     make([]T, 0, capacity),
+		capacity: capacity,
 	}
 }
 
@@ -27,6 +29,16 @@ func (s *Stack[T]) Size() int {
 }
 
 func (s *Stack[T]) Push(value T) {
+
+	if len(s.data) == s.capacity {
+		s.capacity *= 2
+		if s.capacity == 0 {
+			s.capacity = 2
+		}
+		newData := make([]T, len(s.data), s.capacity)
+		copy(newData, s.data)
+		s.data = newData
+	}
 	s.data = append(s.data, value)
 }
 
@@ -51,11 +63,10 @@ func (s *Stack[T]) Clear() {
 }
 
 func (s *Stack[T]) String() string {
-	capacidadeTotal := cap(s.data)
 	tamanhoAtual := len(s.data)
 	
-	parts := make([]string, capacidadeTotal)
-	for i := 0; i < capacidadeTotal; i++ {
+	parts := make([]string, s.capacity)
+	for i := 0; i < s.capacity; i++ {
 		if i < tamanhoAtual {
 			parts[i] = fmt.Sprintf("%v", s.data[i])
 		} else {
@@ -73,8 +84,9 @@ func main() {
 
 	for scanner.Scan() {
 		line = scanner.Text()
-		
-		fmt.Println(line)
+		if len(strings.TrimSpace(line)) == 0 {
+			continue
+		}
 		
 		if !strings.HasPrefix(line, "$") {
 			fmt.Println("$" + line)

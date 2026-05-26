@@ -24,7 +24,8 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@linear
 flags:
   inbox: all
   panel: skills
@@ -32,5 +33,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@map_set
-selected_index: 10
+selected: ed@pilhado
+selected_index: 21

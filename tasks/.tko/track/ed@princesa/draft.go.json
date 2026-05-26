@@ -162,7 +162,12 @@
         },
         {
             "label": "2026-03-30_22-44-01",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n   \n   var n_pessoas, E int\n   fmt.Scan(&n_pessoas)\n   fmt.Scan(&E)\n   \n   vivos := []int{}\n   pos := -1\n\n   for i := 1; i <= n_pessoas; i++{\n      vivos = append(vivos, i)\n      if i == i {\n         if i == E{\n             pos = i - 1\n         }\n      }\n   }\n\n   for{\n\n      fmt.Printf(\"[ \")\n\n         for i, v := range vivos{\n            fmt.Print(v)\n            if i == pos {\n               fmt.Print(\">\")\n                  }\n                  fmt.Print(\" \")\n            }\n\n         fmt.Println(\"]\")\n\n         if len(vivos) == 1{\n            break\n         }\n\n         alvo := (pos + 1) % len(vivos)\n\n         vivos = append(vivos[:alvo], vivos[alvo + 1:]...)\n\n         pos = alvo % len(vivos)\n      }\n\n     }\n\n",
+            "content": "@@ -44,19 +44,18 @@\n %0A   var \n-qtd\n+n_\n pessoas,\n@@ -56,24 +56,16 @@\n ssoas, E\n-scolhido\n  int%0A   \n@@ -74,19 +74,18 @@\n t.Scan(&\n-qtd\n+n_\n pessoas)\n@@ -99,24 +99,16 @@\n .Scan(&E\n-scolhido\n )%0A   %0A  \n@@ -163,11 +163,10 @@\n  %3C= \n-qtd\n+n_\n pess\n@@ -224,16 +224,16 @@\n  == i %7B%0A\n+\n         \n@@ -246,16 +246,8 @@\n == E\n-scolhido\n %7B%0A  \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_13-49-09",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   \n   var qtdpessoas, Escolhido int\n   fmt.Scan(&qtdpessoas)\n   fmt.Scan(&Escolhido)\n   \n   vivos := []int{}\n   pos := -1\n\n   for i := 1; i <= qtdpessoas; i++{\n      vivos = append(vivos, i)\n      if i == i {\n         if i == Escolhido{\n             pos = i - 1\n         }\n      }\n   }\n\n   for{\n\n      fmt.Printf(\"[ \")\n\n         for i, v := range vivos{\n            fmt.Print(v)\n            if i == pos {\n               fmt.Print(\">\")\n                  }\n                  fmt.Print(\" \")\n            }\n\n         fmt.Println(\"]\")\n\n         if len(vivos) == 1{\n            break\n         }\n\n         alvo := (pos + 1) % len(vivos)\n\n         vivos = append(vivos[:alvo], vivos[alvo + 1:]...)\n\n         pos = alvo % len(vivos)\n      }\n\n     }\n\n",
             "lines": "47"
         }
     ]

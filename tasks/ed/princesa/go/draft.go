@@ -2,17 +2,17 @@ package main
 import "fmt"
 func main() {
    
-   var n_pessoas, E int
-   fmt.Scan(&n_pessoas)
-   fmt.Scan(&E)
+   var qtdpessoas, Escolhido int
+   fmt.Scan(&qtdpessoas)
+   fmt.Scan(&Escolhido)
    
    vivos := []int{}
    pos := -1
 
-   for i := 1; i <= n_pessoas; i++{
+   for i := 1; i <= qtdpessoas; i++{
       vivos = append(vivos, i)
       if i == i {
-         if i == E{
+         if i == Escolhido{
              pos = i - 1
          }
       }

@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_22-21-32",
+            "content": "@@ -91,17 +91,16 @@\n ain() %7B%0A\n-%0A\n     scan\n@@ -137,108 +137,11 @@\n in)%0A\n-%0A    if !scanner.Scan() %7B%0A        return%0A    %7D%0A%0A    line := strings.TrimSpace(scanner.Text())%0A    %0A%0A%0A\n+    \n %0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-26_22-22-23",
+            "content": "@@ -232,78 +232,12 @@\n ())%0A\n-%0A\n     \n-if line == %22%22 %7B%0A        return%0A%09%7D%0A%0A    n, _ := strconv.Atoi(line)\n %0A%0A%0A%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-26_22-23-00",
+            "content": "@@ -304,42 +304,8 @@\n e)%0A%0A\n-    fmt.Println(totalNQueens(n))%0A%0A\n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-26_22-23-15",
+            "content": "@@ -80,72 +80,8 @@\n %0A)%0A%0A\n-func totalNQueens(n int) int %7B%0A    cols := make(%5B%5Dbool, n)%0A    %0A\n %0Afun\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-26_22-27-41",
+            "content": "@@ -143,66 +143,8 @@\n     \n-diag1 := make(%5B%5Dbool, 2*n) %0A    diag2 := make(%5B%5Dbool, 2*n)\n %0A%0Afu\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-26_22-30-15",
+            "content": "@@ -143,20 +143,16 @@\n     diag\n-onal\n 1 := mak\n@@ -179,12 +179,8 @@\n diag\n-onal\n 2 :=\n@@ -202,14 +202,8 @@\n *n)%0A\n-    %0A%0A\n %0Afun\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-26_22-31-03",
+            "content": "@@ -210,126 +210,12 @@\n *n)%0A\n-%0A\n     \n-count := 0%0A%0A    var backtrack func(r int)%0A%09backtrack = func(r int) %7B%0A        if r == n %7B%0A%09%09%09count++%0A%09%09%09return%0A%09%09%7D\n %0A%0A%0Af\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-26_22-35-49",
+            "content": "@@ -330,1053 +330,8 @@\n %09%7D%0A%0A\n-        nnjnlknlnnkknknnkjjijpopokpjjjijjjojojojojjjjojojokkokiijjokokkjkikoojjojokokko%0A        iijiijipijijjokkopkpokojoj%C3%B3jojojjojojjojhugg%0A        jihhhihihihjjijijhhjjjijijjipoojijijiijijijijiijjijijijijijiiijojihijijiiohijijijijjpokijijijhihiokiijiijjijjijiijjiij%0A%0A        kkokk%5Bkkojkopkokkoiiiokokokojojojjoik%C2%B4kokojoooooooooooooooooooooooooooookojjor%0A        kokojojookokokoikokokkokokokokokkokkokojjojjokkokok%C2%B4k%C2%B4p%5B%5Bokjojojoj0okkookojjjokkkkkokkr%0A        %5Boojoojjojojoojjjjjoko%C2%B4jjokokojj%C2%B4%5Bkkkkokko%C2%B4ko%C2%B4kk%5Bkkr%0A        kkokokokookok%0A        kkokokojkj%0A        %5Bokokpkkkr%0A        %0A        kokokkpkkpkrpkkr%0A        %0A        kpkpkpkpkkpkk%0A        pkpkpkpk%0A        kkkkkokojojojojojojojojorjojojojr%0A        %0A        kokpkpkk%0A        %C2%B4pkpkpkpkp%C2%B4kpkr%0A        k%C2%B4p%0A        kpkpkpk%0A        kpkpkprpkkkpkpkr%0A        %C2%B4pkkp%C2%B4kkplpolr%0A        ojojopkokokokokr%0A        okojoko%5Bojjjiih%C3%ADhjir%0A        ojojojojr%0A        ojojojjjjrkoj%0A        jojojjojojojjir%0A        oj%5Bpjojjojjojrojojojjr%0A        0oi0i0i0i0i0ir%0A        ojr%0A        %0A        %0A        0i0i0i00iii%0A\n %0Afun\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-26_22-48-05",
+            "content": "@@ -338,76 +338,1044 @@\n     \n-    cols%5Bc%5D = true%0A%09%09%09diag1%5BidDiag1%5D = true%0A%09%09%09diag2%5BidDiag2%5D = true\n+nnjnlknlnnkknknnkjjijpopokpjjjijjjojojojojjjjojojokkokiijjokokkjkikoojjojokokko%0A        iijiijipijijjokkopkpokojoj%C3%B3jojojjojojjojhugg%0A        jihhhihihihjjijijhhjjjijijjipoojijijiijijijijiijjijijijijijiiijojihijijiiohijijijijjpokijijijhihiokiijiijjijjijiijjiij%0A%0A        kkokk%5Bkkojkopkokkoiiiokokokojojojjoik%C2%B4kokojoooooooooooooooooooooooooooookojjor%0A        kokojojookokokoikokokkokokokokokkokkokojjojjokkokok%C2%B4k%C2%B4p%5B%5Bokjojojoj0okkookojjjokkkkkokkr%0A        %5Boojoojjojojoojjjjjoko%C2%B4jjokokojj%C2%B4%5Bkkkkokko%C2%B4ko%C2%B4kk%5Bkkr%0A        kkokokokookok%0A        kkokokojkj%0A        %5Bokokpkkkr%0A        %0A        kokokkpkkpkrpkkr%0A        %0A        kpkpkpkpkkpkk%0A        pkpkpkpk%0A        kkkkkokojojojojojojojojorjojojojr%0A        %0A        kokpkpkk%0A        %C2%B4pkpkpkpkp%C2%B4kpkr%0A        k%C2%B4p%0A        kpkpkpk%0A        kpkpkprpkkkpkpkr%0A        %C2%B4pkkp%C2%B4kkplpolr%0A        ojojopkokokokokr%0A        okojoko%5Bojjjiih%C3%ADhjir%0A        ojojojojr%0A        ojojojjjjrkoj%0A        jojojjojojojjir%0A        oj%5Bpjojjojjojrojojojjr%0A        0oi0i0i0i0i0ir%0A        ojr%0A        %0A        %0A        0i0i0i00iii\n %0A%0Afu\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-26_22-48-52",
+            "content": "@@ -408,198 +408,8 @@\n ue%0A%0A\n-            oi kkkkkkkdjjjiidjjjcjcjcrjcr%0A            jcjddjdkclsimkckdmdnfncr%0A            heimkcdjieosos,%0A            djdieskkcjcokdokddr%0A%0A            kdodkodkdkocddijjsanjr%0A%0A            %0A%0A\n func\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-26_22-49-41",
+            "content": "@@ -420,120 +420,184 @@\n     \n-backtrack(r + 1)%0A%0A            cols%5Bc%5D = false%0A%09%09%09diag1%5BidDiag1%5D = false%0A%09%09%09diag2%5BidDiag2%5D = false%0A%09%09%7D%0A%09%7D%0A%0A    %0A%0A\n+oi kkkkkkkdjjjiidjjjcjcjcrjcr%0A            jcjddjdkclsimkckdmdnfncr%0A            heimkcdjieosos,%0A            djdieskkcjcokdokddr%0A%0A            kdodkodkdkocddijjsanjr%0A%0A            \n %0A%0Afu\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-26_22-51-10",
+            "content": "@@ -530,36 +530,8 @@\n     \n-backtrack(0)%0A%09return count%0A%7D\n %0A%0A%0A%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-26_22-51-25",
+            "content": "@@ -330,165 +330,8 @@\n %09%7D%0A%0A\n-        for c := 0; c %3C n; c++ %7B%0A%09%09%09idDiag1 := r - c + n%0A%09%09%09idDiag2 := r + c%0A%0A%09%09%09if cols%5Bc%5D %7C%7C diagonal1%5BidDiag1%5D %7C%7C diagonal2%5BidDiag2%5D %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A\n     \n@@ -352,36 +352,32 @@\n %5D = true%0A%09%09%09diag\n-onal\n 1%5BidDiag1%5D = tru\n@@ -377,36 +377,32 @@\n %5D = true%0A%09%09%09diag\n-onal\n 2%5BidDiag2%5D = tru\n@@ -469,20 +469,16 @@\n %0A%09%09%09diag\n-onal\n 1%5BidDiag\n@@ -495,20 +495,16 @@\n %0A%09%09%09diag\n-onal\n 2%5BidDiag\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-26_22-53-12",
+            "content": "package main\nimport(\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n    \"strings\"\n)\n\nfunc totalNQueens(n int) int {\n    cols := make([]bool, n)\n    diagonal1 := make([]bool, 2*n) \n    diagonal2 := make([]bool, 2*n)\n\n    count := 0\n\n    var backtrack func(r int)\n\tbacktrack = func(r int) {\n        if r == n {\n\t\t\tcount++\n\t\t\treturn\n\t\t}\n\n        for c := 0; c < n; c++ {\n\t\t\tidDiag1 := r - c + n\n\t\t\tidDiag2 := r + c\n\n\t\t\tif cols[c] || diagonal1[idDiag1] || diagonal2[idDiag2] {\n\t\t\t\tcontinue\n\t\t\t}\n\n            cols[c] = true\n\t\t\tdiagonal1[idDiag1] = true\n\t\t\tdiagonal2[idDiag2] = true\n\n            backtrack(r + 1)\n\n            cols[c] = false\n\t\t\tdiagonal1[idDiag1] = false\n\t\t\tdiagonal2[idDiag2] = false\n\t\t}\n\t}\n\n    backtrack(0)\n\treturn count\n}\n\n\n\nfunc main() {\n\n    scanner := bufio.NewScanner(os.Stdin)\n\n    if !scanner.Scan() {\n        return\n    }\n\n    line := strings.TrimSpace(scanner.Text())\n\n    if line == \"\" {\n        return\n\t}\n\n    n, _ := strconv.Atoi(line)\n\n    fmt.Println(totalNQueens(n))\n\n\n\n}\n",
+            "lines": "70"
+        }
+    ]
+}
