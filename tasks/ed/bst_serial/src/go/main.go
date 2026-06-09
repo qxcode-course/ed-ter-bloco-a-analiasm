@@ -1,0 +1,106 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+type Node struct {
+	Value int
+	Left  *Node
+	Right *Node
+}
+
+func insert(node *Node, value int) *Node {
+	if node == nil {
+		return &Node{Value: value}
+	}
+
+	if value < node.Value {
+		node.Left = insert(node.Left, value)
+	} else if value > node.Value {
+		node.Right = insert(node.Right, value)
+	}
+	return node
+}
+
+func BstInsert(values []int) *Node {
+	var root *Node
+	for _, val := range values {
+		root = insert(root, val)
+	}
+	return root
+}
+
+// Dica: crie um vetor compartilhado e vá preenchendo conforme anda na recursão
+// Depois use o strings.Join para gerar o serial
+func Serialize(root *Node) string {
+	var tokens []string
+
+
+	var buildSerial func(node *Node)
+	buildSerial = func(node *Node) {
+
+		if node == nil {
+			tokens = append(tokens, "#")
+			return
+		}
+
+		tokens = append(tokens, strconv.Itoa(node.Value))
+
+		buildSerial(node.Left)
+		buildSerial(node.Right)
+	}
+
+		buildSerial(root)
+
+		return strings.Join(tokens, " ")
+}
+
+// -----------------------------------------------------------------------------------
+func BShow(node *Node, history string) {
+	if node != nil && (node.Left != nil || node.Right != nil) {
+		BShow(node.Left, history+"l")
+	}
+	for i := 0; i < len(history)-1; i++ {
+		if history[i] != history[i+1] {
+			fmt.Print("│   ")
+		} else {
+			fmt.Print("    ")
+		}
+	}
+	if history != "" {
+		if history[len(history)-1] == 'l' {
+			fmt.Print("╭───")
+		} else {
+			fmt.Print("╰───")
+		}
+	}
+	if node == nil {
+		fmt.Println("#")
+		return
+	}
+	fmt.Println(node.Value)
+	if node.Left != nil || node.Right != nil {
+		BShow(node.Right, history+"r")
+	}
+}
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	parts := strings.Split(scanner.Text(), " ")
+	values := make([]int, 0, len(parts))
+	for _, elem := range parts {
+		v, err := strconv.Atoi(elem)
+		if err == nil {
+			values = append(values, v)
+		}
+	}
+	root := BstInsert(values)
+	BShow(root, "") // Chama a função de impressão formatada
+	fmt.Println(Serialize((root)))
+}

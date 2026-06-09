@@ -1,0 +1,13 @@
+2026-06-02 13:03:20, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-02 13:40:28, EXEC, v:1, k:ed@pilhado, mode:FULL, size:31, fail:COMP
+2026-06-02 13:41:15, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-02 13:41:32, MOVE, v:1, k:ed@balanceada, mode:DOWN
+2026-06-02 13:41:33, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-02 13:41:32, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-02 13:41:32, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-02 13:41:32, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-02 14:28:43, MOVE, v:1, k:ed@caminhao, mode:DOWN
+2026-06-02 14:28:44, MOVE, v:1, k:ed@caminhao, mode:PICK
+2026-06-02 14:28:43, MOVE, v:1, k:ed@caminhao, mode:EDIT
+2026-06-02 14:28:43, MOVE, v:1, k:ed@caminhao, mode:EDIT
+2026-06-02 14:28:43, MOVE, v:1, k:ed@caminhao, mode:EDIT

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_23-14-12",
+            "content": "@@ -158,40 +158,8 @@\n  %7B%0A%09\n-if node == nil %7B%0A%09%09return nil%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-06-08_23-17-43",
+            "content": "@@ -190,46 +190,8 @@\n l%0A%09%7D\n-%0A%0A%09newNode := &Node%7BValue: node.Value%7D\n %0A%7D%0A%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-06-08_23-18-37",
+            "content": "@@ -228,42 +228,8 @@\n lue%7D\n-%0A%0A%09newNode.Left = Clone(node.Left)\n %0A%7D%0A%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-08_23-19-10",
+            "content": "@@ -263,60 +263,8 @@\n ft)%0A\n-%09newNode.Right = Clone(node.Right)%0A%0A%09return newNode%0A\n %7D%0A%0A/\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-08_23-20-49",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc Clone(node *Node) *Node {\n\tif node == nil {\n\t\treturn nil\n\t}\n\n\tnewNode := &Node{Value: node.Value}\n\n\tnewNode.Left = Clone(node.Left)\n\tnewNode.Right = Clone(node.Right)\n\n\treturn newNode\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tfmt.Println(\"original:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tnewRoot := Clone(root) // Clona a \u00e1rvore\n\troot.Value = 4         // Modifica o valor do n\u00f3 raiz original\n\tfmt.Println(\"clone:\")\n\tBShow(newRoot, \"\") // Chama novamente para mostrar a \u00e1rvore invertida\n}\n",
+            "lines": "83"
+        }
+    ]
+}
