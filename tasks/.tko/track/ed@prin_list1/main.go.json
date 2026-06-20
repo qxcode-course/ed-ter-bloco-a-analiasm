@@ -27,8 +27,13 @@
         },
         {
             "label": "2026-05-25_20-21-48",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar elements []string\n\tfor it := l.Front(); it != l.End(); it = it.Next(){\n\t\tvalueStr := fmt.Sprint(it.Value)\n\t\tif it == sword{\n\t\t\telements = append(elements, \">\"+valueStr)\n\t\t}else {\n\t\t\telements = append(elements, valueStr)\n\t\t}\n\t}\n\treturn \"[\" + strings.Join(elements, \", \") + \"]\"\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tproximo := it.next\n\n\tif proximo == l.root{\n\t\tproximo = proximo.next\n\t}\n\n\treturn proximo\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tfmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\n\t\t\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "content": "@@ -1,9 +1,8 @@\n-%0A\n package \n",
             "lines": "53"
+        },
+        {
+            "label": "2026-06-17_13-09-30",
+            "content": "\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar elements []string\n\tfor it := l.Front(); it != l.End(); it = it.Next(){\n\t\tvalueStr := fmt.Sprint(it.Value)\n\t\tif it == sword{\n\t\t\telements = append(elements, \">\"+valueStr)\n\t\t}else {\n\t\t\telements = append(elements, valueStr)\n\t\t}\n\t}\n\treturn \"[\" + strings.Join(elements, \", \") + \"]\"\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tproximo := it.next\n\n\tif proximo == l.root{\n\t\tproximo = proximo.next\n\t}\n\n\treturn proximo\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tfmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\n\t\t\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "54"
         }
     ]
 }

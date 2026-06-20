@@ -25,13 +25,16 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
+- ed@dfs
+- ed@map_set
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'false'
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@serial
-selected_index: 17
+selected: ed@longest
+selected_index: 30

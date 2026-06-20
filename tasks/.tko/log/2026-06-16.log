@@ -1,0 +1,10 @@
+2026-06-16 12:47:40, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-06-16 12:47:51, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-06-16 12:47:55, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-06-16 12:48:05, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-06-16 12:48:28, SELF, v:1, k:ed@prin_list1, self:1, study:37
+2026-06-16 12:48:28, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-06-16 12:48:30, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-06-16 12:47:55, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-16 12:51:29, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-16 12:57:32, MOVE, v:1, k:ed@especiais, mode:BACK

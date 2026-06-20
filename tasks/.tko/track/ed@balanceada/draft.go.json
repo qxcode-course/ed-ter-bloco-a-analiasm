@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-20_16-13-41",
+            "content": "@@ -10,117 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22go/scanner%22%0A%09%22os%22%0A)%0A%0Afunc estaBalanceada(s string) bool%7B%0A%0A    var pilha %5B%5Drune%0A%7D%0A\n+%22fmt%22\n %0Afun\n@@ -37,95 +37,39 @@\n ) %7B%0A\n-%0A\n     \n-scanner := bufio.NewScanner(os.Stdin)%0A%0A    if scanner.Scan()%7B%0A        entrada%0A    %7D\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-20_16-34-01",
+            "content": "@@ -216,168 +216,8 @@\n rada\n- := scanner.Text()%0A%0A        if estaBalanceada(entrada)%7B%0A            fmt.Println(%22balanceado%22)%0A        %7Delse%7B%0A            fmt.Println(%22nao balanceado%22)%0A        %7D\n %0A   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-20_16-36-32",
+            "content": "@@ -116,132 +116,8 @@\n rune\n-%0A%0A    for _, c := range s %7B%0A%0A        if c == '(' %7C%7C c == %22%5B%22%7B%0A            pilha = append(pilha, c%0A        %7D%0A%0A        %7D%0A    %7D\n %0A%7D%0A%0A\n@@ -268,17 +268,16 @@\n trada)%7B%0A\n-%0A\n         \n@@ -310,17 +310,8 @@\n o%22)%0A\n-        %0A\n     \n@@ -321,17 +321,16 @@\n  %7Delse%7B%0A\n-%0A\n         \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-20_16-39-09",
+            "content": "@@ -209,17 +209,16 @@\n pilha, c\n-)\n %0A       \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-20_16-39-17",
+            "content": "@@ -234,80 +234,15 @@\n     \n-pilha = pilha%5B:len(pilha)-1%5D%0A        %7D%0A    %7D%0A%0A    return len(pilha) == 0\n+%7D%0A    %7D\n %0A%7D%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-20_16-41-19",
+            "content": "@@ -215,122 +215,8 @@\n  c)%0A\n-        %7Delse if c == ')' %7C%7C c == '%5D'%7B%0A            if len(pilha) == 0%7B%0A                return false%0A            %7D%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-20_16-47-22",
+            "content": "@@ -328,49 +328,8 @@\n    %7D\n-%0A%0A            topo := pilha%5Blen(pilha)-1%5D\n %0A   \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-20_16-48-03",
+            "content": "@@ -369,122 +369,8 @@\n )-1%5D\n-%0A%0A            if (c == ')' && topo != '(' ) %7C%7C(c== '%5D' && topo != '%5B')%7B%0A                return false%0A            %7D\n %0A   \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-20_16-50-51",
+            "content": "@@ -169,19 +169,19 @@\n %7C%7C c == \n-'%5B'\n+%22%5B%22\n %7B%0A      \n@@ -484,28 +484,27 @@\n   %7D%0A        \n-    \n+%7D%0A%0A\n         pilh\n@@ -528,29 +528,24 @@\n lha)-1%5D%0A\n-%0A    \n         \n %0A       \n@@ -536,31 +536,25 @@\n         \n+%7D\n %0A\n- \n     \n-   %7D%0A    \n+%7D%0A%0A\n     retu\n@@ -572,23 +572,18 @@\n a) == 0%0A\n-    \n %7D%0A\n-%7D\n %0Afunc ma\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-20_16-53-22",
+            "content": "@@ -32,16 +32,30 @@\n %0A%09%22fmt%22%0A\n+%09%22go/scanner%22%0A\n %09%22os%22%0A)%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-20_18-31-22",
+            "content": "@@ -515,24 +515,29 @@\n lha)-1%5D%0A\n+%0A    \n         \n %7D%0A    %7D%0A\n@@ -532,21 +532,23 @@\n     \n-%7D\n %0A\n+   \n     \n+ \n %7D%0A    \n-%0A\n     \n@@ -570,16 +570,22 @@\n a) == 0%0A\n+    %7D%0A\n %7D%0Afunc m\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-20_18-32-16",
+            "content": "@@ -527,25 +527,29 @@\n     %7D%0A    %7D%0A\n+    \n %0A\n-\n     return l\n@@ -669,26 +669,8 @@\n  := \n-strings.TrimSpace(\n scan\n@@ -679,17 +679,16 @@\n r.Text()\n-)\n %0A%0A      \n@@ -717,16 +717,17 @@\n trada)%7B%0A\n+%0A\n         \n@@ -748,32 +748,41 @@\n n(%22balanceado%22)%0A\n+        %0A\n         %7Delse%7B%0A \n@@ -780,16 +780,17 @@\n  %7Delse%7B%0A\n+%0A\n         \n@@ -837,14 +837,12 @@\n   %7D%0A\n+\n     %7D%0A\n-%0A%0A\n %7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-20_18-40-21",
+            "content": "@@ -86,117 +86,24 @@\n     \n-pares := map%5Brune%5Drune%7B%0A        ')' : '(',%0A        '%5D' : '%7B',%0A    %7D%0A    %0A    pilha := make(%5B%5Drune, 0, len(s))\n+var pilha %5B%5Drune\n %0A%0A  \n@@ -126,16 +126,17 @@\n nge s %7B%0A\n+%0A\n         \n@@ -270,43 +270,8 @@\n == 0\n- %7C%7C pilha%5Blen(pilha)-1%5D != pares%5Bc%5D\n %7B%0A  \n@@ -308,24 +308,186 @@\n          %7D%0A%0A\n+            topo := pilha%5Blen(pilha)-1%5D%0A%0A            if (c == ')' && topo != '(' ) %7C%7C(c== '%5D' && topo != '%5B')%7B%0A                return false%0A            %7D%0A        \n             \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-20_18-47-10",
+            "content": "@@ -42,22 +42,8 @@\n os%22%0A\n-    %22strings%22%0A\n )%0A%0Af\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-20_18-48-07",
+            "content": "@@ -177,24 +177,40 @@\n     \n-var \n pilha \n-%5B%5Drune\n+:= make(%5B%5Drune, 0, len(s))\n %0A%0A  \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-20_18-50-27",
+            "content": "@@ -807,10 +807,11 @@\n %0A    %7D%0A%0A\n+%0A\n %7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-20_18-51-39",
+            "content": "@@ -38,16 +38,30 @@\n %22%0A%09%22os%22%0A\n+    %22strings%22%0A\n )%0A%0Afunc \n@@ -217,17 +217,16 @@\n nge s %7B%0A\n-%0A\n         \n@@ -250,17 +250,16 @@\n == '%5B'%7B%0A\n-%0A\n         \n@@ -287,17 +287,16 @@\n lha, c)%0A\n-%0A\n         \n@@ -326,17 +326,16 @@\n == '%5D'%7B%0A\n-%0A\n         \n@@ -393,17 +393,16 @@\n res%5Bc%5D%7B%0A\n-%0A\n         \n@@ -624,16 +624,34 @@\n rada := \n+strings.TrimSpace(\n scanner.\n@@ -656,16 +656,17 @@\n r.Text()\n+)\n %0A%0A      \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-20_18-55-27",
+            "content": "@@ -140,17 +140,17 @@\n  '%5D' : '\n-%5B\n+%7B\n ',%0A    %7D\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-20_18-56-49",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc estaBalanceada(s string) bool{\n\n    pares := map[rune]rune{\n        ')' : '(',\n        ']' : '[',\n    }\n    \n    var pilha []rune\n\n    for _, c := range s {\n\n        if c == '(' || c == '['{\n\n            pilha = append(pilha, c)\n\n        }else if c == ')' || c == ']'{\n\n            if len(pilha) == 0 || pilha[len(pilha)-1] != pares[c]{\n\n                return false\n            }\n\n            pilha = pilha[:len(pilha)-1]\n        }\n    }\n\n    return len(pilha) == 0\n}\nfunc main() {\n\n    scanner := bufio.NewScanner(os.Stdin)\n\n    if scanner.Scan(){\n        entrada := scanner.Text()\n\n        if estaBalanceada(entrada){\n            fmt.Println(\"balanceado\")\n        }else{\n            fmt.Println(\"nao balanceado\")\n        }\n    }\n\n}\n",
+            "lines": "51"
+        }
+    ]
+}

@@ -76,22 +76,34 @@ func main() {
 
 		switch args[0] {
 		case "occurr":
+			
 			printSlice(occurr(str2vet(args[1])))
 		case "teams":
+
 			printSlice(teams(str2vet(args[1])))
 		case "mnext":
+
 			printSlice(mnext(str2vet(args[1])))
 		case "alone":
+
 			printSlice(alone(str2vet(args[1])))
 		case "erase":
+
 			printSlice(erase(str2vet(args[1]), str2vet(args[2])))
+
 		case "clear":
 			val, _ := strconv.Atoi(args[2])
+
 			printSlice(clear(str2vet(args[1]), val))
+
 		case "subseq":
+
 			fmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))
+
 		case "couple":
+
 			fmt.Println(couple(str2vet(args[1])))
+
 		case "end":
 			return
 		default:
