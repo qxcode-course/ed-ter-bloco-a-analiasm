@@ -1,0 +1,37 @@
+2026-06-23 12:24:26, MOVE, v:1, k:ed@longest, mode:PICK
+2026-06-23 12:26:35, EXEC, v:1, k:ed@longest, mode:FULL, size:46, fail:COMP
+2026-06-23 12:26:39, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 12:29:04, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 12:29:38, EXEC, v:1, k:ed@longest, mode:FULL, size:46, fail:COMP
+2026-06-23 12:33:04, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 12:38:17, EXEC, v:1, k:ed@longest, mode:FULL, size:63, fail:COMP
+2026-06-23 12:39:03, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 12:42:16, EXEC, v:1, k:ed@longest, mode:FULL, size:72, fail:COMP
+2026-06-23 12:42:42, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 12:49:07, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 12:51:16, EXEC, v:1, k:ed@longest, mode:FULL, size:84, fail:COMP
+2026-06-23 12:51:28, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 12:54:07, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 12:54:44, EXEC, v:1, k:ed@longest, mode:FULL, size:89, fail:COMP
+2026-06-23 12:59:08, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 13:03:23, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 13:23:45, EXEC, v:1, k:ed@longest, mode:FULL, size:78, fail:COMP
+2026-06-23 13:24:06, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 13:24:12, EXEC, v:1, k:ed@longest, mode:FULL, size:80, fail:COMP
+2026-06-23 13:29:03, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 13:29:14, EXEC, v:1, k:ed@longest, mode:FULL, size:96, fail:COMP
+2026-06-23 13:29:34, EXEC, v:1, k:ed@longest, mode:FULL, size:96, fail:COMP
+2026-06-23 13:30:21, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 13:30:21, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 13:30:21, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 13:30:21, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 13:30:21, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 13:30:22, EXEC, v:1, k:ed@longest, mode:FULL, fail:COMP
+2026-06-23 13:34:09, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 13:39:09, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 13:44:10, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-23 13:48:04, EXEC, v:1, k:ed@longest, mode:FULL, rate:100, size:99
+2026-06-23 13:48:21, MOVE, v:1, k:ed@longest, mode:BACK
+2026-06-23 13:48:43, MOVE, v:1, k:ed@longest, mode:PICK
+2026-06-23 13:48:45, MOVE, v:1, k:ed@longest, mode:BACK
+2026-06-23 13:49:06, SELF, v:1, k:ed@longest, self:1, rate:100, study:84
