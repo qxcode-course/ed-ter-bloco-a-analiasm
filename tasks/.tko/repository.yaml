@@ -25,8 +25,8 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@map_set
 - ed@dfs
+- ed@map_set
 flags:
   inbox: all
   panel: skills
@@ -36,5 +36,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@longest
-selected_index: 30
+selected: ed@battleship
+selected_index: 31
