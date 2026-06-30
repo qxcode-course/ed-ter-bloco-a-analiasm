@@ -1,0 +1,9 @@
+2026-06-29 13:40:33, MOVE, v:1, k:ed@caminho, mode:DOWN
+2026-06-29 13:40:36, MOVE, v:1, k:ed@escapeSpread, mode:DOWN
+2026-06-29 13:40:37, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-06-29 13:40:54, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:31, fail:COMP
+2026-06-29 13:40:33, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-29 13:40:33, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-29 13:40:33, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-29 13:40:36, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-06-29 13:40:36, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
