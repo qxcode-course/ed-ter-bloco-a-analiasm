@@ -10,23 +10,27 @@ import (
 // Não modifique a assinatura da função numIslands
 // Ela é a função que será chamada no LeetCode para resolver o problema
 func numIslands(grid [][]byte) int {
+	cleanGrid := make([][]byte, len(grid))
+	for i := 0; i < len(grid); i++{
+		var row []byte
+		for j := 0; j < len(grid[i]); j++{
+			if grid[i][j] != ' '{
+				row = append(row, grid[i][j])
+			}
+		}
+		cleanGrid[i] = row
+	}
+	grid = cleanGrid
+
 	m, n := len(grid), len(grid[0])
 
 	fireTime := make([][]int, m)
-	personTime := make([][]int, m)
 
 	for i := 0; i < m; i++ {
 		fireTime[i] = make([]int, n)
-		personTime[i] = make([]int, n)
-
 		for j := 0; j < n; j++ {
 			fireTime[i][j] = 1e9 
-			personTime[i][j] = 1e9
 		}
-	}
-
-	dirs := [][]int{
-		{-1, 0}, {1, 0}, {0, -1}, {0, 1},
 	}
 
 	queueFire := list.New()
@@ -38,6 +42,10 @@ func numIslands(grid [][]byte) int {
 				queueFire.PushBack([]int{i, j})
 			}
 		}
+	}
+
+	dirs := [][]int{
+		{-1,0}, {1,0}, {0, -1}, {0, 1},
 	}
 
 	for queueFire.Len() > 0 {
@@ -55,39 +63,66 @@ func numIslands(grid [][]byte) int {
 		}
 	}
 
-	queuePerson := list.New()
-	personTime[0][0] = 0
-	queuePerson.PushBack([]int{0, 0})
+	canEscape := func(wait int) bool{
+		if fireTime[0][0] != 1e9 && fireTime[0][0] <= wait {
+			return false
+		}
 
-	for queuePerson.Len() > 0 {
-		curr := queuePerson.Remove(queuePerson.Front()).([]int) 
-		r, c := curr[0], curr[1]
-		for _, d := range dirs {
-			nr, nc := r+d[0], c+d[1]
+		visited := make([][]bool, m)
+		for i := 0; i < m; i++{
+			visited[i] = make([]bool, n)
+		}
+		queuePerson := list.New()
+		queuePerson.PushBack([]int{0, 0, wait})
+		visited[0][0] = true
 
-			if nr >= 0 && nr < m && nc >= 0 && nc < n && grid[nr][nc] != '2' {
-				if personTime[nr][nc] == 1e9 {
-					personTime[nr][nc] = personTime[r][c] + 1
-					queuePerson.PushBack([]int{nr, nc})
+		for queuePerson.Len() > 0 {
+			curr := queuePerson.Remove(queuePerson.Front()).([]int)
+			r, c, t := curr[0], curr[1], curr[2]
+
+			if r == m-1 && c == n-1{
+				return true
+			}
+
+			for _, d := range dirs{
+				nr, nc := r+d[0], c+d[1]
+				if nr >= 0 && nr < m && nc >= 0 && nc < n && grid[nr][nc] != '2' && !visited[nr][nc]{
+					
+					nextTime := t + 1
+
+					if nr == m-1 && nc == n-1{
+						if fireTime[nr][nc] == 1e9 || nextTime <= fireTime[nr][nc]{
+							return true
+						}
+					}else{
+						if fireTime[nr][nc] == 1e9 || nextTime < fireTime[nr][nc]{
+							visited[nr][nc] = true
+							queuePerson.PushBack([]int{nr, nc, nextTime})
+						}
+					}
 				}
 			}
 		}
+		return false
 	}
 
-	if personTime[m-1][n-1] == 1e9 {
-		return -1
+	low, high := 0, int(1e9)
+	ans := -1
+
+	for low <= high{
+		mid := low + (high-low)/2
+
+		if canEscape(mid){
+			ans = mid
+			low = mid + 1
+		}else{
+			high = mid - 1
+		}
 	}
 
-	if fireTime[m-1][n-1] == 1e9 {
-		return 1e9 
-	}
-
-	ans := fireTime[m-1][n-1] - personTime[m-1][n-1]
-	if ans < 0{
-		return -1
-	}
 	return ans
 }
+
 
 // Não modifique a função main
 func main() {

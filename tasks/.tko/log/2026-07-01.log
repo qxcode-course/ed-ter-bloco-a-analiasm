@@ -1,0 +1,20 @@
+2026-07-01 13:04:26, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-01 13:04:39, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33
+2026-07-01 13:04:39, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:13:43, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:18:42, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:23:36, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:28:41, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:33:28, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:38:44, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:128
+2026-07-01 13:38:30, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:38:44, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 13:58:40, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 14:02:10, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:66, size:140
+2026-07-01 14:02:09, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 14:02:10, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 14:08:29, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-01 14:11:08, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:66, size:141
+2026-07-01 14:12:43, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:100, size:141
+2026-07-01 14:12:49, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-01 14:13:33, SELF, v:1, k:ed@escapeSpread, self:1, rate:100, study:124
