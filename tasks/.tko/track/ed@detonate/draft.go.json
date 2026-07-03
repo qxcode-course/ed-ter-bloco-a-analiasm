@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-03_16-51-55",
+            "content": "@@ -17,32 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22math%22%0A)\n+%22fmt%22\n %0A%0Afu\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-03_16-52-43",
+            "content": "@@ -642,35 +642,7 @@\n     \n-fmt.Printf(%22%25d%22, maximumD())\n %0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-03_16-55-42",
+            "content": "@@ -663,12 +663,14 @@\n maximumD\n+()\n )%0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-03_16-55-50",
+            "content": "@@ -623,262 +623,8 @@\n %0A%7D%0A%0A\n-func dfs(node int, adj %5B%5D%5B%5Dint, visited map%5Bint%5Dbool)int %7B%0A    visited%5Bnode%5D = true%0A    count := 1%0A%0A    for _, vizinho := range adj%5Bnode%5D %7B%0A        if !visited%5Bvizinho%5D%7B%0A            count += dfs(vizinho, adj, visited)%0A        %7D%0A    %7D%0A    return count%0A%7D%0A%0A\n %0Afun\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-03_17-01-17",
+            "content": "@@ -103,31 +103,17 @@\n     \n-adj := make(%5B%5D%5B%5Dint, n)\n+maxD := 1\n %0A%0A  \n@@ -118,17 +118,18 @@\n     for \n-i\n+1 \n := 0; i \n@@ -137,16 +137,35 @@\n  n; i++%7B\n+%0A        count := 1\n %0A%0A      \n@@ -176,30 +176,24 @@\n , y1, r1 := \n-int64(\n bomba%5Bi%5D%5B0%5D)\n@@ -187,33 +187,26 @@\n  bomba%5Bi%5D%5B0%5D\n-)\n , \n-int64(\n bomba%5Bi%5D%5B1%5D)\n@@ -204,25 +204,18 @@\n ba%5Bi%5D%5B1%5D\n-)\n , \n-int64(\n bomba%5Bi%5D\n@@ -221,33 +221,8 @@\n %5D%5B2%5D\n-)%0A        r1Sq := r1 * r1\n %0A%0A  \n@@ -339,22 +339,16 @@\n , y2 := \n-int64(\n bomba%5Bj%5D\n@@ -354,17 +354,10 @@\n %5D%5B0%5D\n-)\n , \n-int64(\n bomb\n@@ -363,17 +363,16 @@\n ba%5Bj%5D%5B1%5D\n-)\n %0A%0A      \n@@ -382,157 +382,114 @@\n    d\n-x := x1 - x2%0A            dy := y1 - y2%0A            distSq := dx*dx + dy*dy%0A%0A            if distSq %3C= r1Sq%7B%0A                adj%5Bi%5D = append(adj%5Bi%5D, j)\n+istancia := math.Sqrt(float64((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)))%0A            if distancia %3C= float64(r1)%7B\n %0A   \n@@ -501,86 +501,19 @@\n     \n-%7D%0A\n     \n-    %7D%0A    %7D%0A          %0A    return maxD := 0%0A%0A    for i := 0; i %3C n; i\n+count\n ++\n-%7B\n %0A   \n@@ -521,72 +521,23 @@\n     \n-visted := make(%5B%5Dbool, n)%0A%0A        count := dfs(i, adj, visited)\n+    %7D%0A        %7D\n %0A%0A  \n@@ -557,17 +557,16 @@\n t %3E maxD\n- \n %7B%0A      \n@@ -596,25 +596,24 @@\n     %7D%0A    %7D%0A\n-%0A\n     return m\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-07-03_17-29-31",
+            "content": "@@ -622,24 +622,31 @@\n        %0A    \n+return \n maxD := 0%0A%0A \n@@ -683,20 +683,22 @@\n      vis\n-i\n ted\n+ :=\n  make(%5B%5D\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-03_17-30-33",
+            "content": "@@ -29,16 +29,22 @@\n mt%22%0A    \n+%22math%22\n %0A)%0A%0Afunc\n@@ -680,19 +680,16 @@\n  visited\n- :=\n  make(%5B%5D\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-03_17-32-02",
+            "content": "@@ -865,19 +865,25 @@\n ted \n-%5B\n+map%5Bint\n %5Dbool)\n- \n int\n+ \n %7B%0A  \n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-03_17-36-17",
+            "content": "@@ -1087,83 +1087,8 @@\n () %7B\n-%0A%0A    exemploBombas := %5B%5D%5B%5Dint%7B%0A        %7B2, 1, 3%7D,%0A        %7B6, 1, 4%7D,%0A    %7D\n %0A   \n@@ -1117,22 +1117,8 @@\n mumD\n-(exemploBombas\n )%0A%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-03_17-41-24",
+            "content": "@@ -1203,12 +1203,11 @@\n oBombas)\n-)\n %0A%7D%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-03_17-41-36",
+            "content": "@@ -1159,21 +1159,16 @@\n ,%0A    %7D%0A\n-    %0A\n     fmt.\n@@ -1181,10 +1181,8 @@\n (%22%25d\n-%5Cn\n %22, m\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-03_17-42-44",
+            "content": "@@ -1089,96 +1089,8 @@\n  %7B%0A%0A\n-    var n, m int%0A%0A    if _, err := fmt.Scan(&n, &m); err != nil %7B%0A        return%0A    %7D%0A%0A\n     \n@@ -1110,96 +1110,35 @@\n  := \n-make(\n %5B%5D%5B%5Dint\n-, 3)%0A%0A    for i := 0; i %3C n; i++%7B%0A        exemploBombas%5Bi%5D = make(%5B%5Dint, 3)%0A\n+%7B%0A        %7B2, 1, 3%7D,\n %0A   \n@@ -1146,81 +1146,18 @@\n     \n-fmt.Scan(&exemploBombas%5Bi%5D%5B0%5D, &exemploBombas%5Bi%5D%5B1%5D, &exemploBombas%5Bi%5D%5B2%5D\n+%7B6, 1, 4%7D,\n %0A   \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-03_17-49-41",
+            "content": "@@ -1360,25 +1360,24 @@\n Bombas%5Bi%5D%5B2%5D\n-)\n %0A    %7D%0A    %0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-03_17-49-57",
+            "content": "@@ -1381,22 +1381,8 @@\n    %0A\n-    if n %3E 0%7B%0A\n     \n@@ -1425,16 +1425,10 @@\n ombas))%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-03_18-11-51",
+            "content": "@@ -29,17 +29,8 @@\n mt%22%0A\n-    %22io%22%0A\n     \n@@ -1111,21 +1111,10 @@\n     \n+i\n f\n-or %7B%0A       \n  _, \n@@ -1140,121 +1140,38 @@\n  &m)\n-%0A%0A        if err != nil%7B%0A            if err == io.EOF%7B%0A                break%0A            %7D%0A            break%0A    \n+; err != nil %7B%0A        return%0A\n     \n@@ -1368,24 +1368,28 @@\n %5D%5B2%5D)%0A    %7D%0A\n+    \n %0A    if n %3E \n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-03_18-16-16",
+            "content": "@@ -1542,23 +1542,8 @@\n s))%0A\n-    %0A        %7D%0A\n     \n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-07-03_18-17-02",
+            "content": "@@ -1303,33 +1303,33 @@\n = make(%5B%5D%5B%5Dint, \n-n\n+3\n )%0A%0A    for i := \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-03_18-58-46",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"io\"\n    \n)\n\nfunc maximumD(bomba [][]int) int {\n\n    n := len(bomba)\n    adj := make([][]int, n)\n\n    for i:= 0; i < n; i++{\n\n        x1, y1, r1 := int64(bomba[i][0]), int64(bomba[i][1]), int64(bomba[i][2])\n        r1Sq := r1 * r1\n\n        for j := 0; j < n; j++ {\n\n            if i == j {\n                continue\n            }\n\n            x2, y2 := int64(bomba[j][0]), int64(bomba[j][1])\n\n            dx := x1 - x2\n            dy := y1 - y2\n            distSq := dx*dx + dy*dy\n\n            if distSq <= r1Sq{\n                adj[i] = append(adj[i], j)\n            }\n        }\n    }\n          \n    maxD := 0\n\n    for i := 0; i < n; i++{\n        visited := make([]bool, n)\n\n        count := dfs(i, adj, visited)\n\n        if count > maxD {\n            maxD = count\n        }\n    }\n\n    return maxD\n}\n\nfunc dfs(node int, adj [][]int, visited []bool) int{\n    visited[node] = true\n    count := 1\n\n    for _, vizinho := range adj[node] {\n        if !visited[vizinho]{\n            count += dfs(vizinho, adj, visited)\n        }\n    }\n    return count\n}\n\n\nfunc main() {\n\n    var n, m int\n\n    for {\n        _, err := fmt.Scan(&n, &m)\n\n        if err != nil{\n            if err == io.EOF{\n                break\n            }\n            break\n        }\n\n    exemploBombas := make([][]int, n)\n\n    for i := 0; i < n; i++{\n        exemploBombas[i] = make([]int, 3)\n\n        fmt.Scan(&exemploBombas[i][0], &exemploBombas[i][1], &exemploBombas[i][2])\n    }\n\n    if n > 0{\n    fmt.Printf(\"%d\\n\", maximumD(exemploBombas))\n    \n        }\n    }\n}\n",
+            "lines": "91"
+        }
+    ]
+}

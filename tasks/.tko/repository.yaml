@@ -26,7 +26,6 @@ sources:
   quests: null
 expanded:
 - ed@bfs
-- ed@map_set
 flags:
   inbox: all
   panel: skills
@@ -36,5 +35,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@escapeSpread
-selected_index: 30
+selected: ed@rotten
+selected_index: 20
