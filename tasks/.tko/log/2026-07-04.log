@@ -1,0 +1,35 @@
+2026-07-04 15:48:37, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-04 15:51:35, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 15:51:50, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 16:23:26, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 16:31:34, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 16:32:12, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 16:40:23, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 16:46:04, EXEC, v:1, k:ed@rotten, mode:FULL, size:30, fail:COMP
+2026-07-04 16:46:27, EXEC, v:1, k:ed@rotten, mode:FULL, size:30, fail:COMP
+2026-07-04 16:46:26, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 16:51:36, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 16:56:37, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:00:44, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:06:38, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:11:35, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:12:02, EXEC, v:1, k:ed@rotten, mode:FULL, size:77, fail:COMP
+2026-07-04 17:16:32, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:20:00, EXEC, v:1, k:ed@rotten, mode:FULL, size:84, fail:COMP
+2026-07-04 17:20:27, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:83
+2026-07-04 17:20:24, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:20:27, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:22:25, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:83
+2026-07-04 17:24:58, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:83
+2026-07-04 17:24:56, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:24:58, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:27:41, EXEC, v:1, k:ed@rotten, mode:FULL, rate:33, size:83
+2026-07-04 17:31:38, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:27:41, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:35:04, EXEC, v:1, k:ed@rotten, mode:FULL, rate:100, size:92
+2026-07-04 17:35:12, EXEC, v:1, k:ed@rotten, mode:FULL, size:92, fail:COMP
+2026-07-04 17:35:11, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:35:04, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:36:40, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-04 17:42:41, EXEC, v:1, k:ed@rotten, mode:FULL, rate:100, size:92
+2026-07-04 17:42:46, MOVE, v:1, k:ed@rotten, mode:BACK
