@@ -4,8 +4,9 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
+	"slices"
 	"strconv"
+	"strings"
 )
 
 type MultiSet struct{
@@ -19,30 +20,14 @@ func NewMultiSet(capacity int) *MultiSet{
 }
 
 func (ms *MultiSet) betterSearch(value int) (bool, int) {
-	low := 0
-	high := len(ms.data)
-
-	for low < high {
-		mid := low + (high-low)/2
-		if ms.data[mid] == value{
-			return true, mid
-		} else if ms.data[mid] < value{
-			low = mid + 1
-		} else{
-			high = mid
-		}
-	}
-	return false, low
+	pos, found := slices.BinarySearch(ms.data, value)
+	return found, pos
 }
 
 func (ms *MultiSet) Insert(value int){
 	_, pos := ms.betterSearch(value)
 
-	ms.data = append(ms.data, 0)
-
-	copy(ms.data[pos+1:], ms.data[pos:])
-
-	ms.data[pos] = value
+	ms.data = slices.Insert(ms.data, pos, value)
 }
 
 func (ms *MultiSet) Contains(value int) bool{
@@ -56,7 +41,7 @@ func (ms *MultiSet) Erase(value int) {
 		fmt.Println("value not found")
 		return
 	}
-	ms.data = append(ms.data[:pos], ms.data[pos+1:]...)
+	ms.data = slices.Delete(ms.data, pos, pos+1)
 }
 
 func (ms *MultiSet) Count(value int) int{
@@ -121,8 +106,15 @@ func main() {
 		if line == "" {
 			continue
 		}
+
+		if strings.HasPrefix(line, "$"){
+			fmt.Println(line)
+		}else{
+			fmt.Printf("$%s\n", line)
+		}
+
 		args := strings.Fields(line)
-		cmd := args[0]
+		cmd := strings.TrimPrefix(args[0], "$")
 
 		switch cmd {
 

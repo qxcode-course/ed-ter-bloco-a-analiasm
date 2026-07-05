@@ -42,7 +42,7 @@ func (s *OrderedSet) Insert(value int){
 func (s *OrderedSet) Erase(value int) bool{
 	idx := s.findIndex(value)
 	if idx < len(s.items) && s.items[idx] == value{
-		s.items = append(s.items[idx:], s.items[idx+1:]... )
+		s.items = append(s.items[:idx], s.items[idx+1:]... )
 		return true
 	}
 	return false
@@ -69,8 +69,12 @@ func main() {
 		if len(parts) == 0 {
 			continue
 		}
-		cmd := parts[0]
-		fmt.Printf("$%s\n", line)
+		if strings.HasPrefix(line, "$"){
+			fmt.Println(line)
+		}else{
+			fmt.Printf("$%s\n", line)
+		}
+		cmd := strings.TrimPrefix(parts[0], "$")
 
 		switch cmd {
 		case "end":

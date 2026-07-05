@@ -11,7 +11,12 @@ type Pos struct {
 }
 
 func (p Pos) getNeig() []Pos {
-	return nil
+	return []Pos{
+		{p.l - 1, p.c},
+		{p.l + 1, p.c},
+		{p.l, p.c - 1},
+		{p.l, p.c + 1},
+	}
 }
 
 func inside(grid [][]rune, pos Pos) bool {
@@ -25,10 +30,56 @@ func match(grid [][]rune, pos Pos, char rune) bool {
 }
 
 func search(grid [][]rune, startPos Pos, endPos Pos) {
-	_, _, _ = grid, startPos, endPos
+	queue := []Pos{startPos}
+
+	visitados := map[Pos]bool{startPos: true}
+
+	caminho := make(map[Pos]Pos)
+
+	fimEncontrado := false
+
+	for len(queue) > 0 {
+		atual := queue[0]
+		queue = queue[1:]
+
+		if atual == endPos {
+			fimEncontrado = true
+			break
+		}
+
+		for _, vizinho := range atual.getNeig(){
+			if inside(grid, vizinho) && grid[vizinho.l][vizinho.c] != '#' && !visitados[vizinho]{
+				visitados[vizinho] = true
+				queue = append(queue, vizinho)
+				caminho[vizinho] = atual
+			}
+		}
+	}
+
+	 if fimEncontrado{
+		var voltar func(atual Pos)
+		voltar = func(atual Pos) {
+			grid[atual.l][atual.c] = '.'
+
+			if atual == startPos{
+				return
+			}
+			voltar(caminho[atual])
+		}
+		voltar(endPos)
+	 }
 }
 
-func voltar()
+func voltar(grid [][]rune, caminho map[Pos]Pos, atual Pos, startPos Pos){
+	grid[atual.l][atual.c] = '.'
+
+	if atual == startPos{
+		return
+	}
+
+	anterior := caminho[atual]
+	voltar(grid, caminho, anterior, startPos)
+}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

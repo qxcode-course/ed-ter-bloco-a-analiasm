@@ -172,7 +172,12 @@
         },
         {
             "label": "2026-03-30_18-45-28",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n\tvar n, m, id int\n\tfmt.Scan(&n)\n\tfilaOrig := make([]int, n)\n\n\tfor i := 0; i < n; i++{\n\t\tfmt.Scan(&filaOrig[i])\n\t}\n\n    fmt.Scan(&m)\n\tsaiu := make(map[int]bool)\n\tfor i := 0; i < m; i++{\n\t\tfmt.Scan(&id)\n\t\tsaiu[id] = true\n\t}\n\t\n\tfor _, pessoa := range filaOrig{\n\t\tif !saiu[pessoa]{\n\t\t\tfmt.Printf(\"%d \", pessoa)\n\t\t}\n\t}\n\n\tfmt.Println()\n\n}",
+            "content": "@@ -366,9 +366,8 @@\n tln()%0A%0A%7D\n-%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-05_16-21-09",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n\tvar n, m, id int\n\tfmt.Scan(&n)\n\tfilaOrig := make([]int, n)\n\n\tfor i := 0; i < n; i++{\n\t\tfmt.Scan(&filaOrig[i])\n\t}\n\n    fmt.Scan(&m)\n\tsaiu := make(map[int]bool)\n\tfor i := 0; i < m; i++{\n\t\tfmt.Scan(&id)\n\t\tsaiu[id] = true\n\t}\n\t\n\tfor _, pessoa := range filaOrig{\n\t\tif !saiu[pessoa]{\n\t\t\tfmt.Printf(\"%d \", pessoa)\n\t\t}\n\t}\n\n\tfmt.Println()\n\n}\n",
             "lines": "28"
         }
     ]

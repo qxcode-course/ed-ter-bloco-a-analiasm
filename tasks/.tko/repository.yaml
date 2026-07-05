@@ -25,7 +25,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
+- ed@map_set
 flags:
   inbox: all
   panel: skills
@@ -35,5 +35,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@rotten
-selected_index: 20
+selected: ed@buscas
+selected_index: 16

@@ -2,3 +2,70 @@
 2026-07-05 15:07:47, EXEC, v:1, k:ed@rotten, mode:FULL, rate:100
 2026-07-05 15:07:53, MOVE, v:1, k:ed@rotten, mode:BACK
 2026-07-05 15:08:12, SELF, v:1, k:ed@rotten, self:1, rate:100, study:82
+2026-07-05 15:09:05, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-07-05 15:09:46, EXEC, v:1, k:ed@caminho, mode:FULL, size:111, fail:COMP
+2026-07-05 15:09:48, EXEC, v:1, k:ed@caminho, mode:FULL, fail:COMP
+2026-07-05 15:12:04, EXEC, v:1, k:ed@caminho, mode:FULL, size:116, fail:COMP
+2026-07-05 15:07:47, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 15:11:52, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:14:27, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:21:49, EXEC, v:1, k:ed@caminho, mode:FULL, size:133, fail:COMP
+2026-07-05 15:22:12, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:26:59, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:30:16, EXEC, v:1, k:ed@caminho, mode:FULL, size:152, fail:COMP
+2026-07-05 15:32:10, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:34:56, EXEC, v:1, k:ed@caminho, mode:FULL, rate:100, size:161
+2026-07-05 15:35:03, EXEC, v:1, k:ed@caminho, mode:FREE, size:161
+2026-07-05 15:35:25, EXEC, v:1, k:ed@caminho, mode:FULL, size:161, fail:COMP
+2026-07-05 15:35:31, MOVE, v:1, k:ed@caminho, mode:BACK
+2026-07-05 15:35:52, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-07-05 15:38:57, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:43:18, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:48:27, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-05 15:56:23, EXEC, v:1, k:ed@caminho, mode:FULL, rate:100, size:162
+2026-07-05 15:56:26, MOVE, v:1, k:ed@caminho, mode:BACK
+2026-07-05 15:56:49, SELF, v:1, k:ed@caminho, self:1, rate:100, study:47
+2026-07-05 15:57:55, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-07-05 16:00:49, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-07-05 16:04:08, EXEC, v:1, k:ed@multiset, mode:FULL, size:150, fail:COMP
+2026-07-05 16:06:20, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-07-05 16:07:28, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:151
+2026-07-05 16:11:15, EXEC, v:1, k:ed@multiset, mode:FULL, rate:100, size:158
+2026-07-05 16:11:20, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-07-05 16:11:48, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-07-05 16:11:50, EXEC, v:1, k:ed@multiset, mode:FULL, rate:100
+2026-07-05 16:11:52, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-07-05 16:12:23, SELF, v:1, k:ed@multiset, self:1, rate:100, study:186
+2026-07-05 16:12:30, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-07-05 16:12:47, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:66
+2026-07-05 16:11:50, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-07-05 16:12:47, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-07-05 16:16:25, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-07-05 16:18:35, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:104
+2026-07-05 16:19:03, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:104
+2026-07-05 16:19:05, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-07-05 16:19:29, SELF, v:1, k:ed@setbuild, self:1, rate:100, study:83
+2026-07-05 16:20:03, MOVE, v:1, k:ed@resto, mode:PICK
+2026-07-05 16:20:10, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-07-05 16:20:16, MOVE, v:1, k:ed@resto, mode:BACK
+2026-07-05 16:20:43, SELF, v:1, k:ed@resto, self:1, rate:100, study:6
+2026-07-05 16:20:44, MOVE, v:1, k:ed@resto, mode:PICK
+2026-07-05 16:20:46, MOVE, v:1, k:ed@resto, mode:BACK
+2026-07-05 16:21:05, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-07-05 16:21:09, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100, size:28
+2026-07-05 16:21:14, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-07-05 16:21:33, SELF, v:1, k:ed@apagando, self:1, rate:100, study:127
+2026-07-05 16:21:36, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-07-05 16:21:37, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-07-05 16:21:40, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-07-05 16:21:47, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100
+2026-07-05 16:21:48, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-07-05 16:22:04, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:42
+2026-07-05 16:22:14, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-07-05 16:22:17, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0
+2026-07-05 16:20:10, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-05 16:21:08, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-07-05 16:21:47, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-07-05 16:22:17, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-07-05 16:24:23, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-07-05 16:24:54, MOVE, v:1, k:ed@buscas, mode:DOWN
